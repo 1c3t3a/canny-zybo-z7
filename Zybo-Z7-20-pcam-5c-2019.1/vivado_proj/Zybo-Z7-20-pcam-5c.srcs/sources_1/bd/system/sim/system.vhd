@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Tue Jun 23 22:19:33 2020
---Host        : bvanca-ro running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+--Date        : Mon Feb 14 17:17:03 2022
+--Host        : dsoukup-ThinkPad running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target system.bd
 --Design      : system
 --Purpose     : IP block netlist
@@ -2824,7 +2824,7 @@ entity system is
     hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=19,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=32,numReposBlks=20,numNonXlnxBlks=5,numHierBlks=12,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -3103,9 +3103,9 @@ architecture STRUCTURE of system is
   port (
     clk_in1 : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC
+    clk_out3 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component system_clk_wiz_0_0;
   component system_processing_system7_0_0 is
@@ -3378,8 +3378,8 @@ architecture STRUCTURE of system is
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    locked : out STD_LOGIC;
-    pxl_clk_5x : out STD_LOGIC
+    pxl_clk_5x : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component system_video_dynclk_0;
   component system_vtg_0 is
@@ -3426,6 +3426,19 @@ architecture STRUCTURE of system is
     dout : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component system_xlconcat_0_0;
+  component system_rgb2grayscale_0_0 is
+  port (
+    clk_pixel : in STD_LOGIC;
+    data_in : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    vid_active_video : in STD_LOGIC;
+    vid_hsync : in STD_LOGIC;
+    vid_vsync : in STD_LOGIC;
+    data_out : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    vid_VDE : out STD_LOGIC;
+    vid_pHsync : out STD_LOGIC;
+    vid_pVsync : out STD_LOGIC
+  );
+  end component system_rgb2grayscale_0_0;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TLAST : STD_LOGIC;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TREADY : STD_LOGIC;
@@ -3721,6 +3734,10 @@ architecture STRUCTURE of system is
   signal rgb2dvi_0_TMDS_CLK_P : STD_LOGIC;
   signal rgb2dvi_0_TMDS_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal rgb2dvi_0_TMDS_DATA_P : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal rgb2grayscale_0_data_out : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal rgb2grayscale_0_vid_VDE : STD_LOGIC;
+  signal rgb2grayscale_0_vid_pHsync : STD_LOGIC;
+  signal rgb2grayscale_0_vid_pVsync : STD_LOGIC;
   signal rst_clk_wiz_0_50M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_0_50M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3728,10 +3745,10 @@ architecture STRUCTURE of system is
   signal rst_vid_clk_dyn_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal s_axil_clk_50 : STD_LOGIC;
   signal v_axi4s_vid_out_0_locked : STD_LOGIC;
-  signal v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
-  signal v_axi4s_vid_out_0_vid_io_out_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal v_axi4s_vid_out_0_vid_io_out_HSYNC : STD_LOGIC;
-  signal v_axi4s_vid_out_0_vid_io_out_VSYNC : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_active_video : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_data : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal v_axi4s_vid_out_0_vid_hsync : STD_LOGIC;
+  signal v_axi4s_vid_out_0_vid_vsync : STD_LOGIC;
   signal v_axi4s_vid_out_0_vtg_ce : STD_LOGIC;
   signal v_tc_0_irq : STD_LOGIC;
   signal v_tc_0_vtiming_out_ACTIVE_VIDEO : STD_LOGIC;
@@ -4566,10 +4583,22 @@ rgb2dvi_0: component system_rgb2dvi_0_0
       TMDS_Data_n(2 downto 0) => rgb2dvi_0_TMDS_DATA_N(2 downto 0),
       TMDS_Data_p(2 downto 0) => rgb2dvi_0_TMDS_DATA_P(2 downto 0),
       aRst_n => v_axi4s_vid_out_0_locked,
-      vid_pData(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
-      vid_pHSync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
-      vid_pVDE => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
-      vid_pVSync => v_axi4s_vid_out_0_vid_io_out_VSYNC
+      vid_pData(23 downto 0) => rgb2grayscale_0_data_out(23 downto 0),
+      vid_pHSync => rgb2grayscale_0_vid_pHsync,
+      vid_pVDE => rgb2grayscale_0_vid_VDE,
+      vid_pVSync => rgb2grayscale_0_vid_pVsync
+    );
+rgb2grayscale_0: component system_rgb2grayscale_0_0
+     port map (
+      clk_pixel => PixelClk_Generator_clk_out1,
+      data_in(23 downto 0) => v_axi4s_vid_out_0_vid_data(23 downto 0),
+      data_out(23 downto 0) => rgb2grayscale_0_data_out(23 downto 0),
+      vid_VDE => rgb2grayscale_0_vid_VDE,
+      vid_active_video => v_axi4s_vid_out_0_vid_active_video,
+      vid_hsync => v_axi4s_vid_out_0_vid_hsync,
+      vid_pHsync => rgb2grayscale_0_vid_pHsync,
+      vid_pVsync => rgb2grayscale_0_vid_pVsync,
+      vid_vsync => v_axi4s_vid_out_0_vid_vsync
     );
 rst_clk_wiz_0_50M: component system_rst_clk_wiz_0_50M_0
      port map (
@@ -4613,16 +4642,16 @@ v_axi4s_vid_out_0: component system_v_axi4s_vid_out_0_0
       s_axis_video_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
       status(31 downto 0) => NLW_v_axi4s_vid_out_0_status_UNCONNECTED(31 downto 0),
       underflow => NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED,
-      vid_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
-      vid_data(23 downto 0) => v_axi4s_vid_out_0_vid_io_out_DATA(23 downto 0),
+      vid_active_video => v_axi4s_vid_out_0_vid_active_video,
+      vid_data(23 downto 0) => v_axi4s_vid_out_0_vid_data(23 downto 0),
       vid_field_id => NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED,
       vid_hblank => NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED,
-      vid_hsync => v_axi4s_vid_out_0_vid_io_out_HSYNC,
+      vid_hsync => v_axi4s_vid_out_0_vid_hsync,
       vid_io_out_ce => '1',
       vid_io_out_clk => PixelClk_Generator_clk_out1,
       vid_io_out_reset => rst_vid_clk_dyn_peripheral_reset(0),
       vid_vblank => NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED,
-      vid_vsync => v_axi4s_vid_out_0_vid_io_out_VSYNC,
+      vid_vsync => v_axi4s_vid_out_0_vid_vsync,
       vtg_active_video => v_tc_0_vtiming_out_ACTIVE_VIDEO,
       vtg_ce => v_axi4s_vid_out_0_vtg_ce,
       vtg_field_id => '0',

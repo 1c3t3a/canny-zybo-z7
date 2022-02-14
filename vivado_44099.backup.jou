@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Feb 14 14:36:14 2022
+# Process ID: 44099
+# Current directory: /home/dsoukup/Vivado-Projects/canny-zybo-z7
+# Command line: vivado
+# Log file: /home/dsoukup/Vivado-Projects/canny-zybo-z7/vivado.log
+# Journal file: /home/dsoukup/Vivado-Projects/canny-zybo-z7/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.xpr
+update_compile_order -fileset sources_1
+set_property top rgb2grayscale [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+source rgb2grayscale.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.srcs/sim_1/new/tb_grayscale.v
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source rgb2grayscale.tcl
+set_property top tb_grayscale [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+source tb_grayscale.tcl
+update_compile_order -fileset sim_1
+open_bd_design {/home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/system.bd}
+set_property location {10 3814 914} [get_bd_cells rgb2dvi_0]
+set_property location {4282 929} [get_bd_intf_ports hdmi_tx]
+set_property location {4038 890} [get_bd_intf_ports hdmi_tx]
+set_property location {10.5 3812 892} [get_bd_cells rgb2dvi_0]
+set_property location {11.5 3909 868} [get_bd_cells rgb2dvi_0]
+set_property location {11 3941 888} [get_bd_cells rgb2dvi_0]
+set_property location {11 3937 911} [get_bd_cells rgb2dvi_0]
+set_property location {11 3924 931} [get_bd_cells rgb2dvi_0]
+save_bd_design
