@@ -1,6 +1,5 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ip/system_MIPI_CSI_2_RX_0_0/hdl/line_buffer/hdl" --include "../../../../Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ipshared/ec9e/hdl" --include "../../../../Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ipshared/c923" --include "../../../../Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ipshared/8c62/hdl" --include "/tools/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../../Zybo-Z7-20-pcam-5c.srcs/sources_1/new/rgb2greyscale.v" \
 "../../../../Zybo-Z7-20-pcam-5c.srcs/sim_1/new/tb_grayscale.v" \
 
 # compile glbl module

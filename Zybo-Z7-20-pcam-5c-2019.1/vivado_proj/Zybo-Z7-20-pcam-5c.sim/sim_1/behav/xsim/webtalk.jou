@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Feb 14 13:01:22 2022
-# Process ID: 32297
+# Start of session at: Mon Feb 14 14:42:33 2022
+# Process ID: 46615
 # Current directory: /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/tb_grayscale_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/rgb2grayscale_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/tb_grayscale_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/rgb2grayscale_behav/webtalk/xsim_webtalk.tcl -notrace

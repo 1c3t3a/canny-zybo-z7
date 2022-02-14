@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1644840728">
-  <File Type="PA-TCL" Name="DVIClocking.tcl"/>
-  <File Type="REPORTS-TCL" Name="DVIClocking_reports.tcl"/>
-  <File Type="OPT-DCP" Name="DVIClocking_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="DVIClocking.hwdef"/>
-  <File Type="PWROPT-DCP" Name="DVIClocking_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="DVIClocking_placed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="DVIClocking_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="DVIClocking_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="DVIClocking_physopt.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="DVIClocking_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="DVIClocking_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="DVIClocking_routed_bb.dcp"/>
-  <File Type="BG-BIT" Name="DVIClocking.bit"/>
-  <File Type="BG-BIN" Name="DVIClocking.bin"/>
-  <File Type="BITSTR-MSK" Name="DVIClocking.msk"/>
   <File Type="ROUTE-TIMING-PB" Name="DVIClocking_timing_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="DVIClocking.tcl"/>
+  <File Type="BITSTR-MSK" Name="DVIClocking.msk"/>
+  <File Type="BG-BIN" Name="DVIClocking.bin"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="DVIClocking_routed_bb.dcp"/>
+  <File Type="BG-BGN" Name="DVIClocking.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="DVIClocking_postplace_pwropt.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="DVIClocking_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="DVIClocking_routed.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="DVIClocking_physopt.dcp"/>
+  <File Type="REPORTS-TCL" Name="DVIClocking_reports.tcl"/>
   <File Type="BITSTR-RBT" Name="DVIClocking.rbt"/>
+  <File Type="OPT-DCP" Name="DVIClocking_opt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="DVIClocking_routed_error.dcp"/>
+  <File Type="BG-DRC" Name="DVIClocking.drc"/>
+  <File Type="OPT-HWDEF" Name="DVIClocking.hwdef"/>
+  <File Type="BG-BIT" Name="DVIClocking.bit"/>
+  <File Type="PLACE-DCP" Name="DVIClocking_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="DVIClocking_pwropt.dcp"/>
   <File Type="BITSTR-NKY" Name="DVIClocking.nky"/>
   <File Type="BITSTR-BMM" Name="DVIClocking_bd.bmm"/>
-  <File Type="BG-DRC" Name="DVIClocking.drc"/>
   <File Type="BITSTR-MMI" Name="DVIClocking.mmi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BGN" Name="DVIClocking.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="DVIClocking.sysdef"/>
   <File Type="BITSTR-LTX" Name="DVIClocking.ltx"/>
   <File Type="RDI-RDI" Name="DVIClocking.vdi"/>
@@ -143,22 +143,22 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_video_dynclk_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_rst_clk_wiz_0_50M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_vtg_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_rst_vid_clk_dyn_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_rgb2dvi_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_AXI_BayerToRGB_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_video_dynclk_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_vtg_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_clk_wiz_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_v_axi4s_vid_out_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_2"/>
   <BlockFileSet Type="BlockSrcs" Name="system_MIPI_CSI_2_RX_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_MIPI_D_PHY_RX_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_MIPI_D_PHY_RX_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_AXI_GammaCorrection_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_DVIClocking_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_1"/>
 </GenRun>

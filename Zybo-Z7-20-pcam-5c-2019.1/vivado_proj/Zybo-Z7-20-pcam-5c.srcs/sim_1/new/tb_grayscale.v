@@ -32,10 +32,9 @@ module tb_grayscale();
 
     initial // initial block executes only once
         begin
-            // values for a and b
             data_in = 'hFF0088;
             #period; // wait for period
-            //if (data_out != )
+            //if (data_out != 'h939393 )
 
         end
 endmodule
