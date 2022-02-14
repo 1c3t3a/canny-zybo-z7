@@ -1,7 +1,0 @@
-Running: xsim.dir/rgb2greyscale_behav/xsimk -simmode gui -wdb rgb2greyscale_behav.wdb -simrunnum 0 -socket 46101
-Design successfully loaded
-Design Loading Memory Usage: 33364 KB (Peak: 33484 KB)
-Design Loading CPU Usage: 80 ms
-Simulation completed
-Simulation Memory Usage: 115100 KB (Peak: 172632 KB)
-Simulation CPU Usage: 90 ms

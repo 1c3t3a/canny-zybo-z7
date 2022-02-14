@@ -1,4 +1,0 @@
-Running: xsim.dir/DVIClocking_behav/xsimk -simmode gui -wdb DVIClocking_behav.wdb -simrunnum 0 -socket 33861
-Design successfully loaded
-Design Loading Memory Usage: 33420 KB (Peak: 33540 KB)
-Design Loading CPU Usage: 50 ms
