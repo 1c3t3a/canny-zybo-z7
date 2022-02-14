@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="system_video_dynclk_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_video_dynclk_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_MIPI_D_PHY_RX_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_MIPI_D_PHY_RX_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axi_vdma_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_axi_vdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_processing_system7_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_AXI_BayerToRGB_1_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_AXI_BayerToRGB_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_AXI_GammaCorrection_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_AXI_GammaCorrection_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_DVIClocking_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_DVIClocking_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_MIPI_CSI_2_RX_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_MIPI_CSI_2_RX_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_clk_wiz_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_xbar_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_rst_clk_wiz_0_50M_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_rst_clk_wiz_0_50M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_rgb2dvi_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_rgb2dvi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_rst_vid_clk_dyn_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_rst_vid_clk_dyn_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_v_axi4s_vid_out_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_v_axi4s_vid_out_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_vtg_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_vtg_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_rgb2greyscale_0_0_synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/system_rgb2greyscale_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="system_video_dynclk_0_synth_1"/>
+		<Parent Id="system_MIPI_D_PHY_RX_0_0_synth_1"/>
+		<Parent Id="system_axi_vdma_0_0_synth_1"/>
+		<Parent Id="system_processing_system7_0_0_synth_1"/>
+		<Parent Id="system_AXI_BayerToRGB_1_0_synth_1"/>
+		<Parent Id="system_AXI_GammaCorrection_0_0_synth_1"/>
+		<Parent Id="system_DVIClocking_0_0_synth_1"/>
+		<Parent Id="system_MIPI_CSI_2_RX_0_0_synth_1"/>
+		<Parent Id="system_clk_wiz_0_0_synth_1"/>
+		<Parent Id="system_xbar_0_synth_1"/>
+		<Parent Id="system_rst_clk_wiz_0_50M_0_synth_1"/>
+		<Parent Id="system_rgb2dvi_0_0_synth_1"/>
+		<Parent Id="system_rst_vid_clk_dyn_0_synth_1"/>
+		<Parent Id="system_v_axi4s_vid_out_0_0_synth_1"/>
+		<Parent Id="system_vtg_0_synth_1"/>
+		<Parent Id="system_rgb2greyscale_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="system_video_dynclk_0_synth_1"/>
+		<Parent Id="system_MIPI_D_PHY_RX_0_0_synth_1"/>
+		<Parent Id="system_axi_vdma_0_0_synth_1"/>
+		<Parent Id="system_processing_system7_0_0_synth_1"/>
+		<Parent Id="system_AXI_BayerToRGB_1_0_synth_1"/>
+		<Parent Id="system_AXI_GammaCorrection_0_0_synth_1"/>
+		<Parent Id="system_DVIClocking_0_0_synth_1"/>
+		<Parent Id="system_MIPI_CSI_2_RX_0_0_synth_1"/>
+		<Parent Id="system_clk_wiz_0_0_synth_1"/>
+		<Parent Id="system_xbar_0_synth_1"/>
+		<Parent Id="system_rst_clk_wiz_0_50M_0_synth_1"/>
+		<Parent Id="system_rgb2dvi_0_0_synth_1"/>
+		<Parent Id="system_rst_vid_clk_dyn_0_synth_1"/>
+		<Parent Id="system_v_axi4s_vid_out_0_0_synth_1"/>
+		<Parent Id="system_vtg_0_synth_1"/>
+		<Parent Id="system_rgb2greyscale_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

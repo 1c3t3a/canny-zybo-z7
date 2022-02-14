@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Feb 14 09:58:08 2022
-# Process ID: 22742
-# Current directory: /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1
-# Command line: vivado -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
-# Log file: /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1/system_wrapper.vdi
-# Journal file: /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1/vivado.jou
+# Start of session at: Mon Feb 14 13:12:40 2022
+# Process ID: 34527
+# Current directory: /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1
+# Command line: vivado -log DVIClocking.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DVIClocking.tcl -notrace
+# Log file: /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1/DVIClocking.vdi
+# Journal file: /home/dsoukup/Vivado-Projects/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
-source system_wrapper.tcl -notrace
+source DVIClocking.tcl -notrace

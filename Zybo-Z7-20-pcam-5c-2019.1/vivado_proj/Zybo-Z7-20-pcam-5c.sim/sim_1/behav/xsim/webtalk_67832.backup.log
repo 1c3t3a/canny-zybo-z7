@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Feb 14 12:40:17 2022
+# Process ID: 67832
+# Current directory: /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/rgb2greyscale_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/rgb2greyscale_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/parallels/Documents/wallento/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sim/sim_1/behav/xsim/xsim.dir/rgb2greyscale_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Feb 14 12:40:20 2022. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Feb 14 12:40:20 2022...
