@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Feb 11 15:15:12 2022
+# Process ID: 45694
+# Current directory: /home/wallento/pcam-test/Zybo-Z7-20-pcam-5c-2019.1
+# Command line: vivado
+# Log file: /home/wallento/pcam-test/Zybo-Z7-20-pcam-5c-2019.1/vivado.log
+# Journal file: /home/wallento/pcam-test/Zybo-Z7-20-pcam-5c-2019.1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/wallento/pcam-test/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.xpr
+launch_sdk -workspace /home/wallento/pcam-test/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sdk -hwspec /home/wallento/pcam-test/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.sdk/system_wrapper.hdf
+update_compile_order -fileset sources_1

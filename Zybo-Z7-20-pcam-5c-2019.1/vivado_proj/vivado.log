@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jun 23 22:48:48 2020
+# Process ID: 91392
+# Current directory: C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts
+# Command line: vivado.exe -mode batch -source C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts/digilent_vivado_release.tcl -notrace -tclargs -r C:/Zybo-Z7-20-pcam-5c -x C:/Zybo-Z7-20-pcam-5c/proj/Zybo-Z7-20-pcam-5c.xpr -o C:/Zybo-Z7-20-pcam-5c/release_3/Zybo-Z7-20-pcam-5c-2019.1.zip -temp C:/Zybo-Z7-20-pcam-5c/release_3/Zybo-Z7-20-pcam-5c-2019.1
+# Log file: C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts/vivado.log
+# Journal file: C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts\vivado.jou
+#-----------------------------------------------------------
+source C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts/digilent_vivado_release.tcl -notrace
+WARNING: [Coretcl 2-89] No projects matched '*'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Zybo-Z7-20-pcam-5c/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 512.438 ; gain = 214.133
+INFO: Releasing project Zybo-Z7-20-pcam-5c
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Zybo-Z7-20-pcam-5c/release_3/Zybo-Z7-20-pcam-5c-2019.1' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Zybo-Z7-20-pcam-5c/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Zybo-Z7-20-pcam-5c/repo'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_video_dynclk_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_MIPI_D_PHY_RX_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_auto_pc_1_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_axi_vdma_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_processing_system7_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_AXI_BayerToRGB_1_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_AXI_GammaCorrection_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_DVIClocking_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_MIPI_CSI_2_RX_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_clk_wiz_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_xbar_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_auto_pc_2_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_rst_clk_wiz_0_50M_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_rgb2dvi_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_rst_vid_clk_dyn_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_auto_pc_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_v_axi4s_vid_out_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'system_vtg_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-133] re-setting run 'system_video_dynclk_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_MIPI_D_PHY_RX_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_auto_pc_1_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_axi_vdma_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_processing_system7_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_AXI_BayerToRGB_1_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_AXI_GammaCorrection_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_DVIClocking_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_MIPI_CSI_2_RX_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_clk_wiz_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_xbar_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_auto_pc_2_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_rst_clk_wiz_0_50M_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_rgb2dvi_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_rst_vid_clk_dyn_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_auto_pc_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_v_axi4s_vid_out_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'system_vtg_0_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_AXI_BayerToRGB_1_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_AXI_BayerToRGB_1_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_AXI_GammaCorrection_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_AXI_GammaCorrection_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_DVIClocking_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_DVIClocking_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_MIPI_CSI_2_RX_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_MIPI_CSI_2_RX_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_MIPI_D_PHY_RX_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_MIPI_D_PHY_RX_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_auto_pc_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_auto_pc_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_auto_pc_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_auto_pc_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_auto_pc_2'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_auto_pc_2'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_axi_vdma_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_axi_vdma_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_clk_wiz_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_clk_wiz_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_processing_system7_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_processing_system7_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_rgb2dvi_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_rgb2dvi_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_rst_clk_wiz_0_50M_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_rst_clk_wiz_0_50M_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_rst_vid_clk_dyn_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_rst_vid_clk_dyn_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_v_axi4s_vid_out_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_v_axi4s_vid_out_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_video_dynclk_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_video_dynclk_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_vtg_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_vtg_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'system_xbar_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'system_xbar_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'

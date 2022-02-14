@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jun 23 22:48:48 2020
+# Process ID: 91392
+# Current directory: C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts
+# Command line: vivado.exe -mode batch -source C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts/digilent_vivado_release.tcl -notrace -tclargs -r C:/Zybo-Z7-20-pcam-5c -x C:/Zybo-Z7-20-pcam-5c/proj/Zybo-Z7-20-pcam-5c.xpr -o C:/Zybo-Z7-20-pcam-5c/release_3/Zybo-Z7-20-pcam-5c-2019.1.zip -temp C:/Zybo-Z7-20-pcam-5c/release_3/Zybo-Z7-20-pcam-5c-2019.1
+# Log file: C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts/vivado.log
+# Journal file: C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts\vivado.jou
+#-----------------------------------------------------------
+source C:/Zybo-Z7-20-pcam-5c/digilent-vivado-scripts/digilent_vivado_release.tcl -notrace
