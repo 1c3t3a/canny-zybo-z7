@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Mon Feb 14 17:17:03 2022
---Host        : dsoukup-ThinkPad running 64-bit Ubuntu 20.04.3 LTS
+--Date        : Tue Feb 15 10:24:03 2022
+--Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
 --Purpose     : IP block netlist
@@ -61,12 +61,6 @@ architecture STRUCTURE of system_wrapper is
     dphy_data_hs_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_lp_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    hdmi_tx_clk_p : out STD_LOGIC;
-    hdmi_tx_clk_n : out STD_LOGIC;
-    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    dphy_hs_clock_clk_p : in STD_LOGIC;
-    dphy_hs_clock_clk_n : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -96,7 +90,13 @@ architecture STRUCTURE of system_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     cam_gpio_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     cam_gpio_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    cam_gpio_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 )
+    cam_gpio_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
+    dphy_hs_clock_clk_p : in STD_LOGIC;
+    dphy_hs_clock_clk_n : in STD_LOGIC;
+    hdmi_tx_clk_p : out STD_LOGIC;
+    hdmi_tx_clk_n : out STD_LOGIC;
+    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component system;
   component IOBUF is

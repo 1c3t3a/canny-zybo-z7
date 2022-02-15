@@ -60,7 +60,7 @@ ENTITY system_rgb2grayscale_0_0 IS
     vid_active_video : IN STD_LOGIC;
     vid_hsync : IN STD_LOGIC;
     vid_vsync : IN STD_LOGIC;
-    data_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+    data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     vid_VDE : OUT STD_LOGIC;
     vid_pHsync : OUT STD_LOGIC;
     vid_pVsync : OUT STD_LOGIC
@@ -77,7 +77,7 @@ ARCHITECTURE system_rgb2grayscale_0_0_arch OF system_rgb2grayscale_0_0 IS
       vid_active_video : IN STD_LOGIC;
       vid_hsync : IN STD_LOGIC;
       vid_vsync : IN STD_LOGIC;
-      data_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+      data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       vid_VDE : OUT STD_LOGIC;
       vid_pHsync : OUT STD_LOGIC;
       vid_pVsync : OUT STD_LOGIC

@@ -28,7 +28,7 @@ module rgb2grayscale(
     input vid_hsync,
     input vid_vsync,
     //
-    output reg [23:0] data_out,
+    output reg [7:0] data_out,
     output reg vid_VDE,
     output reg vid_pHsync,
     output reg vid_pVsync
@@ -38,9 +38,7 @@ module rgb2grayscale(
     assign grey_value = (data_in[23:20] + data_in[23:21]) + (data_in[15:9] + data_in[15:12]) + (data_in[7:2] + data_in[7:5]);
     
     always @( posedge clk_pixel ) begin
-        data_out[7:0] = grey_value;
-        data_out[15:8] = grey_value;
-        data_out[23:16] = grey_value;
+        data_out = grey_value;
         vid_VDE = vid_active_video;
         vid_pHsync = vid_hsync;
         vid_pVsync = vid_vsync;
