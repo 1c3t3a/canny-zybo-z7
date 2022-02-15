@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Tue Feb 15 10:24:03 2022
+--Date        : Tue Feb 15 14:27:11 2022
 --Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -76,27 +76,27 @@ architecture STRUCTURE of system_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    cam_iic_sda_i : in STD_LOGIC;
-    cam_iic_sda_o : out STD_LOGIC;
-    cam_iic_sda_t : out STD_LOGIC;
-    cam_iic_scl_i : in STD_LOGIC;
-    cam_iic_scl_o : out STD_LOGIC;
-    cam_iic_scl_t : out STD_LOGIC;
+    cam_gpio_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    cam_gpio_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    cam_gpio_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    cam_gpio_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    cam_gpio_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    cam_gpio_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dphy_hs_clock_clk_p : in STD_LOGIC;
-    dphy_hs_clock_clk_n : in STD_LOGIC;
+    cam_iic_sda_i : in STD_LOGIC;
+    cam_iic_sda_o : out STD_LOGIC;
+    cam_iic_sda_t : out STD_LOGIC;
+    cam_iic_scl_i : in STD_LOGIC;
+    cam_iic_scl_o : out STD_LOGIC;
+    cam_iic_scl_t : out STD_LOGIC;
     hdmi_tx_clk_p : out STD_LOGIC;
     hdmi_tx_clk_n : out STD_LOGIC;
     hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 )
+    hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    dphy_hs_clock_clk_p : in STD_LOGIC;
+    dphy_hs_clock_clk_n : in STD_LOGIC
   );
   end component system;
   component IOBUF is
