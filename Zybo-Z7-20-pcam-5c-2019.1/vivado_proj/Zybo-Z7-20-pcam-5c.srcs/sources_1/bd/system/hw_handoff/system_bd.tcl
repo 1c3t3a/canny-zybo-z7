@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# DVIClocking, gauss, grayscale2rgb, rgb2grayscale
+# DVIClocking, gauss, grayscale2rgb, rgb2grayscale, sobel_dx
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -1208,6 +1208,17 @@ proc create_root_design { parentCell } {
   # Create instance: rst_vid_clk_dyn, and set properties
   set rst_vid_clk_dyn [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_vid_clk_dyn ]
 
+  # Create instance: sobel_dx_0, and set properties
+  set block_name sobel_dx
+  set block_cell_name sobel_dx_0
+  if { [catch {set sobel_dx_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $sobel_dx_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: v_axi4s_vid_out_0, and set properties
   set v_axi4s_vid_out_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0 ]
   set_property -dict [ list \
@@ -1303,7 +1314,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DVIClocking_0_SerialClk [get_bd_pins DVIClocking_0/SerialClk] [get_bd_pins rgb2dvi_0/SerialClk]
   connect_bd_net -net DVIClocking_0_aLockedOut [get_bd_pins DVIClocking_0/aLockedOut] [get_bd_pins rst_vid_clk_dyn/dcm_locked]
   connect_bd_net -net MIPI_D_PHY_RX_0_RxByteClkHS [get_bd_pins MIPI_CSI_2_RX_0/RxByteClkHS] [get_bd_pins MIPI_D_PHY_RX_0/RxByteClkHS]
-  connect_bd_net -net PixelClk_Generator_clk_out1 [get_bd_pins DVIClocking_0/PixelClk] [get_bd_pins gauss_0/clk_pixel] [get_bd_pins grayscale2rgb_0/clk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins rgb2grayscale_0/clk_pixel] [get_bd_pins rst_vid_clk_dyn/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins vtg/clk]
+  connect_bd_net -net PixelClk_Generator_clk_out1 [get_bd_pins DVIClocking_0/PixelClk] [get_bd_pins gauss_0/clk_pixel] [get_bd_pins grayscale2rgb_0/clk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins rgb2grayscale_0/clk_pixel] [get_bd_pins rst_vid_clk_dyn/slowest_sync_clk] [get_bd_pins sobel_dx_0/clk_pixel] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins vtg/clk]
   connect_bd_net -net axi_vdma_0_mm2s_introut [get_bd_pins axi_vdma_0/mm2s_introut] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net axi_vdma_0_s2mm_introut [get_bd_pins axi_vdma_0/s2mm_introut] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins rst_clk_wiz_0_50M/dcm_locked]
@@ -1315,10 +1326,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net dphy_data_hs_p_1 [get_bd_ports dphy_data_hs_p] [get_bd_pins MIPI_D_PHY_RX_0/dphy_data_hs_p]
   connect_bd_net -net dphy_data_lp_n_1 [get_bd_ports dphy_data_lp_n] [get_bd_pins MIPI_D_PHY_RX_0/dphy_data_lp_n]
   connect_bd_net -net dphy_data_lp_p_1 [get_bd_ports dphy_data_lp_p] [get_bd_pins MIPI_D_PHY_RX_0/dphy_data_lp_p]
-  connect_bd_net -net gauss_0_data_out [get_bd_pins gauss_0/data_out] [get_bd_pins grayscale2rgb_0/gray_value]
-  connect_bd_net -net gauss_0_vid_av [get_bd_pins gauss_0/vid_av] [get_bd_pins grayscale2rgb_0/av]
-  connect_bd_net -net gauss_0_vid_pHsync [get_bd_pins gauss_0/vid_pHsync] [get_bd_pins grayscale2rgb_0/hsync]
-  connect_bd_net -net gauss_0_vid_pVsync [get_bd_pins gauss_0/vid_pVsync] [get_bd_pins grayscale2rgb_0/vsync]
+  connect_bd_net -net gauss_0_data_out [get_bd_pins gauss_0/data_out] [get_bd_pins sobel_dx_0/data_in]
+  connect_bd_net -net gauss_0_vid_av [get_bd_pins gauss_0/vid_av] [get_bd_pins sobel_dx_0/vid_active_video]
+  connect_bd_net -net gauss_0_vid_pHsync [get_bd_pins gauss_0/vid_pHsync] [get_bd_pins sobel_dx_0/vid_hsync]
+  connect_bd_net -net gauss_0_vid_pVsync [get_bd_pins gauss_0/vid_pVsync] [get_bd_pins sobel_dx_0/vid_vsync]
   connect_bd_net -net grayscale2rgb_0_av_out [get_bd_pins grayscale2rgb_0/av_out] [get_bd_pins rgb2dvi_0/vid_pVDE]
   connect_bd_net -net grayscale2rgb_0_data_out [get_bd_pins grayscale2rgb_0/data_out] [get_bd_pins rgb2dvi_0/vid_pData]
   connect_bd_net -net grayscale2rgb_0_hsync_out [get_bd_pins grayscale2rgb_0/hsync_out] [get_bd_pins rgb2dvi_0/vid_pHSync]
@@ -1337,6 +1348,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net rst_vid_clk_dyn_peripheral_aresetn [get_bd_pins rst_vid_clk_dyn/peripheral_aresetn] [get_bd_pins vtg/resetn]
   connect_bd_net -net rst_vid_clk_dyn_peripheral_reset [get_bd_pins rst_vid_clk_dyn/peripheral_reset] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_reset]
   connect_bd_net -net s_axil_clk_50 [get_bd_pins AXI_GammaCorrection_0/AxiLiteClk] [get_bd_pins MIPI_CSI_2_RX_0/s_axi_lite_aclk] [get_bd_pins MIPI_D_PHY_RX_0/s_axi_lite_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_clk_wiz_0_50M/slowest_sync_clk] [get_bd_pins video_dynclk/s_axi_aclk] [get_bd_pins vtg/s_axi_aclk]
+  connect_bd_net -net sobel_dx_0_data_out [get_bd_pins grayscale2rgb_0/gray_value] [get_bd_pins sobel_dx_0/data_out]
+  connect_bd_net -net sobel_dx_0_vid_av [get_bd_pins grayscale2rgb_0/av] [get_bd_pins sobel_dx_0/vid_av]
+  connect_bd_net -net sobel_dx_0_vid_pHsync [get_bd_pins grayscale2rgb_0/hsync] [get_bd_pins sobel_dx_0/vid_pHsync]
+  connect_bd_net -net sobel_dx_0_vid_pVsync [get_bd_pins grayscale2rgb_0/vsync] [get_bd_pins sobel_dx_0/vid_pVsync]
   connect_bd_net -net v_axi4s_vid_out_0_locked [get_bd_pins rgb2dvi_0/aRst_n] [get_bd_pins v_axi4s_vid_out_0/locked]
   connect_bd_net -net v_axi4s_vid_out_0_vid_active_video [get_bd_pins rgb2grayscale_0/vid_active_video] [get_bd_pins v_axi4s_vid_out_0/vid_active_video]
   connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_pins rgb2grayscale_0/data_in] [get_bd_pins v_axi4s_vid_out_0/vid_data]

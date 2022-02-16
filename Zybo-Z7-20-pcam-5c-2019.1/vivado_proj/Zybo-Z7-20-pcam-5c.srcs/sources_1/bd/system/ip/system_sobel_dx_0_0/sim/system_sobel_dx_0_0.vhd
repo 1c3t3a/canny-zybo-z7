@@ -46,14 +46,14 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:gauss:1.0
+-- IP VLNV: xilinx.com:module_ref:sobel_dx:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY system_gauss_0_0 IS
+ENTITY system_sobel_dx_0_0 IS
   PORT (
     clk_pixel : IN STD_LOGIC;
     data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -65,12 +65,12 @@ ENTITY system_gauss_0_0 IS
     vid_pHsync : OUT STD_LOGIC;
     vid_pVsync : OUT STD_LOGIC
   );
-END system_gauss_0_0;
+END system_sobel_dx_0_0;
 
-ARCHITECTURE system_gauss_0_0_arch OF system_gauss_0_0 IS
+ARCHITECTURE system_sobel_dx_0_0_arch OF system_sobel_dx_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF system_gauss_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT gauss IS
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF system_sobel_dx_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT sobel_dx IS
     GENERIC (
       ROW_WIDTH : INTEGER;
       COLUMN_HEIGHT : INTEGER
@@ -86,17 +86,11 @@ ARCHITECTURE system_gauss_0_0_arch OF system_gauss_0_0 IS
       vid_pHsync : OUT STD_LOGIC;
       vid_pVsync : OUT STD_LOGIC
     );
-  END COMPONENT gauss;
-  ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF system_gauss_0_0_arch: ARCHITECTURE IS "gauss,Vivado 2019.1";
-  ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
-  ATTRIBUTE CHECK_LICENSE_TYPE OF system_gauss_0_0_arch : ARCHITECTURE IS "system_gauss_0_0,gauss,{}";
-  ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF system_gauss_0_0_arch: ARCHITECTURE IS "system_gauss_0_0,gauss,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=gauss,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,ROW_WIDTH=1280,COLUMN_HEIGHT=720}";
+  END COMPONENT sobel_dx;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
-  ATTRIBUTE IP_DEFINITION_SOURCE OF system_gauss_0_0_arch: ARCHITECTURE IS "module_ref";
+  ATTRIBUTE IP_DEFINITION_SOURCE OF system_sobel_dx_0_0_arch: ARCHITECTURE IS "module_ref";
 BEGIN
-  U0 : gauss
+  U0 : sobel_dx
     GENERIC MAP (
       ROW_WIDTH => 1280,
       COLUMN_HEIGHT => 720
@@ -112,4 +106,4 @@ BEGIN
       vid_pHsync => vid_pHsync,
       vid_pVsync => vid_pVsync
     );
-END system_gauss_0_0_arch;
+END system_sobel_dx_0_0_arch;

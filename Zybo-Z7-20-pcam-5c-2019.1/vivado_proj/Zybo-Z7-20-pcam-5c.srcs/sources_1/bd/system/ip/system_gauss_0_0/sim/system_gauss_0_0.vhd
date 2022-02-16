@@ -92,7 +92,7 @@ ARCHITECTURE system_gauss_0_0_arch OF system_gauss_0_0 IS
 BEGIN
   U0 : gauss
     GENERIC MAP (
-      ROW_WIDTH => 1080,
+      ROW_WIDTH => 1280,
       COLUMN_HEIGHT => 720
     )
     PORT MAP (

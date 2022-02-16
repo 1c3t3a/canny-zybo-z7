@@ -1,21 +1,21 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Wed Feb 16 09:48:22 2022
+// Date        : Wed Feb 16 10:42:12 2022
 // Host        : parallels-Parallels-Virtual-Platform running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/parallels/Documents/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ip/system_gauss_0_0/system_gauss_0_0_sim_netlist.v
-// Design      : system_gauss_0_0
+//               /home/parallels/Documents/canny-zybo-z7/Zybo-Z7-20-pcam-5c-2019.1/vivado_proj/Zybo-Z7-20-pcam-5c.srcs/sources_1/bd/system/ip/system_sobel_dx_0_0/system_sobel_dx_0_0_sim_netlist.v
+// Design      : system_sobel_dx_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_gauss_0_0,gauss,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "gauss,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "system_sobel_dx_0_0,sobel_dx,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "sobel_dx,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
-module system_gauss_0_0
+module system_sobel_dx_0_0
    (clk_pixel,
     data_in,
     vid_active_video,
@@ -45,7 +45,7 @@ module system_gauss_0_0
   wire vid_pVsync;
   wire vid_vsync;
 
-  system_gauss_0_0_gauss U0
+  system_sobel_dx_0_0_sobel_dx U0
        (.clk_pixel(clk_pixel),
         .data_in(data_in),
         .data_out(data_out),
@@ -57,8 +57,8 @@ module system_gauss_0_0
         .vid_vsync(vid_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "gauss" *) 
-module system_gauss_0_0_gauss
+(* ORIG_REF_NAME = "sobel_dx" *) 
+module system_sobel_dx_0_0_sobel_dx
    (vid_pHsync,
     vid_pVsync,
     data_out,
@@ -78,10 +78,7 @@ module system_gauss_0_0_gauss
   input vid_hsync;
   input vid_vsync;
 
-  wire [7:0]A;
-  wire [7:0]B;
-  wire [7:0]C;
-  wire [10:1]C__0;
+  wire [3839:3839]av_pipelined;
   wire \av_pipelined[0]_i_1_n_0 ;
   wire \av_pipelined_reg[1024]_srl32_n_0 ;
   wire \av_pipelined_reg[1056]_srl32_n_1 ;
@@ -206,265 +203,95 @@ module system_gauss_0_0_gauss
   wire clk_pixel;
   wire [7:0]data_in;
   wire [7:0]data_out;
-  wire \data_out0[-1111111104]__0_n_0 ;
-  wire \data_out0[-1111111104]__10_n_0 ;
-  wire \data_out0[-1111111104]__11_n_0 ;
-  wire \data_out0[-1111111104]__1_n_0 ;
-  wire \data_out0[-1111111104]__2_n_0 ;
-  wire \data_out0[-1111111104]__3_n_0 ;
-  wire \data_out0[-1111111104]__4_n_0 ;
-  wire \data_out0[-1111111104]__5_n_0 ;
-  wire \data_out0[-1111111104]__6_n_0 ;
-  wire \data_out0[-1111111104]__7_n_0 ;
-  wire \data_out0[-1111111104]__8_n_0 ;
-  wire \data_out0[-1111111104]__9_n_0 ;
-  wire \data_out0[-1111111104]_srl2_n_0 ;
-  wire \data_out0[-1111111105]__0_n_0 ;
-  wire \data_out0[-1111111105]__10_n_0 ;
-  wire \data_out0[-1111111105]__11_n_0 ;
-  wire \data_out0[-1111111105]__1_n_0 ;
-  wire \data_out0[-1111111105]__2_n_0 ;
-  wire \data_out0[-1111111105]__3_n_0 ;
-  wire \data_out0[-1111111105]__4_n_0 ;
-  wire \data_out0[-1111111105]__5_n_0 ;
-  wire \data_out0[-1111111105]__6_n_0 ;
-  wire \data_out0[-1111111105]__7_n_0 ;
-  wire \data_out0[-1111111105]__8_n_0 ;
-  wire \data_out0[-1111111105]__9_n_0 ;
-  wire \data_out0[-1111111105]_srl2_n_0 ;
-  wire \data_out0[-1111111106]__0_n_0 ;
-  wire \data_out0[-1111111106]__10_n_0 ;
-  wire \data_out0[-1111111106]__11_n_0 ;
-  wire \data_out0[-1111111106]__1_n_0 ;
-  wire \data_out0[-1111111106]__2_n_0 ;
-  wire \data_out0[-1111111106]__3_n_0 ;
-  wire \data_out0[-1111111106]__4_n_0 ;
-  wire \data_out0[-1111111106]__5_n_0 ;
-  wire \data_out0[-1111111106]__6_n_0 ;
-  wire \data_out0[-1111111106]__7_n_0 ;
-  wire \data_out0[-1111111106]__8_n_0 ;
-  wire \data_out0[-1111111106]__9_n_0 ;
-  wire \data_out0[-1111111106]_srl2_n_0 ;
-  wire \data_out0[-1111111107]__0_n_0 ;
-  wire \data_out0[-1111111107]__10_n_0 ;
-  wire \data_out0[-1111111107]__11_n_0 ;
-  wire \data_out0[-1111111107]__1_n_0 ;
-  wire \data_out0[-1111111107]__2_n_0 ;
-  wire \data_out0[-1111111107]__3_n_0 ;
-  wire \data_out0[-1111111107]__4_n_0 ;
-  wire \data_out0[-1111111107]__5_n_0 ;
-  wire \data_out0[-1111111107]__6_n_0 ;
-  wire \data_out0[-1111111107]__7_n_0 ;
-  wire \data_out0[-1111111107]__8_n_0 ;
-  wire \data_out0[-1111111107]__9_n_0 ;
-  wire \data_out0[-1111111107]_srl2_n_0 ;
-  wire \data_out0[-1111111108]__0_n_0 ;
-  wire \data_out0[-1111111108]__10_n_0 ;
-  wire \data_out0[-1111111108]__11_n_0 ;
-  wire \data_out0[-1111111108]__1_n_0 ;
-  wire \data_out0[-1111111108]__2_n_0 ;
-  wire \data_out0[-1111111108]__3_n_0 ;
-  wire \data_out0[-1111111108]__4_n_0 ;
-  wire \data_out0[-1111111108]__5_n_0 ;
-  wire \data_out0[-1111111108]__6_n_0 ;
-  wire \data_out0[-1111111108]__7_n_0 ;
-  wire \data_out0[-1111111108]__8_n_0 ;
-  wire \data_out0[-1111111108]__9_n_0 ;
-  wire \data_out0[-1111111108]_srl2_n_0 ;
-  wire \data_out0[-1111111109]__0_n_0 ;
-  wire \data_out0[-1111111109]__10_n_0 ;
-  wire \data_out0[-1111111109]__11_n_0 ;
-  wire \data_out0[-1111111109]__1_n_0 ;
-  wire \data_out0[-1111111109]__2_n_0 ;
-  wire \data_out0[-1111111109]__3_n_0 ;
-  wire \data_out0[-1111111109]__4_n_0 ;
-  wire \data_out0[-1111111109]__5_n_0 ;
-  wire \data_out0[-1111111109]__6_n_0 ;
-  wire \data_out0[-1111111109]__7_n_0 ;
-  wire \data_out0[-1111111109]__8_n_0 ;
-  wire \data_out0[-1111111109]__9_n_0 ;
-  wire \data_out0[-1111111109]_srl2_n_0 ;
-  wire \data_out0[-1111111110]__0_n_0 ;
-  wire \data_out0[-1111111110]__10_n_0 ;
-  wire \data_out0[-1111111110]__11_n_0 ;
-  wire \data_out0[-1111111110]__1_n_0 ;
-  wire \data_out0[-1111111110]__2_n_0 ;
-  wire \data_out0[-1111111110]__3_n_0 ;
-  wire \data_out0[-1111111110]__4_n_0 ;
-  wire \data_out0[-1111111110]__5_n_0 ;
-  wire \data_out0[-1111111110]__6_n_0 ;
-  wire \data_out0[-1111111110]__7_n_0 ;
-  wire \data_out0[-1111111110]__8_n_0 ;
-  wire \data_out0[-1111111110]__9_n_0 ;
-  wire \data_out0[-1111111110]_srl2_n_0 ;
-  wire \data_out0[-1111111111]__0_n_0 ;
-  wire \data_out0[-1111111111]__10_n_0 ;
-  wire \data_out0[-1111111111]__11_n_0 ;
-  wire \data_out0[-1111111111]__1_n_0 ;
-  wire \data_out0[-1111111111]__2_n_0 ;
-  wire \data_out0[-1111111111]__3_n_0 ;
-  wire \data_out0[-1111111111]__4_n_0 ;
-  wire \data_out0[-1111111111]__5_n_0 ;
-  wire \data_out0[-1111111111]__6_n_0 ;
-  wire \data_out0[-1111111111]__7_n_0 ;
-  wire \data_out0[-1111111111]__8_n_0 ;
-  wire \data_out0[-1111111111]__9_n_0 ;
-  wire \data_out0[-1111111111]_srl2_n_0 ;
-  wire data_out0__0_carry__0_i_10_n_0;
-  wire data_out0__0_carry__0_i_11_n_0;
-  wire data_out0__0_carry__0_i_12_n_0;
-  wire data_out0__0_carry__0_i_13_n_0;
-  wire data_out0__0_carry__0_i_1_n_0;
-  wire data_out0__0_carry__0_i_2_n_0;
-  wire data_out0__0_carry__0_i_3_n_0;
-  wire data_out0__0_carry__0_i_4_n_0;
-  wire data_out0__0_carry__0_i_5_n_0;
-  wire data_out0__0_carry__0_i_6_n_0;
-  wire data_out0__0_carry__0_i_7_n_0;
-  wire data_out0__0_carry__0_i_8_n_0;
-  wire data_out0__0_carry__0_i_9_n_0;
-  wire data_out0__0_carry__0_i_9_n_1;
-  wire data_out0__0_carry__0_i_9_n_2;
-  wire data_out0__0_carry__0_i_9_n_3;
-  wire data_out0__0_carry__0_i_9_n_4;
-  wire data_out0__0_carry__0_i_9_n_5;
-  wire data_out0__0_carry__0_i_9_n_6;
-  wire data_out0__0_carry__0_i_9_n_7;
-  wire data_out0__0_carry__0_n_0;
-  wire data_out0__0_carry__0_n_1;
-  wire data_out0__0_carry__0_n_2;
-  wire data_out0__0_carry__0_n_3;
-  wire data_out0__0_carry__1_i_10_n_0;
-  wire data_out0__0_carry__1_i_11_n_0;
-  wire data_out0__0_carry__1_i_12_n_0;
-  wire data_out0__0_carry__1_i_12_n_1;
-  wire data_out0__0_carry__1_i_12_n_2;
-  wire data_out0__0_carry__1_i_12_n_3;
-  wire data_out0__0_carry__1_i_12_n_4;
-  wire data_out0__0_carry__1_i_12_n_5;
-  wire data_out0__0_carry__1_i_12_n_6;
-  wire data_out0__0_carry__1_i_12_n_7;
-  wire data_out0__0_carry__1_i_13_n_2;
-  wire data_out0__0_carry__1_i_13_n_7;
-  wire data_out0__0_carry__1_i_14_n_0;
-  wire data_out0__0_carry__1_i_15_n_0;
-  wire data_out0__0_carry__1_i_16_n_0;
-  wire data_out0__0_carry__1_i_17_n_0;
-  wire data_out0__0_carry__1_i_18_n_0;
-  wire data_out0__0_carry__1_i_19_n_0;
-  wire data_out0__0_carry__1_i_19_n_1;
-  wire data_out0__0_carry__1_i_19_n_2;
-  wire data_out0__0_carry__1_i_19_n_3;
-  wire data_out0__0_carry__1_i_19_n_4;
-  wire data_out0__0_carry__1_i_19_n_5;
-  wire data_out0__0_carry__1_i_19_n_6;
-  wire data_out0__0_carry__1_i_19_n_7;
-  wire data_out0__0_carry__1_i_1_n_1;
-  wire data_out0__0_carry__1_i_1_n_2;
-  wire data_out0__0_carry__1_i_1_n_3;
-  wire data_out0__0_carry__1_i_1_n_4;
-  wire data_out0__0_carry__1_i_1_n_5;
-  wire data_out0__0_carry__1_i_1_n_6;
-  wire data_out0__0_carry__1_i_1_n_7;
-  wire data_out0__0_carry__1_i_20_n_0;
-  wire data_out0__0_carry__1_i_21_n_0;
-  wire data_out0__0_carry__1_i_21_n_1;
-  wire data_out0__0_carry__1_i_21_n_2;
-  wire data_out0__0_carry__1_i_21_n_3;
-  wire data_out0__0_carry__1_i_21_n_4;
-  wire data_out0__0_carry__1_i_21_n_5;
-  wire data_out0__0_carry__1_i_21_n_6;
-  wire data_out0__0_carry__1_i_22_n_0;
-  wire data_out0__0_carry__1_i_23_n_0;
-  wire data_out0__0_carry__1_i_24_n_0;
-  wire data_out0__0_carry__1_i_25_n_0;
-  wire data_out0__0_carry__1_i_26_n_0;
-  wire data_out0__0_carry__1_i_27_n_0;
-  wire data_out0__0_carry__1_i_28_n_0;
-  wire data_out0__0_carry__1_i_2_n_0;
-  wire data_out0__0_carry__1_i_3_n_1;
-  wire data_out0__0_carry__1_i_3_n_3;
-  wire data_out0__0_carry__1_i_4_n_0;
-  wire data_out0__0_carry__1_i_5_n_0;
-  wire data_out0__0_carry__1_i_5_n_1;
-  wire data_out0__0_carry__1_i_5_n_2;
-  wire data_out0__0_carry__1_i_5_n_3;
-  wire data_out0__0_carry__1_i_6_n_1;
-  wire data_out0__0_carry__1_i_6_n_3;
-  wire data_out0__0_carry__1_i_6_n_6;
-  wire data_out0__0_carry__1_i_6_n_7;
-  wire data_out0__0_carry__1_i_7_n_0;
-  wire data_out0__0_carry__1_i_8_n_0;
-  wire data_out0__0_carry__1_i_9_n_0;
-  wire data_out0__0_carry__1_n_1;
-  wire data_out0__0_carry__1_n_2;
-  wire data_out0__0_carry__1_n_3;
-  wire data_out0__0_carry_i_10_n_0;
-  wire data_out0__0_carry_i_11_n_0;
-  wire data_out0__0_carry_i_12_n_0;
-  wire data_out0__0_carry_i_12_n_1;
-  wire data_out0__0_carry_i_12_n_2;
-  wire data_out0__0_carry_i_12_n_3;
-  wire data_out0__0_carry_i_13_n_0;
-  wire data_out0__0_carry_i_14_n_0;
-  wire data_out0__0_carry_i_15_n_0;
-  wire data_out0__0_carry_i_16_n_0;
-  wire data_out0__0_carry_i_16_n_1;
-  wire data_out0__0_carry_i_16_n_2;
-  wire data_out0__0_carry_i_16_n_3;
-  wire data_out0__0_carry_i_16_n_4;
-  wire data_out0__0_carry_i_16_n_5;
-  wire data_out0__0_carry_i_16_n_6;
-  wire data_out0__0_carry_i_17_n_0;
-  wire data_out0__0_carry_i_18_n_0;
-  wire data_out0__0_carry_i_19_n_0;
-  wire data_out0__0_carry_i_1_n_0;
-  wire data_out0__0_carry_i_2_n_0;
-  wire data_out0__0_carry_i_3_n_0;
-  wire data_out0__0_carry_i_4_n_0;
-  wire data_out0__0_carry_i_5_n_0;
-  wire data_out0__0_carry_i_6_n_0;
-  wire data_out0__0_carry_i_7_n_0;
-  wire data_out0__0_carry_i_8_n_0;
-  wire data_out0__0_carry_i_8_n_1;
-  wire data_out0__0_carry_i_8_n_2;
-  wire data_out0__0_carry_i_8_n_3;
-  wire data_out0__0_carry_i_8_n_4;
-  wire data_out0__0_carry_i_8_n_5;
-  wire data_out0__0_carry_i_8_n_6;
-  wire data_out0__0_carry_i_9_n_0;
-  wire data_out0__0_carry_n_0;
-  wire data_out0__0_carry_n_1;
-  wire data_out0__0_carry_n_2;
-  wire data_out0__0_carry_n_3;
-  wire data_out0__32_carry__0_i_1_n_0;
-  wire data_out0__32_carry__0_i_2_n_0;
-  wire data_out0__32_carry__0_i_3_n_0;
-  wire data_out0__32_carry__0_i_4_n_0;
-  wire data_out0__32_carry__0_i_5_n_0;
-  wire data_out0__32_carry__0_i_6_n_0;
-  wire data_out0__32_carry__0_i_7_n_0;
-  wire data_out0__32_carry__0_i_8_n_0;
-  wire data_out0__32_carry__0_n_0;
-  wire data_out0__32_carry__0_n_1;
-  wire data_out0__32_carry__0_n_2;
-  wire data_out0__32_carry__0_n_3;
-  wire data_out0__32_carry__1_i_1_n_0;
-  wire data_out0__32_carry__1_n_1;
-  wire data_out0__32_carry__1_n_2;
-  wire data_out0__32_carry__1_n_3;
-  wire data_out0__32_carry_i_1_n_0;
-  wire data_out0__32_carry_i_2_n_0;
-  wire data_out0__32_carry_i_3_n_0;
-  wire data_out0__32_carry_i_4_n_0;
-  wire data_out0__32_carry_i_5_n_0;
-  wire data_out0__32_carry_i_6_n_0;
-  wire data_out0__32_carry_i_7_n_0;
-  wire data_out0__32_carry_n_0;
-  wire data_out0__32_carry_n_1;
-  wire data_out0__32_carry_n_2;
-  wire data_out0__32_carry_n_3;
-  wire [7:0]data_out4;
+  wire [7:7]data_out0;
+  wire \data_out1[-1111111104]__0_n_0 ;
+  wire \data_out1[-1111111104]__1_n_0 ;
+  wire \data_out1[-1111111105]__0_n_0 ;
+  wire \data_out1[-1111111105]__1_n_0 ;
+  wire \data_out1[-1111111106]__0_n_0 ;
+  wire \data_out1[-1111111106]__1_n_0 ;
+  wire \data_out1[-1111111107]__0_n_0 ;
+  wire \data_out1[-1111111107]__1_n_0 ;
+  wire \data_out1[-1111111108]__0_n_0 ;
+  wire \data_out1[-1111111108]__1_n_0 ;
+  wire \data_out1[-1111111109]__0_n_0 ;
+  wire \data_out1[-1111111109]__1_n_0 ;
+  wire \data_out1[-1111111110]__0_n_0 ;
+  wire \data_out1[-1111111110]__1_n_0 ;
+  wire \data_out1[-1111111111]__0_n_0 ;
+  wire \data_out1[-1111111111]__1_n_0 ;
+  wire \data_out1[-_n_0_1111111104] ;
+  wire \data_out1[-_n_0_1111111105] ;
+  wire \data_out1[-_n_0_1111111106] ;
+  wire \data_out1[-_n_0_1111111107] ;
+  wire \data_out1[-_n_0_1111111108] ;
+  wire \data_out1[-_n_0_1111111109] ;
+  wire \data_out1[-_n_0_1111111110] ;
+  wire \data_out1[-_n_0_1111111111] ;
+  wire data_out1__1_carry__0_i_1_n_0;
+  wire data_out1__1_carry__0_i_2_n_0;
+  wire data_out1__1_carry__0_i_3_n_0;
+  wire data_out1__1_carry__0_i_4_n_0;
+  wire data_out1__1_carry__0_i_5_n_0;
+  wire data_out1__1_carry__0_i_6_n_0;
+  wire data_out1__1_carry__0_i_7_n_0;
+  wire data_out1__1_carry__0_i_8_n_0;
+  wire data_out1__1_carry__0_n_0;
+  wire data_out1__1_carry__0_n_1;
+  wire data_out1__1_carry__0_n_2;
+  wire data_out1__1_carry__0_n_3;
+  wire data_out1__1_carry__0_n_4;
+  wire data_out1__1_carry__0_n_5;
+  wire data_out1__1_carry__0_n_6;
+  wire data_out1__1_carry__0_n_7;
+  wire data_out1__1_carry__1_i_1_n_0;
+  wire data_out1__1_carry__1_i_2_n_0;
+  wire data_out1__1_carry__1_i_3_n_0;
+  wire data_out1__1_carry__1_n_2;
+  wire data_out1__1_carry__1_n_3;
+  wire data_out1__1_carry__1_n_5;
+  wire data_out1__1_carry__1_n_6;
+  wire data_out1__1_carry__1_n_7;
+  wire data_out1__1_carry_i_1_n_0;
+  wire data_out1__1_carry_i_2_n_0;
+  wire data_out1__1_carry_i_3_n_0;
+  wire data_out1__1_carry_i_4_n_0;
+  wire data_out1__1_carry_i_5_n_0;
+  wire data_out1__1_carry_i_6_n_0;
+  wire data_out1__1_carry_n_0;
+  wire data_out1__1_carry_n_1;
+  wire data_out1__1_carry_n_2;
+  wire data_out1__1_carry_n_3;
+  wire data_out1__1_carry_n_4;
+  wire data_out1__1_carry_n_5;
+  wire data_out1__1_carry_n_6;
+  wire data_out1__1_carry_n_7;
+  wire \data_out1_inferred__1/i___1_carry__0_n_0 ;
+  wire \data_out1_inferred__1/i___1_carry__0_n_1 ;
+  wire \data_out1_inferred__1/i___1_carry__0_n_2 ;
+  wire \data_out1_inferred__1/i___1_carry__0_n_3 ;
+  wire \data_out1_inferred__1/i___1_carry__1_n_2 ;
+  wire \data_out1_inferred__1/i___1_carry__1_n_3 ;
+  wire \data_out1_inferred__1/i___1_carry_n_0 ;
+  wire \data_out1_inferred__1/i___1_carry_n_1 ;
+  wire \data_out1_inferred__1/i___1_carry_n_2 ;
+  wire \data_out1_inferred__1/i___1_carry_n_3 ;
+  wire \data_out4[-1111111104]__0_n_0 ;
+  wire \data_out4[-1111111104]__1_n_0 ;
+  wire \data_out4[-1111111105]__0_n_0 ;
+  wire \data_out4[-1111111105]__1_n_0 ;
+  wire \data_out4[-1111111106]__0_n_0 ;
+  wire \data_out4[-1111111106]__1_n_0 ;
+  wire \data_out4[-1111111107]__0_n_0 ;
+  wire \data_out4[-1111111107]__1_n_0 ;
+  wire \data_out4[-1111111108]__0_n_0 ;
+  wire \data_out4[-1111111108]__1_n_0 ;
+  wire \data_out4[-1111111109]__0_n_0 ;
+  wire \data_out4[-1111111109]__1_n_0 ;
+  wire \data_out4[-1111111110]__0_n_0 ;
+  wire \data_out4[-1111111110]__1_n_0 ;
+  wire \data_out4[-1111111111]__0_n_0 ;
+  wire \data_out4[-1111111111]__1_n_0 ;
   wire \data_out4[-_n_0_1111111104] ;
   wire \data_out4[-_n_0_1111111105] ;
   wire \data_out4[-_n_0_1111111106] ;
@@ -473,6 +300,103 @@ module system_gauss_0_0_gauss
   wire \data_out4[-_n_0_1111111109] ;
   wire \data_out4[-_n_0_1111111110] ;
   wire \data_out4[-_n_0_1111111111] ;
+  wire [7:0]data_out4__1;
+  wire data_out4_n_100;
+  wire data_out4_n_101;
+  wire data_out4_n_102;
+  wire data_out4_n_103;
+  wire data_out4_n_104;
+  wire data_out4_n_105;
+  wire data_out4_n_106;
+  wire data_out4_n_107;
+  wire data_out4_n_108;
+  wire data_out4_n_109;
+  wire data_out4_n_110;
+  wire data_out4_n_111;
+  wire data_out4_n_112;
+  wire data_out4_n_113;
+  wire data_out4_n_114;
+  wire data_out4_n_115;
+  wire data_out4_n_116;
+  wire data_out4_n_117;
+  wire data_out4_n_118;
+  wire data_out4_n_119;
+  wire data_out4_n_120;
+  wire data_out4_n_121;
+  wire data_out4_n_122;
+  wire data_out4_n_123;
+  wire data_out4_n_124;
+  wire data_out4_n_125;
+  wire data_out4_n_126;
+  wire data_out4_n_127;
+  wire data_out4_n_128;
+  wire data_out4_n_129;
+  wire data_out4_n_130;
+  wire data_out4_n_131;
+  wire data_out4_n_132;
+  wire data_out4_n_133;
+  wire data_out4_n_134;
+  wire data_out4_n_135;
+  wire data_out4_n_136;
+  wire data_out4_n_137;
+  wire data_out4_n_138;
+  wire data_out4_n_139;
+  wire data_out4_n_140;
+  wire data_out4_n_141;
+  wire data_out4_n_142;
+  wire data_out4_n_143;
+  wire data_out4_n_144;
+  wire data_out4_n_145;
+  wire data_out4_n_146;
+  wire data_out4_n_147;
+  wire data_out4_n_148;
+  wire data_out4_n_149;
+  wire data_out4_n_150;
+  wire data_out4_n_151;
+  wire data_out4_n_152;
+  wire data_out4_n_153;
+  wire data_out4_n_58;
+  wire data_out4_n_59;
+  wire data_out4_n_60;
+  wire data_out4_n_61;
+  wire data_out4_n_62;
+  wire data_out4_n_63;
+  wire data_out4_n_64;
+  wire data_out4_n_65;
+  wire data_out4_n_66;
+  wire data_out4_n_67;
+  wire data_out4_n_68;
+  wire data_out4_n_69;
+  wire data_out4_n_70;
+  wire data_out4_n_71;
+  wire data_out4_n_72;
+  wire data_out4_n_73;
+  wire data_out4_n_74;
+  wire data_out4_n_75;
+  wire data_out4_n_76;
+  wire data_out4_n_77;
+  wire data_out4_n_78;
+  wire data_out4_n_79;
+  wire data_out4_n_80;
+  wire data_out4_n_81;
+  wire data_out4_n_82;
+  wire data_out4_n_83;
+  wire data_out4_n_84;
+  wire data_out4_n_85;
+  wire data_out4_n_86;
+  wire data_out4_n_87;
+  wire data_out4_n_88;
+  wire data_out4_n_89;
+  wire data_out4_n_90;
+  wire data_out4_n_91;
+  wire data_out4_n_92;
+  wire data_out4_n_93;
+  wire data_out4_n_94;
+  wire data_out4_n_95;
+  wire data_out4_n_96;
+  wire data_out4_n_97;
+  wire data_out4_n_98;
+  wire data_out4_n_99;
   wire \data_pipelined_reg[10200]_srl27_n_0 ;
   wire \data_pipelined_reg[10201]_srl27_n_0 ;
   wire \data_pipelined_reg[10202]_srl27_n_0 ;
@@ -489,86 +413,86 @@ module system_gauss_0_0_gauss
   wire \data_pipelined_reg[1029]_srl32_n_0 ;
   wire \data_pipelined_reg[1030]_srl32_n_0 ;
   wire \data_pipelined_reg[1031]_srl32_n_0 ;
-  wire \data_pipelined_reg[10480]_srl32_n_1 ;
-  wire \data_pipelined_reg[10481]_srl32_n_1 ;
-  wire \data_pipelined_reg[10482]_srl32_n_1 ;
-  wire \data_pipelined_reg[10483]_srl32_n_1 ;
-  wire \data_pipelined_reg[10484]_srl32_n_1 ;
-  wire \data_pipelined_reg[10485]_srl32_n_1 ;
-  wire \data_pipelined_reg[10486]_srl32_n_1 ;
-  wire \data_pipelined_reg[10487]_srl32_n_1 ;
-  wire \data_pipelined_reg[10736]_srl32_n_1 ;
-  wire \data_pipelined_reg[10737]_srl32_n_1 ;
-  wire \data_pipelined_reg[10738]_srl32_n_1 ;
-  wire \data_pipelined_reg[10739]_srl32_n_1 ;
-  wire \data_pipelined_reg[10740]_srl32_n_1 ;
-  wire \data_pipelined_reg[10741]_srl32_n_1 ;
-  wire \data_pipelined_reg[10742]_srl32_n_1 ;
-  wire \data_pipelined_reg[10743]_srl32_n_1 ;
-  wire \data_pipelined_reg[10992]_srl32_n_1 ;
-  wire \data_pipelined_reg[10993]_srl32_n_1 ;
-  wire \data_pipelined_reg[10994]_srl32_n_1 ;
-  wire \data_pipelined_reg[10995]_srl32_n_1 ;
-  wire \data_pipelined_reg[10996]_srl32_n_1 ;
-  wire \data_pipelined_reg[10997]_srl32_n_1 ;
-  wire \data_pipelined_reg[10998]_srl32_n_1 ;
-  wire \data_pipelined_reg[10999]_srl32_n_1 ;
-  wire \data_pipelined_reg[11248]_srl32_n_0 ;
-  wire \data_pipelined_reg[11249]_srl32_n_0 ;
-  wire \data_pipelined_reg[11250]_srl32_n_0 ;
-  wire \data_pipelined_reg[11251]_srl32_n_0 ;
-  wire \data_pipelined_reg[11252]_srl32_n_0 ;
-  wire \data_pipelined_reg[11253]_srl32_n_0 ;
-  wire \data_pipelined_reg[11254]_srl32_n_0 ;
-  wire \data_pipelined_reg[11255]_srl32_n_0 ;
-  wire \data_pipelined_reg[11504]_srl32_n_1 ;
-  wire \data_pipelined_reg[11505]_srl32_n_1 ;
-  wire \data_pipelined_reg[11506]_srl32_n_1 ;
-  wire \data_pipelined_reg[11507]_srl32_n_1 ;
-  wire \data_pipelined_reg[11508]_srl32_n_1 ;
-  wire \data_pipelined_reg[11509]_srl32_n_1 ;
-  wire \data_pipelined_reg[11510]_srl32_n_1 ;
-  wire \data_pipelined_reg[11511]_srl32_n_1 ;
-  wire \data_pipelined_reg[11760]_srl32_n_1 ;
-  wire \data_pipelined_reg[11761]_srl32_n_1 ;
-  wire \data_pipelined_reg[11762]_srl32_n_1 ;
-  wire \data_pipelined_reg[11763]_srl32_n_1 ;
-  wire \data_pipelined_reg[11764]_srl32_n_1 ;
-  wire \data_pipelined_reg[11765]_srl32_n_1 ;
-  wire \data_pipelined_reg[11766]_srl32_n_1 ;
-  wire \data_pipelined_reg[11767]_srl32_n_1 ;
-  wire \data_pipelined_reg[12016]_srl32_n_1 ;
-  wire \data_pipelined_reg[12017]_srl32_n_1 ;
-  wire \data_pipelined_reg[12018]_srl32_n_1 ;
-  wire \data_pipelined_reg[12019]_srl32_n_1 ;
-  wire \data_pipelined_reg[12020]_srl32_n_1 ;
-  wire \data_pipelined_reg[12021]_srl32_n_1 ;
-  wire \data_pipelined_reg[12022]_srl32_n_1 ;
-  wire \data_pipelined_reg[12023]_srl32_n_1 ;
-  wire \data_pipelined_reg[12272]_srl32_n_0 ;
-  wire \data_pipelined_reg[12273]_srl32_n_0 ;
-  wire \data_pipelined_reg[12274]_srl32_n_0 ;
-  wire \data_pipelined_reg[12275]_srl32_n_0 ;
-  wire \data_pipelined_reg[12276]_srl32_n_0 ;
-  wire \data_pipelined_reg[12277]_srl32_n_0 ;
-  wire \data_pipelined_reg[12278]_srl32_n_0 ;
-  wire \data_pipelined_reg[12279]_srl32_n_0 ;
-  wire \data_pipelined_reg[12528]_srl32_n_1 ;
-  wire \data_pipelined_reg[12529]_srl32_n_1 ;
-  wire \data_pipelined_reg[12530]_srl32_n_1 ;
-  wire \data_pipelined_reg[12531]_srl32_n_1 ;
-  wire \data_pipelined_reg[12532]_srl32_n_1 ;
-  wire \data_pipelined_reg[12533]_srl32_n_1 ;
-  wire \data_pipelined_reg[12534]_srl32_n_1 ;
-  wire \data_pipelined_reg[12535]_srl32_n_1 ;
-  wire \data_pipelined_reg[12784]_srl32_n_1 ;
-  wire \data_pipelined_reg[12785]_srl32_n_1 ;
-  wire \data_pipelined_reg[12786]_srl32_n_1 ;
-  wire \data_pipelined_reg[12787]_srl32_n_1 ;
-  wire \data_pipelined_reg[12788]_srl32_n_1 ;
-  wire \data_pipelined_reg[12789]_srl32_n_1 ;
-  wire \data_pipelined_reg[12790]_srl32_n_1 ;
-  wire \data_pipelined_reg[12791]_srl32_n_1 ;
+  wire \data_pipelined_reg[10472]_srl32_n_1 ;
+  wire \data_pipelined_reg[10473]_srl32_n_1 ;
+  wire \data_pipelined_reg[10474]_srl32_n_1 ;
+  wire \data_pipelined_reg[10475]_srl32_n_1 ;
+  wire \data_pipelined_reg[10476]_srl32_n_1 ;
+  wire \data_pipelined_reg[10477]_srl32_n_1 ;
+  wire \data_pipelined_reg[10478]_srl32_n_1 ;
+  wire \data_pipelined_reg[10479]_srl32_n_1 ;
+  wire \data_pipelined_reg[10728]_srl32_n_1 ;
+  wire \data_pipelined_reg[10729]_srl32_n_1 ;
+  wire \data_pipelined_reg[10730]_srl32_n_1 ;
+  wire \data_pipelined_reg[10731]_srl32_n_1 ;
+  wire \data_pipelined_reg[10732]_srl32_n_1 ;
+  wire \data_pipelined_reg[10733]_srl32_n_1 ;
+  wire \data_pipelined_reg[10734]_srl32_n_1 ;
+  wire \data_pipelined_reg[10735]_srl32_n_1 ;
+  wire \data_pipelined_reg[10984]_srl32_n_1 ;
+  wire \data_pipelined_reg[10985]_srl32_n_1 ;
+  wire \data_pipelined_reg[10986]_srl32_n_1 ;
+  wire \data_pipelined_reg[10987]_srl32_n_1 ;
+  wire \data_pipelined_reg[10988]_srl32_n_1 ;
+  wire \data_pipelined_reg[10989]_srl32_n_1 ;
+  wire \data_pipelined_reg[10990]_srl32_n_1 ;
+  wire \data_pipelined_reg[10991]_srl32_n_1 ;
+  wire \data_pipelined_reg[11240]_srl32_n_0 ;
+  wire \data_pipelined_reg[11241]_srl32_n_0 ;
+  wire \data_pipelined_reg[11242]_srl32_n_0 ;
+  wire \data_pipelined_reg[11243]_srl32_n_0 ;
+  wire \data_pipelined_reg[11244]_srl32_n_0 ;
+  wire \data_pipelined_reg[11245]_srl32_n_0 ;
+  wire \data_pipelined_reg[11246]_srl32_n_0 ;
+  wire \data_pipelined_reg[11247]_srl32_n_0 ;
+  wire \data_pipelined_reg[11496]_srl32_n_1 ;
+  wire \data_pipelined_reg[11497]_srl32_n_1 ;
+  wire \data_pipelined_reg[11498]_srl32_n_1 ;
+  wire \data_pipelined_reg[11499]_srl32_n_1 ;
+  wire \data_pipelined_reg[11500]_srl32_n_1 ;
+  wire \data_pipelined_reg[11501]_srl32_n_1 ;
+  wire \data_pipelined_reg[11502]_srl32_n_1 ;
+  wire \data_pipelined_reg[11503]_srl32_n_1 ;
+  wire \data_pipelined_reg[11752]_srl32_n_1 ;
+  wire \data_pipelined_reg[11753]_srl32_n_1 ;
+  wire \data_pipelined_reg[11754]_srl32_n_1 ;
+  wire \data_pipelined_reg[11755]_srl32_n_1 ;
+  wire \data_pipelined_reg[11756]_srl32_n_1 ;
+  wire \data_pipelined_reg[11757]_srl32_n_1 ;
+  wire \data_pipelined_reg[11758]_srl32_n_1 ;
+  wire \data_pipelined_reg[11759]_srl32_n_1 ;
+  wire \data_pipelined_reg[12008]_srl32_n_1 ;
+  wire \data_pipelined_reg[12009]_srl32_n_1 ;
+  wire \data_pipelined_reg[12010]_srl32_n_1 ;
+  wire \data_pipelined_reg[12011]_srl32_n_1 ;
+  wire \data_pipelined_reg[12012]_srl32_n_1 ;
+  wire \data_pipelined_reg[12013]_srl32_n_1 ;
+  wire \data_pipelined_reg[12014]_srl32_n_1 ;
+  wire \data_pipelined_reg[12015]_srl32_n_1 ;
+  wire \data_pipelined_reg[12264]_srl32_n_0 ;
+  wire \data_pipelined_reg[12265]_srl32_n_0 ;
+  wire \data_pipelined_reg[12266]_srl32_n_0 ;
+  wire \data_pipelined_reg[12267]_srl32_n_0 ;
+  wire \data_pipelined_reg[12268]_srl32_n_0 ;
+  wire \data_pipelined_reg[12269]_srl32_n_0 ;
+  wire \data_pipelined_reg[12270]_srl32_n_0 ;
+  wire \data_pipelined_reg[12271]_srl32_n_0 ;
+  wire \data_pipelined_reg[12520]_srl32_n_1 ;
+  wire \data_pipelined_reg[12521]_srl32_n_1 ;
+  wire \data_pipelined_reg[12522]_srl32_n_1 ;
+  wire \data_pipelined_reg[12523]_srl32_n_1 ;
+  wire \data_pipelined_reg[12524]_srl32_n_1 ;
+  wire \data_pipelined_reg[12525]_srl32_n_1 ;
+  wire \data_pipelined_reg[12526]_srl32_n_1 ;
+  wire \data_pipelined_reg[12527]_srl32_n_1 ;
+  wire \data_pipelined_reg[12776]_srl32_n_1 ;
+  wire \data_pipelined_reg[12777]_srl32_n_1 ;
+  wire \data_pipelined_reg[12778]_srl32_n_1 ;
+  wire \data_pipelined_reg[12779]_srl32_n_1 ;
+  wire \data_pipelined_reg[12780]_srl32_n_1 ;
+  wire \data_pipelined_reg[12781]_srl32_n_1 ;
+  wire \data_pipelined_reg[12782]_srl32_n_1 ;
+  wire \data_pipelined_reg[12783]_srl32_n_1 ;
   wire \data_pipelined_reg[1280]_srl32_n_1 ;
   wire \data_pipelined_reg[1281]_srl32_n_1 ;
   wire \data_pipelined_reg[1282]_srl32_n_1 ;
@@ -577,86 +501,86 @@ module system_gauss_0_0_gauss
   wire \data_pipelined_reg[1285]_srl32_n_1 ;
   wire \data_pipelined_reg[1286]_srl32_n_1 ;
   wire \data_pipelined_reg[1287]_srl32_n_1 ;
-  wire \data_pipelined_reg[13040]_srl32_n_1 ;
-  wire \data_pipelined_reg[13041]_srl32_n_1 ;
-  wire \data_pipelined_reg[13042]_srl32_n_1 ;
-  wire \data_pipelined_reg[13043]_srl32_n_1 ;
-  wire \data_pipelined_reg[13044]_srl32_n_1 ;
-  wire \data_pipelined_reg[13045]_srl32_n_1 ;
-  wire \data_pipelined_reg[13046]_srl32_n_1 ;
-  wire \data_pipelined_reg[13047]_srl32_n_1 ;
-  wire \data_pipelined_reg[13296]_srl32_n_0 ;
-  wire \data_pipelined_reg[13297]_srl32_n_0 ;
-  wire \data_pipelined_reg[13298]_srl32_n_0 ;
-  wire \data_pipelined_reg[13299]_srl32_n_0 ;
-  wire \data_pipelined_reg[13300]_srl32_n_0 ;
-  wire \data_pipelined_reg[13301]_srl32_n_0 ;
-  wire \data_pipelined_reg[13302]_srl32_n_0 ;
-  wire \data_pipelined_reg[13303]_srl32_n_0 ;
-  wire \data_pipelined_reg[13552]_srl32_n_1 ;
-  wire \data_pipelined_reg[13553]_srl32_n_1 ;
-  wire \data_pipelined_reg[13554]_srl32_n_1 ;
-  wire \data_pipelined_reg[13555]_srl32_n_1 ;
-  wire \data_pipelined_reg[13556]_srl32_n_1 ;
-  wire \data_pipelined_reg[13557]_srl32_n_1 ;
-  wire \data_pipelined_reg[13558]_srl32_n_1 ;
-  wire \data_pipelined_reg[13559]_srl32_n_1 ;
-  wire \data_pipelined_reg[13808]_srl32_n_1 ;
-  wire \data_pipelined_reg[13809]_srl32_n_1 ;
-  wire \data_pipelined_reg[13810]_srl32_n_1 ;
-  wire \data_pipelined_reg[13811]_srl32_n_1 ;
-  wire \data_pipelined_reg[13812]_srl32_n_1 ;
-  wire \data_pipelined_reg[13813]_srl32_n_1 ;
-  wire \data_pipelined_reg[13814]_srl32_n_1 ;
-  wire \data_pipelined_reg[13815]_srl32_n_1 ;
-  wire \data_pipelined_reg[14064]_srl32_n_1 ;
-  wire \data_pipelined_reg[14065]_srl32_n_1 ;
-  wire \data_pipelined_reg[14066]_srl32_n_1 ;
-  wire \data_pipelined_reg[14067]_srl32_n_1 ;
-  wire \data_pipelined_reg[14068]_srl32_n_1 ;
-  wire \data_pipelined_reg[14069]_srl32_n_1 ;
-  wire \data_pipelined_reg[14070]_srl32_n_1 ;
-  wire \data_pipelined_reg[14071]_srl32_n_1 ;
-  wire \data_pipelined_reg[14320]_srl32_n_0 ;
-  wire \data_pipelined_reg[14321]_srl32_n_0 ;
-  wire \data_pipelined_reg[14322]_srl32_n_0 ;
-  wire \data_pipelined_reg[14323]_srl32_n_0 ;
-  wire \data_pipelined_reg[14324]_srl32_n_0 ;
-  wire \data_pipelined_reg[14325]_srl32_n_0 ;
-  wire \data_pipelined_reg[14326]_srl32_n_0 ;
-  wire \data_pipelined_reg[14327]_srl32_n_0 ;
-  wire \data_pipelined_reg[14576]_srl32_n_1 ;
-  wire \data_pipelined_reg[14577]_srl32_n_1 ;
-  wire \data_pipelined_reg[14578]_srl32_n_1 ;
-  wire \data_pipelined_reg[14579]_srl32_n_1 ;
-  wire \data_pipelined_reg[14580]_srl32_n_1 ;
-  wire \data_pipelined_reg[14581]_srl32_n_1 ;
-  wire \data_pipelined_reg[14582]_srl32_n_1 ;
-  wire \data_pipelined_reg[14583]_srl32_n_1 ;
-  wire \data_pipelined_reg[14832]_srl32_n_1 ;
-  wire \data_pipelined_reg[14833]_srl32_n_1 ;
-  wire \data_pipelined_reg[14834]_srl32_n_1 ;
-  wire \data_pipelined_reg[14835]_srl32_n_1 ;
-  wire \data_pipelined_reg[14836]_srl32_n_1 ;
-  wire \data_pipelined_reg[14837]_srl32_n_1 ;
-  wire \data_pipelined_reg[14838]_srl32_n_1 ;
-  wire \data_pipelined_reg[14839]_srl32_n_1 ;
-  wire \data_pipelined_reg[15088]_srl32_n_1 ;
-  wire \data_pipelined_reg[15089]_srl32_n_1 ;
-  wire \data_pipelined_reg[15090]_srl32_n_1 ;
-  wire \data_pipelined_reg[15091]_srl32_n_1 ;
-  wire \data_pipelined_reg[15092]_srl32_n_1 ;
-  wire \data_pipelined_reg[15093]_srl32_n_1 ;
-  wire \data_pipelined_reg[15094]_srl32_n_1 ;
-  wire \data_pipelined_reg[15095]_srl32_n_1 ;
-  wire \data_pipelined_reg[15344]_srl32_n_0 ;
-  wire \data_pipelined_reg[15345]_srl32_n_0 ;
-  wire \data_pipelined_reg[15346]_srl32_n_0 ;
-  wire \data_pipelined_reg[15347]_srl32_n_0 ;
-  wire \data_pipelined_reg[15348]_srl32_n_0 ;
-  wire \data_pipelined_reg[15349]_srl32_n_0 ;
-  wire \data_pipelined_reg[15350]_srl32_n_0 ;
-  wire \data_pipelined_reg[15351]_srl32_n_0 ;
+  wire \data_pipelined_reg[13032]_srl32_n_1 ;
+  wire \data_pipelined_reg[13033]_srl32_n_1 ;
+  wire \data_pipelined_reg[13034]_srl32_n_1 ;
+  wire \data_pipelined_reg[13035]_srl32_n_1 ;
+  wire \data_pipelined_reg[13036]_srl32_n_1 ;
+  wire \data_pipelined_reg[13037]_srl32_n_1 ;
+  wire \data_pipelined_reg[13038]_srl32_n_1 ;
+  wire \data_pipelined_reg[13039]_srl32_n_1 ;
+  wire \data_pipelined_reg[13288]_srl32_n_0 ;
+  wire \data_pipelined_reg[13289]_srl32_n_0 ;
+  wire \data_pipelined_reg[13290]_srl32_n_0 ;
+  wire \data_pipelined_reg[13291]_srl32_n_0 ;
+  wire \data_pipelined_reg[13292]_srl32_n_0 ;
+  wire \data_pipelined_reg[13293]_srl32_n_0 ;
+  wire \data_pipelined_reg[13294]_srl32_n_0 ;
+  wire \data_pipelined_reg[13295]_srl32_n_0 ;
+  wire \data_pipelined_reg[13544]_srl32_n_1 ;
+  wire \data_pipelined_reg[13545]_srl32_n_1 ;
+  wire \data_pipelined_reg[13546]_srl32_n_1 ;
+  wire \data_pipelined_reg[13547]_srl32_n_1 ;
+  wire \data_pipelined_reg[13548]_srl32_n_1 ;
+  wire \data_pipelined_reg[13549]_srl32_n_1 ;
+  wire \data_pipelined_reg[13550]_srl32_n_1 ;
+  wire \data_pipelined_reg[13551]_srl32_n_1 ;
+  wire \data_pipelined_reg[13800]_srl32_n_1 ;
+  wire \data_pipelined_reg[13801]_srl32_n_1 ;
+  wire \data_pipelined_reg[13802]_srl32_n_1 ;
+  wire \data_pipelined_reg[13803]_srl32_n_1 ;
+  wire \data_pipelined_reg[13804]_srl32_n_1 ;
+  wire \data_pipelined_reg[13805]_srl32_n_1 ;
+  wire \data_pipelined_reg[13806]_srl32_n_1 ;
+  wire \data_pipelined_reg[13807]_srl32_n_1 ;
+  wire \data_pipelined_reg[14056]_srl32_n_1 ;
+  wire \data_pipelined_reg[14057]_srl32_n_1 ;
+  wire \data_pipelined_reg[14058]_srl32_n_1 ;
+  wire \data_pipelined_reg[14059]_srl32_n_1 ;
+  wire \data_pipelined_reg[14060]_srl32_n_1 ;
+  wire \data_pipelined_reg[14061]_srl32_n_1 ;
+  wire \data_pipelined_reg[14062]_srl32_n_1 ;
+  wire \data_pipelined_reg[14063]_srl32_n_1 ;
+  wire \data_pipelined_reg[14312]_srl32_n_0 ;
+  wire \data_pipelined_reg[14313]_srl32_n_0 ;
+  wire \data_pipelined_reg[14314]_srl32_n_0 ;
+  wire \data_pipelined_reg[14315]_srl32_n_0 ;
+  wire \data_pipelined_reg[14316]_srl32_n_0 ;
+  wire \data_pipelined_reg[14317]_srl32_n_0 ;
+  wire \data_pipelined_reg[14318]_srl32_n_0 ;
+  wire \data_pipelined_reg[14319]_srl32_n_0 ;
+  wire \data_pipelined_reg[14568]_srl32_n_1 ;
+  wire \data_pipelined_reg[14569]_srl32_n_1 ;
+  wire \data_pipelined_reg[14570]_srl32_n_1 ;
+  wire \data_pipelined_reg[14571]_srl32_n_1 ;
+  wire \data_pipelined_reg[14572]_srl32_n_1 ;
+  wire \data_pipelined_reg[14573]_srl32_n_1 ;
+  wire \data_pipelined_reg[14574]_srl32_n_1 ;
+  wire \data_pipelined_reg[14575]_srl32_n_1 ;
+  wire \data_pipelined_reg[14824]_srl32_n_1 ;
+  wire \data_pipelined_reg[14825]_srl32_n_1 ;
+  wire \data_pipelined_reg[14826]_srl32_n_1 ;
+  wire \data_pipelined_reg[14827]_srl32_n_1 ;
+  wire \data_pipelined_reg[14828]_srl32_n_1 ;
+  wire \data_pipelined_reg[14829]_srl32_n_1 ;
+  wire \data_pipelined_reg[14830]_srl32_n_1 ;
+  wire \data_pipelined_reg[14831]_srl32_n_1 ;
+  wire \data_pipelined_reg[15080]_srl32_n_1 ;
+  wire \data_pipelined_reg[15081]_srl32_n_1 ;
+  wire \data_pipelined_reg[15082]_srl32_n_1 ;
+  wire \data_pipelined_reg[15083]_srl32_n_1 ;
+  wire \data_pipelined_reg[15084]_srl32_n_1 ;
+  wire \data_pipelined_reg[15085]_srl32_n_1 ;
+  wire \data_pipelined_reg[15086]_srl32_n_1 ;
+  wire \data_pipelined_reg[15087]_srl32_n_1 ;
+  wire \data_pipelined_reg[15336]_srl32_n_0 ;
+  wire \data_pipelined_reg[15337]_srl32_n_0 ;
+  wire \data_pipelined_reg[15338]_srl32_n_0 ;
+  wire \data_pipelined_reg[15339]_srl32_n_0 ;
+  wire \data_pipelined_reg[15340]_srl32_n_0 ;
+  wire \data_pipelined_reg[15341]_srl32_n_0 ;
+  wire \data_pipelined_reg[15342]_srl32_n_0 ;
+  wire \data_pipelined_reg[15343]_srl32_n_0 ;
   wire \data_pipelined_reg[1536]_srl32_n_1 ;
   wire \data_pipelined_reg[1537]_srl32_n_1 ;
   wire \data_pipelined_reg[1538]_srl32_n_1 ;
@@ -665,86 +589,86 @@ module system_gauss_0_0_gauss
   wire \data_pipelined_reg[1541]_srl32_n_1 ;
   wire \data_pipelined_reg[1542]_srl32_n_1 ;
   wire \data_pipelined_reg[1543]_srl32_n_1 ;
-  wire \data_pipelined_reg[15600]_srl32_n_1 ;
-  wire \data_pipelined_reg[15601]_srl32_n_1 ;
-  wire \data_pipelined_reg[15602]_srl32_n_1 ;
-  wire \data_pipelined_reg[15603]_srl32_n_1 ;
-  wire \data_pipelined_reg[15604]_srl32_n_1 ;
-  wire \data_pipelined_reg[15605]_srl32_n_1 ;
-  wire \data_pipelined_reg[15606]_srl32_n_1 ;
-  wire \data_pipelined_reg[15607]_srl32_n_1 ;
-  wire \data_pipelined_reg[15856]_srl32_n_1 ;
-  wire \data_pipelined_reg[15857]_srl32_n_1 ;
-  wire \data_pipelined_reg[15858]_srl32_n_1 ;
-  wire \data_pipelined_reg[15859]_srl32_n_1 ;
-  wire \data_pipelined_reg[15860]_srl32_n_1 ;
-  wire \data_pipelined_reg[15861]_srl32_n_1 ;
-  wire \data_pipelined_reg[15862]_srl32_n_1 ;
-  wire \data_pipelined_reg[15863]_srl32_n_1 ;
-  wire \data_pipelined_reg[16112]_srl32_n_1 ;
-  wire \data_pipelined_reg[16113]_srl32_n_1 ;
-  wire \data_pipelined_reg[16114]_srl32_n_1 ;
-  wire \data_pipelined_reg[16115]_srl32_n_1 ;
-  wire \data_pipelined_reg[16116]_srl32_n_1 ;
-  wire \data_pipelined_reg[16117]_srl32_n_1 ;
-  wire \data_pipelined_reg[16118]_srl32_n_1 ;
-  wire \data_pipelined_reg[16119]_srl32_n_1 ;
-  wire \data_pipelined_reg[16368]_srl32_n_0 ;
-  wire \data_pipelined_reg[16369]_srl32_n_0 ;
-  wire \data_pipelined_reg[16370]_srl32_n_0 ;
-  wire \data_pipelined_reg[16371]_srl32_n_0 ;
-  wire \data_pipelined_reg[16372]_srl32_n_0 ;
-  wire \data_pipelined_reg[16373]_srl32_n_0 ;
-  wire \data_pipelined_reg[16374]_srl32_n_0 ;
-  wire \data_pipelined_reg[16375]_srl32_n_0 ;
-  wire \data_pipelined_reg[16624]_srl32_n_1 ;
-  wire \data_pipelined_reg[16625]_srl32_n_1 ;
-  wire \data_pipelined_reg[16626]_srl32_n_1 ;
-  wire \data_pipelined_reg[16627]_srl32_n_1 ;
-  wire \data_pipelined_reg[16628]_srl32_n_1 ;
-  wire \data_pipelined_reg[16629]_srl32_n_1 ;
-  wire \data_pipelined_reg[16630]_srl32_n_1 ;
-  wire \data_pipelined_reg[16631]_srl32_n_1 ;
-  wire \data_pipelined_reg[16880]_srl32_n_1 ;
-  wire \data_pipelined_reg[16881]_srl32_n_1 ;
-  wire \data_pipelined_reg[16882]_srl32_n_1 ;
-  wire \data_pipelined_reg[16883]_srl32_n_1 ;
-  wire \data_pipelined_reg[16884]_srl32_n_1 ;
-  wire \data_pipelined_reg[16885]_srl32_n_1 ;
-  wire \data_pipelined_reg[16886]_srl32_n_1 ;
-  wire \data_pipelined_reg[16887]_srl32_n_1 ;
-  wire \data_pipelined_reg[17136]_srl32_n_1 ;
-  wire \data_pipelined_reg[17137]_srl32_n_1 ;
-  wire \data_pipelined_reg[17138]_srl32_n_1 ;
-  wire \data_pipelined_reg[17139]_srl32_n_1 ;
-  wire \data_pipelined_reg[17140]_srl32_n_1 ;
-  wire \data_pipelined_reg[17141]_srl32_n_1 ;
-  wire \data_pipelined_reg[17142]_srl32_n_1 ;
-  wire \data_pipelined_reg[17143]_srl32_n_1 ;
-  wire \data_pipelined_reg[17392]_srl32_n_0 ;
-  wire \data_pipelined_reg[17393]_srl32_n_0 ;
-  wire \data_pipelined_reg[17394]_srl32_n_0 ;
-  wire \data_pipelined_reg[17395]_srl32_n_0 ;
-  wire \data_pipelined_reg[17396]_srl32_n_0 ;
-  wire \data_pipelined_reg[17397]_srl32_n_0 ;
-  wire \data_pipelined_reg[17398]_srl32_n_0 ;
-  wire \data_pipelined_reg[17399]_srl32_n_0 ;
-  wire \data_pipelined_reg[17648]_srl32_n_1 ;
-  wire \data_pipelined_reg[17649]_srl32_n_1 ;
-  wire \data_pipelined_reg[17650]_srl32_n_1 ;
-  wire \data_pipelined_reg[17651]_srl32_n_1 ;
-  wire \data_pipelined_reg[17652]_srl32_n_1 ;
-  wire \data_pipelined_reg[17653]_srl32_n_1 ;
-  wire \data_pipelined_reg[17654]_srl32_n_1 ;
-  wire \data_pipelined_reg[17655]_srl32_n_1 ;
-  wire \data_pipelined_reg[17904]_srl32_n_1 ;
-  wire \data_pipelined_reg[17905]_srl32_n_1 ;
-  wire \data_pipelined_reg[17906]_srl32_n_1 ;
-  wire \data_pipelined_reg[17907]_srl32_n_1 ;
-  wire \data_pipelined_reg[17908]_srl32_n_1 ;
-  wire \data_pipelined_reg[17909]_srl32_n_1 ;
-  wire \data_pipelined_reg[17910]_srl32_n_1 ;
-  wire \data_pipelined_reg[17911]_srl32_n_1 ;
+  wire \data_pipelined_reg[15592]_srl32_n_1 ;
+  wire \data_pipelined_reg[15593]_srl32_n_1 ;
+  wire \data_pipelined_reg[15594]_srl32_n_1 ;
+  wire \data_pipelined_reg[15595]_srl32_n_1 ;
+  wire \data_pipelined_reg[15596]_srl32_n_1 ;
+  wire \data_pipelined_reg[15597]_srl32_n_1 ;
+  wire \data_pipelined_reg[15598]_srl32_n_1 ;
+  wire \data_pipelined_reg[15599]_srl32_n_1 ;
+  wire \data_pipelined_reg[15848]_srl32_n_1 ;
+  wire \data_pipelined_reg[15849]_srl32_n_1 ;
+  wire \data_pipelined_reg[15850]_srl32_n_1 ;
+  wire \data_pipelined_reg[15851]_srl32_n_1 ;
+  wire \data_pipelined_reg[15852]_srl32_n_1 ;
+  wire \data_pipelined_reg[15853]_srl32_n_1 ;
+  wire \data_pipelined_reg[15854]_srl32_n_1 ;
+  wire \data_pipelined_reg[15855]_srl32_n_1 ;
+  wire \data_pipelined_reg[16104]_srl32_n_1 ;
+  wire \data_pipelined_reg[16105]_srl32_n_1 ;
+  wire \data_pipelined_reg[16106]_srl32_n_1 ;
+  wire \data_pipelined_reg[16107]_srl32_n_1 ;
+  wire \data_pipelined_reg[16108]_srl32_n_1 ;
+  wire \data_pipelined_reg[16109]_srl32_n_1 ;
+  wire \data_pipelined_reg[16110]_srl32_n_1 ;
+  wire \data_pipelined_reg[16111]_srl32_n_1 ;
+  wire \data_pipelined_reg[16360]_srl32_n_0 ;
+  wire \data_pipelined_reg[16361]_srl32_n_0 ;
+  wire \data_pipelined_reg[16362]_srl32_n_0 ;
+  wire \data_pipelined_reg[16363]_srl32_n_0 ;
+  wire \data_pipelined_reg[16364]_srl32_n_0 ;
+  wire \data_pipelined_reg[16365]_srl32_n_0 ;
+  wire \data_pipelined_reg[16366]_srl32_n_0 ;
+  wire \data_pipelined_reg[16367]_srl32_n_0 ;
+  wire \data_pipelined_reg[16616]_srl32_n_1 ;
+  wire \data_pipelined_reg[16617]_srl32_n_1 ;
+  wire \data_pipelined_reg[16618]_srl32_n_1 ;
+  wire \data_pipelined_reg[16619]_srl32_n_1 ;
+  wire \data_pipelined_reg[16620]_srl32_n_1 ;
+  wire \data_pipelined_reg[16621]_srl32_n_1 ;
+  wire \data_pipelined_reg[16622]_srl32_n_1 ;
+  wire \data_pipelined_reg[16623]_srl32_n_1 ;
+  wire \data_pipelined_reg[16872]_srl32_n_1 ;
+  wire \data_pipelined_reg[16873]_srl32_n_1 ;
+  wire \data_pipelined_reg[16874]_srl32_n_1 ;
+  wire \data_pipelined_reg[16875]_srl32_n_1 ;
+  wire \data_pipelined_reg[16876]_srl32_n_1 ;
+  wire \data_pipelined_reg[16877]_srl32_n_1 ;
+  wire \data_pipelined_reg[16878]_srl32_n_1 ;
+  wire \data_pipelined_reg[16879]_srl32_n_1 ;
+  wire \data_pipelined_reg[17128]_srl32_n_1 ;
+  wire \data_pipelined_reg[17129]_srl32_n_1 ;
+  wire \data_pipelined_reg[17130]_srl32_n_1 ;
+  wire \data_pipelined_reg[17131]_srl32_n_1 ;
+  wire \data_pipelined_reg[17132]_srl32_n_1 ;
+  wire \data_pipelined_reg[17133]_srl32_n_1 ;
+  wire \data_pipelined_reg[17134]_srl32_n_1 ;
+  wire \data_pipelined_reg[17135]_srl32_n_1 ;
+  wire \data_pipelined_reg[17384]_srl32_n_0 ;
+  wire \data_pipelined_reg[17385]_srl32_n_0 ;
+  wire \data_pipelined_reg[17386]_srl32_n_0 ;
+  wire \data_pipelined_reg[17387]_srl32_n_0 ;
+  wire \data_pipelined_reg[17388]_srl32_n_0 ;
+  wire \data_pipelined_reg[17389]_srl32_n_0 ;
+  wire \data_pipelined_reg[17390]_srl32_n_0 ;
+  wire \data_pipelined_reg[17391]_srl32_n_0 ;
+  wire \data_pipelined_reg[17640]_srl32_n_1 ;
+  wire \data_pipelined_reg[17641]_srl32_n_1 ;
+  wire \data_pipelined_reg[17642]_srl32_n_1 ;
+  wire \data_pipelined_reg[17643]_srl32_n_1 ;
+  wire \data_pipelined_reg[17644]_srl32_n_1 ;
+  wire \data_pipelined_reg[17645]_srl32_n_1 ;
+  wire \data_pipelined_reg[17646]_srl32_n_1 ;
+  wire \data_pipelined_reg[17647]_srl32_n_1 ;
+  wire \data_pipelined_reg[17896]_srl32_n_1 ;
+  wire \data_pipelined_reg[17897]_srl32_n_1 ;
+  wire \data_pipelined_reg[17898]_srl32_n_1 ;
+  wire \data_pipelined_reg[17899]_srl32_n_1 ;
+  wire \data_pipelined_reg[17900]_srl32_n_1 ;
+  wire \data_pipelined_reg[17901]_srl32_n_1 ;
+  wire \data_pipelined_reg[17902]_srl32_n_1 ;
+  wire \data_pipelined_reg[17903]_srl32_n_1 ;
   wire \data_pipelined_reg[1792]_srl32_n_1 ;
   wire \data_pipelined_reg[1793]_srl32_n_1 ;
   wire \data_pipelined_reg[1794]_srl32_n_1 ;
@@ -753,86 +677,86 @@ module system_gauss_0_0_gauss
   wire \data_pipelined_reg[1797]_srl32_n_1 ;
   wire \data_pipelined_reg[1798]_srl32_n_1 ;
   wire \data_pipelined_reg[1799]_srl32_n_1 ;
-  wire \data_pipelined_reg[18160]_srl32_n_1 ;
-  wire \data_pipelined_reg[18161]_srl32_n_1 ;
-  wire \data_pipelined_reg[18162]_srl32_n_1 ;
-  wire \data_pipelined_reg[18163]_srl32_n_1 ;
-  wire \data_pipelined_reg[18164]_srl32_n_1 ;
-  wire \data_pipelined_reg[18165]_srl32_n_1 ;
-  wire \data_pipelined_reg[18166]_srl32_n_1 ;
-  wire \data_pipelined_reg[18167]_srl32_n_1 ;
-  wire \data_pipelined_reg[18416]_srl32_n_0 ;
-  wire \data_pipelined_reg[18417]_srl32_n_0 ;
-  wire \data_pipelined_reg[18418]_srl32_n_0 ;
-  wire \data_pipelined_reg[18419]_srl32_n_0 ;
-  wire \data_pipelined_reg[18420]_srl32_n_0 ;
-  wire \data_pipelined_reg[18421]_srl32_n_0 ;
-  wire \data_pipelined_reg[18422]_srl32_n_0 ;
-  wire \data_pipelined_reg[18423]_srl32_n_0 ;
-  wire \data_pipelined_reg[18672]_srl32_n_1 ;
-  wire \data_pipelined_reg[18673]_srl32_n_1 ;
-  wire \data_pipelined_reg[18674]_srl32_n_1 ;
-  wire \data_pipelined_reg[18675]_srl32_n_1 ;
-  wire \data_pipelined_reg[18676]_srl32_n_1 ;
-  wire \data_pipelined_reg[18677]_srl32_n_1 ;
-  wire \data_pipelined_reg[18678]_srl32_n_1 ;
-  wire \data_pipelined_reg[18679]_srl32_n_1 ;
-  wire \data_pipelined_reg[18928]_srl32_n_1 ;
-  wire \data_pipelined_reg[18929]_srl32_n_1 ;
-  wire \data_pipelined_reg[18930]_srl32_n_1 ;
-  wire \data_pipelined_reg[18931]_srl32_n_1 ;
-  wire \data_pipelined_reg[18932]_srl32_n_1 ;
-  wire \data_pipelined_reg[18933]_srl32_n_1 ;
-  wire \data_pipelined_reg[18934]_srl32_n_1 ;
-  wire \data_pipelined_reg[18935]_srl32_n_1 ;
-  wire \data_pipelined_reg[19184]_srl32_n_1 ;
-  wire \data_pipelined_reg[19185]_srl32_n_1 ;
-  wire \data_pipelined_reg[19186]_srl32_n_1 ;
-  wire \data_pipelined_reg[19187]_srl32_n_1 ;
-  wire \data_pipelined_reg[19188]_srl32_n_1 ;
-  wire \data_pipelined_reg[19189]_srl32_n_1 ;
-  wire \data_pipelined_reg[19190]_srl32_n_1 ;
-  wire \data_pipelined_reg[19191]_srl32_n_1 ;
-  wire \data_pipelined_reg[19440]_srl32_n_0 ;
-  wire \data_pipelined_reg[19441]_srl32_n_0 ;
-  wire \data_pipelined_reg[19442]_srl32_n_0 ;
-  wire \data_pipelined_reg[19443]_srl32_n_0 ;
-  wire \data_pipelined_reg[19444]_srl32_n_0 ;
-  wire \data_pipelined_reg[19445]_srl32_n_0 ;
-  wire \data_pipelined_reg[19446]_srl32_n_0 ;
-  wire \data_pipelined_reg[19447]_srl32_n_0 ;
-  wire \data_pipelined_reg[19696]_srl32_n_1 ;
-  wire \data_pipelined_reg[19697]_srl32_n_1 ;
-  wire \data_pipelined_reg[19698]_srl32_n_1 ;
-  wire \data_pipelined_reg[19699]_srl32_n_1 ;
-  wire \data_pipelined_reg[19700]_srl32_n_1 ;
-  wire \data_pipelined_reg[19701]_srl32_n_1 ;
-  wire \data_pipelined_reg[19702]_srl32_n_1 ;
-  wire \data_pipelined_reg[19703]_srl32_n_1 ;
-  wire \data_pipelined_reg[19952]_srl32_n_1 ;
-  wire \data_pipelined_reg[19953]_srl32_n_1 ;
-  wire \data_pipelined_reg[19954]_srl32_n_1 ;
-  wire \data_pipelined_reg[19955]_srl32_n_1 ;
-  wire \data_pipelined_reg[19956]_srl32_n_1 ;
-  wire \data_pipelined_reg[19957]_srl32_n_1 ;
-  wire \data_pipelined_reg[19958]_srl32_n_1 ;
-  wire \data_pipelined_reg[19959]_srl32_n_1 ;
-  wire \data_pipelined_reg[20208]_srl32_n_1 ;
-  wire \data_pipelined_reg[20209]_srl32_n_1 ;
-  wire \data_pipelined_reg[20210]_srl32_n_1 ;
-  wire \data_pipelined_reg[20211]_srl32_n_1 ;
-  wire \data_pipelined_reg[20212]_srl32_n_1 ;
-  wire \data_pipelined_reg[20213]_srl32_n_1 ;
-  wire \data_pipelined_reg[20214]_srl32_n_1 ;
-  wire \data_pipelined_reg[20215]_srl32_n_1 ;
-  wire \data_pipelined_reg[20432]_srl28_n_0 ;
-  wire \data_pipelined_reg[20433]_srl28_n_0 ;
-  wire \data_pipelined_reg[20434]_srl28_n_0 ;
-  wire \data_pipelined_reg[20435]_srl28_n_0 ;
-  wire \data_pipelined_reg[20436]_srl28_n_0 ;
-  wire \data_pipelined_reg[20437]_srl28_n_0 ;
-  wire \data_pipelined_reg[20438]_srl28_n_0 ;
-  wire \data_pipelined_reg[20439]_srl28_n_0 ;
+  wire \data_pipelined_reg[18152]_srl32_n_1 ;
+  wire \data_pipelined_reg[18153]_srl32_n_1 ;
+  wire \data_pipelined_reg[18154]_srl32_n_1 ;
+  wire \data_pipelined_reg[18155]_srl32_n_1 ;
+  wire \data_pipelined_reg[18156]_srl32_n_1 ;
+  wire \data_pipelined_reg[18157]_srl32_n_1 ;
+  wire \data_pipelined_reg[18158]_srl32_n_1 ;
+  wire \data_pipelined_reg[18159]_srl32_n_1 ;
+  wire \data_pipelined_reg[18408]_srl32_n_0 ;
+  wire \data_pipelined_reg[18409]_srl32_n_0 ;
+  wire \data_pipelined_reg[18410]_srl32_n_0 ;
+  wire \data_pipelined_reg[18411]_srl32_n_0 ;
+  wire \data_pipelined_reg[18412]_srl32_n_0 ;
+  wire \data_pipelined_reg[18413]_srl32_n_0 ;
+  wire \data_pipelined_reg[18414]_srl32_n_0 ;
+  wire \data_pipelined_reg[18415]_srl32_n_0 ;
+  wire \data_pipelined_reg[18664]_srl32_n_1 ;
+  wire \data_pipelined_reg[18665]_srl32_n_1 ;
+  wire \data_pipelined_reg[18666]_srl32_n_1 ;
+  wire \data_pipelined_reg[18667]_srl32_n_1 ;
+  wire \data_pipelined_reg[18668]_srl32_n_1 ;
+  wire \data_pipelined_reg[18669]_srl32_n_1 ;
+  wire \data_pipelined_reg[18670]_srl32_n_1 ;
+  wire \data_pipelined_reg[18671]_srl32_n_1 ;
+  wire \data_pipelined_reg[18920]_srl32_n_1 ;
+  wire \data_pipelined_reg[18921]_srl32_n_1 ;
+  wire \data_pipelined_reg[18922]_srl32_n_1 ;
+  wire \data_pipelined_reg[18923]_srl32_n_1 ;
+  wire \data_pipelined_reg[18924]_srl32_n_1 ;
+  wire \data_pipelined_reg[18925]_srl32_n_1 ;
+  wire \data_pipelined_reg[18926]_srl32_n_1 ;
+  wire \data_pipelined_reg[18927]_srl32_n_1 ;
+  wire \data_pipelined_reg[19176]_srl32_n_1 ;
+  wire \data_pipelined_reg[19177]_srl32_n_1 ;
+  wire \data_pipelined_reg[19178]_srl32_n_1 ;
+  wire \data_pipelined_reg[19179]_srl32_n_1 ;
+  wire \data_pipelined_reg[19180]_srl32_n_1 ;
+  wire \data_pipelined_reg[19181]_srl32_n_1 ;
+  wire \data_pipelined_reg[19182]_srl32_n_1 ;
+  wire \data_pipelined_reg[19183]_srl32_n_1 ;
+  wire \data_pipelined_reg[19432]_srl32_n_0 ;
+  wire \data_pipelined_reg[19433]_srl32_n_0 ;
+  wire \data_pipelined_reg[19434]_srl32_n_0 ;
+  wire \data_pipelined_reg[19435]_srl32_n_0 ;
+  wire \data_pipelined_reg[19436]_srl32_n_0 ;
+  wire \data_pipelined_reg[19437]_srl32_n_0 ;
+  wire \data_pipelined_reg[19438]_srl32_n_0 ;
+  wire \data_pipelined_reg[19439]_srl32_n_0 ;
+  wire \data_pipelined_reg[19688]_srl32_n_1 ;
+  wire \data_pipelined_reg[19689]_srl32_n_1 ;
+  wire \data_pipelined_reg[19690]_srl32_n_1 ;
+  wire \data_pipelined_reg[19691]_srl32_n_1 ;
+  wire \data_pipelined_reg[19692]_srl32_n_1 ;
+  wire \data_pipelined_reg[19693]_srl32_n_1 ;
+  wire \data_pipelined_reg[19694]_srl32_n_1 ;
+  wire \data_pipelined_reg[19695]_srl32_n_1 ;
+  wire \data_pipelined_reg[19944]_srl32_n_1 ;
+  wire \data_pipelined_reg[19945]_srl32_n_1 ;
+  wire \data_pipelined_reg[19946]_srl32_n_1 ;
+  wire \data_pipelined_reg[19947]_srl32_n_1 ;
+  wire \data_pipelined_reg[19948]_srl32_n_1 ;
+  wire \data_pipelined_reg[19949]_srl32_n_1 ;
+  wire \data_pipelined_reg[19950]_srl32_n_1 ;
+  wire \data_pipelined_reg[19951]_srl32_n_1 ;
+  wire \data_pipelined_reg[20200]_srl32_n_1 ;
+  wire \data_pipelined_reg[20201]_srl32_n_1 ;
+  wire \data_pipelined_reg[20202]_srl32_n_1 ;
+  wire \data_pipelined_reg[20203]_srl32_n_1 ;
+  wire \data_pipelined_reg[20204]_srl32_n_1 ;
+  wire \data_pipelined_reg[20205]_srl32_n_1 ;
+  wire \data_pipelined_reg[20206]_srl32_n_1 ;
+  wire \data_pipelined_reg[20207]_srl32_n_1 ;
+  wire \data_pipelined_reg[20456]_srl32_n_0 ;
+  wire \data_pipelined_reg[20457]_srl32_n_0 ;
+  wire \data_pipelined_reg[20458]_srl32_n_0 ;
+  wire \data_pipelined_reg[20459]_srl32_n_0 ;
+  wire \data_pipelined_reg[20460]_srl32_n_0 ;
+  wire \data_pipelined_reg[20461]_srl32_n_0 ;
+  wire \data_pipelined_reg[20462]_srl32_n_0 ;
+  wire \data_pipelined_reg[20463]_srl32_n_0 ;
   wire \data_pipelined_reg[2048]_srl32_n_0 ;
   wire \data_pipelined_reg[2049]_srl32_n_0 ;
   wire \data_pipelined_reg[2050]_srl32_n_0 ;
@@ -1193,6 +1117,14 @@ module system_gauss_0_0_gauss
   wire \data_pipelined_reg[30677]_srl29_n_0 ;
   wire \data_pipelined_reg[30678]_srl29_n_0 ;
   wire \data_pipelined_reg[30679]_srl29_n_0 ;
+  wire \data_pipelined_reg[30704]_srl2_n_0 ;
+  wire \data_pipelined_reg[30705]_srl2_n_0 ;
+  wire \data_pipelined_reg[30706]_srl2_n_0 ;
+  wire \data_pipelined_reg[30707]_srl2_n_0 ;
+  wire \data_pipelined_reg[30708]_srl2_n_0 ;
+  wire \data_pipelined_reg[30709]_srl2_n_0 ;
+  wire \data_pipelined_reg[30710]_srl2_n_0 ;
+  wire \data_pipelined_reg[30711]_srl2_n_0 ;
   wire \data_pipelined_reg[3072]_srl32_n_0 ;
   wire \data_pipelined_reg[3073]_srl32_n_0 ;
   wire \data_pipelined_reg[3074]_srl32_n_0 ;
@@ -1434,48 +1366,8 @@ module system_gauss_0_0_gauss
   wire \data_pipelined_reg[9990]_srl32_n_1 ;
   wire \data_pipelined_reg[9991]_srl32_n_1 ;
   wire \data_pipelined_reg_n_0_[0] ;
-  wire \data_pipelined_reg_n_0_[10216] ;
-  wire \data_pipelined_reg_n_0_[10217] ;
-  wire \data_pipelined_reg_n_0_[10218] ;
-  wire \data_pipelined_reg_n_0_[10219] ;
-  wire \data_pipelined_reg_n_0_[10220] ;
-  wire \data_pipelined_reg_n_0_[10221] ;
-  wire \data_pipelined_reg_n_0_[10222] ;
-  wire \data_pipelined_reg_n_0_[10223] ;
-  wire \data_pipelined_reg_n_0_[10224] ;
-  wire \data_pipelined_reg_n_0_[10225] ;
-  wire \data_pipelined_reg_n_0_[10226] ;
-  wire \data_pipelined_reg_n_0_[10227] ;
-  wire \data_pipelined_reg_n_0_[10228] ;
-  wire \data_pipelined_reg_n_0_[10229] ;
-  wire \data_pipelined_reg_n_0_[10230] ;
-  wire \data_pipelined_reg_n_0_[10231] ;
   wire \data_pipelined_reg_n_0_[1] ;
-  wire \data_pipelined_reg_n_0_[20448] ;
-  wire \data_pipelined_reg_n_0_[20449] ;
-  wire \data_pipelined_reg_n_0_[20450] ;
-  wire \data_pipelined_reg_n_0_[20451] ;
-  wire \data_pipelined_reg_n_0_[20452] ;
-  wire \data_pipelined_reg_n_0_[20453] ;
-  wire \data_pipelined_reg_n_0_[20454] ;
-  wire \data_pipelined_reg_n_0_[20455] ;
-  wire \data_pipelined_reg_n_0_[20456] ;
-  wire \data_pipelined_reg_n_0_[20457] ;
-  wire \data_pipelined_reg_n_0_[20458] ;
-  wire \data_pipelined_reg_n_0_[20459] ;
-  wire \data_pipelined_reg_n_0_[20460] ;
-  wire \data_pipelined_reg_n_0_[20461] ;
-  wire \data_pipelined_reg_n_0_[20462] ;
-  wire \data_pipelined_reg_n_0_[20463] ;
   wire \data_pipelined_reg_n_0_[2] ;
-  wire \data_pipelined_reg_n_0_[30688] ;
-  wire \data_pipelined_reg_n_0_[30689] ;
-  wire \data_pipelined_reg_n_0_[30690] ;
-  wire \data_pipelined_reg_n_0_[30691] ;
-  wire \data_pipelined_reg_n_0_[30692] ;
-  wire \data_pipelined_reg_n_0_[30693] ;
-  wire \data_pipelined_reg_n_0_[30694] ;
-  wire \data_pipelined_reg_n_0_[30695] ;
   wire \data_pipelined_reg_n_0_[3] ;
   wire \data_pipelined_reg_n_0_[4] ;
   wire \data_pipelined_reg_n_0_[5] ;
@@ -1602,8 +1494,58 @@ module system_gauss_0_0_gauss
   wire \hsync_pipelined_reg[96]_srl32_n_1 ;
   wire \hsync_pipelined_reg[992]_srl32_n_1 ;
   wire \hsync_pipelined_reg_n_0_[0] ;
-  wire [11:0]p_0_in;
-  wire p_0_in_0;
+  wire i___1_carry__0_i_10_n_0;
+  wire i___1_carry__0_i_11_n_0;
+  wire i___1_carry__0_i_12_n_0;
+  wire i___1_carry__0_i_13_n_0;
+  wire i___1_carry__0_i_13_n_1;
+  wire i___1_carry__0_i_13_n_2;
+  wire i___1_carry__0_i_13_n_3;
+  wire i___1_carry__0_i_14_n_0;
+  wire i___1_carry__0_i_15_n_0;
+  wire i___1_carry__0_i_16_n_0;
+  wire i___1_carry__0_i_17_n_0;
+  wire i___1_carry__0_i_18_n_0;
+  wire i___1_carry__0_i_19_n_0;
+  wire i___1_carry__0_i_1_n_0;
+  wire i___1_carry__0_i_20_n_0;
+  wire i___1_carry__0_i_2_n_0;
+  wire i___1_carry__0_i_3_n_0;
+  wire i___1_carry__0_i_4_n_0;
+  wire i___1_carry__0_i_5_n_0;
+  wire i___1_carry__0_i_6_n_0;
+  wire i___1_carry__0_i_7_n_0;
+  wire i___1_carry__0_i_8_n_0;
+  wire i___1_carry__0_i_9_n_0;
+  wire i___1_carry__1_i_10_n_0;
+  wire i___1_carry__1_i_10_n_1;
+  wire i___1_carry__1_i_10_n_2;
+  wire i___1_carry__1_i_10_n_3;
+  wire i___1_carry__1_i_11_n_0;
+  wire i___1_carry__1_i_12_n_0;
+  wire i___1_carry__1_i_13_n_0;
+  wire i___1_carry__1_i_14_n_0;
+  wire i___1_carry__1_i_1_n_0;
+  wire i___1_carry__1_i_2_n_0;
+  wire i___1_carry__1_i_3_n_0;
+  wire i___1_carry__1_i_4_n_0;
+  wire i___1_carry__1_i_5_n_0;
+  wire i___1_carry__1_i_6_n_0;
+  wire i___1_carry__1_i_7_n_2;
+  wire i___1_carry__1_i_7_n_3;
+  wire i___1_carry__1_i_8_n_0;
+  wire i___1_carry__1_i_9_n_0;
+  wire i___1_carry_i_1_n_0;
+  wire i___1_carry_i_2_n_0;
+  wire i___1_carry_i_3_n_0;
+  wire i___1_carry_i_4_n_0;
+  wire i___1_carry_i_5_n_0;
+  wire i___1_carry_i_6_n_0;
+  wire i___1_carry_i_7_n_0;
+  wire i___1_carry_i_8_n_0;
+  wire i___1_carry_i_9_n_0;
+  wire [30703:10216]p_0_in;
+  wire [10:0]p_0_in__0;
   wire [1:1]p_2_in;
   wire vid_active_video;
   wire vid_av;
@@ -1852,19 +1794,20 @@ module system_gauss_0_0_gauss
   wire \NLW_av_pipelined_reg[960]_srl32_Q_UNCONNECTED ;
   wire \NLW_av_pipelined_reg[96]_srl32_Q_UNCONNECTED ;
   wire \NLW_av_pipelined_reg[992]_srl32_Q_UNCONNECTED ;
-  wire [3:3]NLW_data_out0__0_carry__1_CO_UNCONNECTED;
-  wire [3:3]NLW_data_out0__0_carry__1_i_1_CO_UNCONNECTED;
-  wire [3:0]NLW_data_out0__0_carry__1_i_13_CO_UNCONNECTED;
-  wire [3:1]NLW_data_out0__0_carry__1_i_13_O_UNCONNECTED;
-  wire [0:0]NLW_data_out0__0_carry__1_i_21_O_UNCONNECTED;
-  wire [3:1]NLW_data_out0__0_carry__1_i_3_CO_UNCONNECTED;
-  wire [3:2]NLW_data_out0__0_carry__1_i_3_O_UNCONNECTED;
-  wire [3:1]NLW_data_out0__0_carry__1_i_6_CO_UNCONNECTED;
-  wire [3:2]NLW_data_out0__0_carry__1_i_6_O_UNCONNECTED;
-  wire [0:0]NLW_data_out0__0_carry_i_16_O_UNCONNECTED;
-  wire [0:0]NLW_data_out0__0_carry_i_8_O_UNCONNECTED;
-  wire [3:0]NLW_data_out0__32_carry_O_UNCONNECTED;
-  wire [3:3]NLW_data_out0__32_carry__1_CO_UNCONNECTED;
+  wire [3:2]NLW_data_out1__1_carry__1_CO_UNCONNECTED;
+  wire [3:3]NLW_data_out1__1_carry__1_O_UNCONNECTED;
+  wire [2:0]\NLW_data_out1_inferred__1/i___1_carry_O_UNCONNECTED ;
+  wire [3:2]\NLW_data_out1_inferred__1/i___1_carry__1_CO_UNCONNECTED ;
+  wire [3:3]\NLW_data_out1_inferred__1/i___1_carry__1_O_UNCONNECTED ;
+  wire NLW_data_out4_CARRYCASCOUT_UNCONNECTED;
+  wire NLW_data_out4_MULTSIGNOUT_UNCONNECTED;
+  wire NLW_data_out4_OVERFLOW_UNCONNECTED;
+  wire NLW_data_out4_PATTERNBDETECT_UNCONNECTED;
+  wire NLW_data_out4_PATTERNDETECT_UNCONNECTED;
+  wire NLW_data_out4_UNDERFLOW_UNCONNECTED;
+  wire [29:0]NLW_data_out4_ACOUT_UNCONNECTED;
+  wire [17:0]NLW_data_out4_BCOUT_UNCONNECTED;
+  wire [3:0]NLW_data_out4_CARRYOUT_UNCONNECTED;
   wire \NLW_data_pipelined_reg[10200]_srl27_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[10201]_srl27_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[10202]_srl27_Q31_UNCONNECTED ;
@@ -1881,86 +1824,86 @@ module system_gauss_0_0_gauss
   wire \NLW_data_pipelined_reg[1029]_srl32_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1030]_srl32_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1031]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10480]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10481]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10482]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10483]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10484]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10485]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10486]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10487]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10736]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10737]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10738]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10739]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10740]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10741]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10742]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10743]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10992]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10993]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10994]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10995]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10996]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10997]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10998]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[10999]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11248]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11249]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11250]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11251]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11252]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11253]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11254]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11255]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11504]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11505]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11506]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11507]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11508]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11509]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11510]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11511]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11760]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11761]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11762]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11763]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11764]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11765]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11766]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[11767]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12016]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12017]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12018]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12019]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12020]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12021]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12022]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12023]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12272]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12273]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12274]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12275]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12276]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12277]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12278]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12279]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12528]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12529]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12530]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12531]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12532]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12533]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12534]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12535]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12784]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12785]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12786]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12787]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12788]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12789]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12790]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[12791]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10472]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10473]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10474]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10475]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10476]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10477]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10478]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10479]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10728]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10729]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10730]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10731]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10732]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10733]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10734]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10735]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10984]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10985]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10986]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10987]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10988]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10989]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10990]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[10991]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11240]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11241]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11242]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11243]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11244]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11245]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11246]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11247]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11496]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11497]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11498]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11499]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11500]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11501]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11502]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11503]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11752]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11753]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11754]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11755]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11756]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11757]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11758]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[11759]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12008]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12009]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12010]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12011]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12012]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12013]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12014]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12015]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12264]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12265]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12266]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12267]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12268]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12269]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12270]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12271]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12520]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12521]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12522]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12523]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12524]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12525]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12526]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12527]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12776]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12777]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12778]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12779]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12780]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12781]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12782]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[12783]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1280]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1281]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1282]_srl32_Q_UNCONNECTED ;
@@ -1969,86 +1912,86 @@ module system_gauss_0_0_gauss
   wire \NLW_data_pipelined_reg[1285]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1286]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1287]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13040]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13041]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13042]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13043]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13044]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13045]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13046]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13047]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13296]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13297]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13298]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13299]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13300]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13301]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13302]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13303]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13552]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13553]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13554]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13555]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13556]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13557]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13558]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13559]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13808]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13809]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13810]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13811]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13812]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13813]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13814]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[13815]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14064]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14065]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14066]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14067]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14068]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14069]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14070]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14071]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14320]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14321]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14322]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14323]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14324]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14325]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14326]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14327]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14576]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14577]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14578]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14579]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14580]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14581]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14582]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14583]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14832]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14833]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14834]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14835]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14836]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14837]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14838]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[14839]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15088]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15089]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15090]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15091]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15092]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15093]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15094]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15095]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15344]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15345]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15346]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15347]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15348]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15349]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15350]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15351]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13032]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13033]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13034]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13035]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13036]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13037]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13038]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13039]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13288]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13289]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13290]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13291]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13292]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13293]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13294]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13295]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13544]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13545]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13546]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13547]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13548]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13549]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13550]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13551]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13800]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13801]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13802]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13803]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13804]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13805]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13806]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[13807]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14056]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14057]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14058]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14059]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14060]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14061]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14062]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14063]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14312]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14313]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14314]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14315]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14316]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14317]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14318]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14319]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14568]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14569]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14570]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14571]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14572]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14573]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14574]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14575]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14824]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14825]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14826]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14827]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14828]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14829]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14830]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[14831]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15080]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15081]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15082]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15083]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15084]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15085]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15086]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15087]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15336]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15337]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15338]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15339]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15340]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15341]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15342]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15343]_srl32_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1536]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1537]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1538]_srl32_Q_UNCONNECTED ;
@@ -2057,86 +2000,86 @@ module system_gauss_0_0_gauss
   wire \NLW_data_pipelined_reg[1541]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1542]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1543]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15600]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15601]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15602]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15603]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15604]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15605]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15606]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15607]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15856]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15857]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15858]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15859]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15860]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15861]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15862]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[15863]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16112]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16113]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16114]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16115]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16116]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16117]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16118]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16119]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16368]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16369]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16370]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16371]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16372]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16373]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16374]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16375]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16624]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16625]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16626]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16627]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16628]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16629]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16630]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16631]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16880]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16881]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16882]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16883]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16884]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16885]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16886]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[16887]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17136]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17137]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17138]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17139]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17140]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17141]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17142]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17143]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17392]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17393]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17394]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17395]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17396]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17397]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17398]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17399]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17648]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17649]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17650]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17651]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17652]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17653]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17654]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17655]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17904]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17905]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17906]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17907]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17908]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17909]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17910]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[17911]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15592]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15593]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15594]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15595]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15596]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15597]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15598]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15599]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15848]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15849]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15850]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15851]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15852]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15853]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15854]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[15855]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16104]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16105]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16106]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16107]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16108]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16109]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16110]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16111]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16360]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16361]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16362]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16363]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16364]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16365]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16366]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16367]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16616]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16617]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16618]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16619]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16620]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16621]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16622]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16623]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16872]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16873]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16874]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16875]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16876]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16877]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16878]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[16879]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17128]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17129]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17130]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17131]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17132]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17133]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17134]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17135]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17384]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17385]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17386]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17387]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17388]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17389]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17390]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17391]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17640]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17641]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17642]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17643]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17644]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17645]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17646]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17647]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17896]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17897]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17898]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17899]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17900]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17901]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17902]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[17903]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1792]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1793]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1794]_srl32_Q_UNCONNECTED ;
@@ -2145,86 +2088,86 @@ module system_gauss_0_0_gauss
   wire \NLW_data_pipelined_reg[1797]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1798]_srl32_Q_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[1799]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18160]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18161]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18162]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18163]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18164]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18165]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18166]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18167]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18416]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18417]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18418]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18419]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18420]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18421]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18422]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18423]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18672]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18673]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18674]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18675]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18676]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18677]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18678]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18679]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18928]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18929]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18930]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18931]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18932]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18933]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18934]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[18935]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19184]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19185]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19186]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19187]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19188]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19189]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19190]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19191]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19440]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19441]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19442]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19443]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19444]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19445]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19446]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19447]_srl32_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19696]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19697]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19698]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19699]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19700]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19701]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19702]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19703]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19952]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19953]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19954]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19955]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19956]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19957]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19958]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[19959]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20208]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20209]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20210]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20211]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20212]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20213]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20214]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20215]_srl32_Q_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20432]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20433]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20434]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20435]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20436]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20437]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20438]_srl28_Q31_UNCONNECTED ;
-  wire \NLW_data_pipelined_reg[20439]_srl28_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18152]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18153]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18154]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18155]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18156]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18157]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18158]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18159]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18408]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18409]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18410]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18411]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18412]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18413]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18414]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18415]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18664]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18665]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18666]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18667]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18668]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18669]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18670]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18671]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18920]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18921]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18922]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18923]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18924]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18925]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18926]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[18927]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19176]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19177]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19178]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19179]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19180]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19181]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19182]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19183]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19432]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19433]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19434]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19435]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19436]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19437]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19438]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19439]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19688]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19689]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19690]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19691]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19692]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19693]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19694]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19695]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19944]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19945]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19946]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19947]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19948]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19949]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19950]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[19951]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20200]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20201]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20202]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20203]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20204]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20205]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20206]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20207]_srl32_Q_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20456]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20457]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20458]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20459]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20460]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20461]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20462]_srl32_Q31_UNCONNECTED ;
+  wire \NLW_data_pipelined_reg[20463]_srl32_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[2048]_srl32_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[2049]_srl32_Q31_UNCONNECTED ;
   wire \NLW_data_pipelined_reg[2050]_srl32_Q31_UNCONNECTED ;
@@ -2945,6 +2888,8 @@ module system_gauss_0_0_gauss
   wire \NLW_hsync_pipelined_reg[960]_srl32_Q_UNCONNECTED ;
   wire \NLW_hsync_pipelined_reg[96]_srl32_Q_UNCONNECTED ;
   wire \NLW_hsync_pipelined_reg[992]_srl32_Q_UNCONNECTED ;
+  wire [3:2]NLW_i___1_carry__1_i_7_CO_UNCONNECTED;
+  wire [3:3]NLW_i___1_carry__1_i_7_O_UNCONNECTED;
   wire \NLW_vsync_pipelined_reg[1024]_srl32_Q31_UNCONNECTED ;
   wire \NLW_vsync_pipelined_reg[1056]_srl32_Q_UNCONNECTED ;
   wire \NLW_vsync_pipelined_reg[1088]_srl32_Q_UNCONNECTED ;
@@ -3066,7 +3011,7 @@ module system_gauss_0_0_gauss
   wire \NLW_vsync_pipelined_reg[96]_srl32_Q_UNCONNECTED ;
   wire \NLW_vsync_pipelined_reg[992]_srl32_Q_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \av_pipelined[0]_i_1 
@@ -4165,7 +4110,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\av_pipelined_reg[3838]_srl30_n_0 ),
-        .Q(p_0_in_0),
+        .Q(av_pipelined),
         .R(1'b0));
   (* srl_bus_name = "\U0/av_pipelined_reg " *) 
   (* srl_name = "\U0/av_pipelined_reg[384]_srl32 " *) 
@@ -4409,1382 +4354,619 @@ module system_gauss_0_0_gauss
         .D(\av_pipelined_reg[960]_srl32_n_1 ),
         .Q(\NLW_av_pipelined_reg[992]_srl32_Q_UNCONNECTED ),
         .Q31(\av_pipelined_reg[992]_srl32_n_1 ));
+  FDRE \data_out1[-1111111104] 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10231]),
+        .Q(\data_out1[-_n_0_1111111104] ),
+        .R(1'b0));
+  FDRE \data_out1[-1111111104]__0 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out1[-_n_0_1111111104] ),
+        .Q(\data_out1[-1111111104]__0_n_0 ),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111104]__0 
+    \data_out1[-1111111104]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111104]_srl2_n_0 ),
-        .Q(\data_out0[-1111111104]__0_n_0 ),
+        .D(\data_pipelined_reg[30711]_srl2_n_0 ),
+        .Q(\data_out1[-1111111104]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111104]__1 
+  FDRE \data_out1[-1111111105] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[7]),
-        .Q(\data_out0[-1111111104]__1_n_0 ),
+        .D(p_0_in[10230]),
+        .Q(\data_out1[-_n_0_1111111105] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111104]__10 
+  FDRE \data_out1[-1111111105]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111104]__9_n_0 ),
-        .Q(\data_out0[-1111111104]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111105] ),
+        .Q(\data_out1[-1111111105]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111104]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10231] ),
-        .Q(\data_out0[-1111111104]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111104]__1_n_0 ),
-        .Q(\data_out0[-1111111104]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[7]),
-        .Q(\data_out0[-1111111104]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111104]__3_n_0 ),
-        .Q(\data_out0[-1111111104]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20463] ),
-        .Q(\data_out0[-1111111104]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111104]__5_n_0 ),
-        .Q(\data_out0[-1111111104]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20455] ),
-        .Q(\data_out0[-1111111104]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111104]__7_n_0 ),
-        .Q(\data_out0[-1111111104]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111104]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30695] ),
-        .Q(\data_out0[-1111111104]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111104]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111104]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30695] ),
-        .Q(\data_out0[-1111111104]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111105]__0 
+    \data_out1[-1111111105]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111105]_srl2_n_0 ),
-        .Q(\data_out0[-1111111105]__0_n_0 ),
+        .D(\data_pipelined_reg[30710]_srl2_n_0 ),
+        .Q(\data_out1[-1111111105]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111105]__1 
+  FDRE \data_out1[-1111111106] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[6]),
-        .Q(\data_out0[-1111111105]__1_n_0 ),
+        .D(p_0_in[10229]),
+        .Q(\data_out1[-_n_0_1111111106] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111105]__10 
+  FDRE \data_out1[-1111111106]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111105]__9_n_0 ),
-        .Q(\data_out0[-1111111105]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111106] ),
+        .Q(\data_out1[-1111111106]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111105]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10230] ),
-        .Q(\data_out0[-1111111105]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111105]__1_n_0 ),
-        .Q(\data_out0[-1111111105]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[6]),
-        .Q(\data_out0[-1111111105]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111105]__3_n_0 ),
-        .Q(\data_out0[-1111111105]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20462] ),
-        .Q(\data_out0[-1111111105]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111105]__5_n_0 ),
-        .Q(\data_out0[-1111111105]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20454] ),
-        .Q(\data_out0[-1111111105]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111105]__7_n_0 ),
-        .Q(\data_out0[-1111111105]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111105]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30694] ),
-        .Q(\data_out0[-1111111105]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111105]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111105]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30694] ),
-        .Q(\data_out0[-1111111105]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111106]__0 
+    \data_out1[-1111111106]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111106]_srl2_n_0 ),
-        .Q(\data_out0[-1111111106]__0_n_0 ),
+        .D(\data_pipelined_reg[30709]_srl2_n_0 ),
+        .Q(\data_out1[-1111111106]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111106]__1 
+  FDRE \data_out1[-1111111107] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[5]),
-        .Q(\data_out0[-1111111106]__1_n_0 ),
+        .D(p_0_in[10228]),
+        .Q(\data_out1[-_n_0_1111111107] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111106]__10 
+  FDRE \data_out1[-1111111107]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111106]__9_n_0 ),
-        .Q(\data_out0[-1111111106]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111107] ),
+        .Q(\data_out1[-1111111107]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111106]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10229] ),
-        .Q(\data_out0[-1111111106]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111106]__1_n_0 ),
-        .Q(\data_out0[-1111111106]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[5]),
-        .Q(\data_out0[-1111111106]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111106]__3_n_0 ),
-        .Q(\data_out0[-1111111106]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20461] ),
-        .Q(\data_out0[-1111111106]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111106]__5_n_0 ),
-        .Q(\data_out0[-1111111106]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20453] ),
-        .Q(\data_out0[-1111111106]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111106]__7_n_0 ),
-        .Q(\data_out0[-1111111106]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111106]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30693] ),
-        .Q(\data_out0[-1111111106]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111106]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111106]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30693] ),
-        .Q(\data_out0[-1111111106]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111107]__0 
+    \data_out1[-1111111107]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111107]_srl2_n_0 ),
-        .Q(\data_out0[-1111111107]__0_n_0 ),
+        .D(\data_pipelined_reg[30708]_srl2_n_0 ),
+        .Q(\data_out1[-1111111107]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111107]__1 
+  FDRE \data_out1[-1111111108] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[4]),
-        .Q(\data_out0[-1111111107]__1_n_0 ),
+        .D(p_0_in[10227]),
+        .Q(\data_out1[-_n_0_1111111108] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111107]__10 
+  FDRE \data_out1[-1111111108]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111107]__9_n_0 ),
-        .Q(\data_out0[-1111111107]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111108] ),
+        .Q(\data_out1[-1111111108]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111107]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10228] ),
-        .Q(\data_out0[-1111111107]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111107]__1_n_0 ),
-        .Q(\data_out0[-1111111107]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[4]),
-        .Q(\data_out0[-1111111107]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111107]__3_n_0 ),
-        .Q(\data_out0[-1111111107]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20460] ),
-        .Q(\data_out0[-1111111107]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111107]__5_n_0 ),
-        .Q(\data_out0[-1111111107]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20452] ),
-        .Q(\data_out0[-1111111107]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111107]__7_n_0 ),
-        .Q(\data_out0[-1111111107]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111107]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30692] ),
-        .Q(\data_out0[-1111111107]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111107]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111107]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30692] ),
-        .Q(\data_out0[-1111111107]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111108]__0 
+    \data_out1[-1111111108]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111108]_srl2_n_0 ),
-        .Q(\data_out0[-1111111108]__0_n_0 ),
+        .D(\data_pipelined_reg[30707]_srl2_n_0 ),
+        .Q(\data_out1[-1111111108]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111108]__1 
+  FDRE \data_out1[-1111111109] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[3]),
-        .Q(\data_out0[-1111111108]__1_n_0 ),
+        .D(p_0_in[10226]),
+        .Q(\data_out1[-_n_0_1111111109] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111108]__10 
+  FDRE \data_out1[-1111111109]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111108]__9_n_0 ),
-        .Q(\data_out0[-1111111108]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111109] ),
+        .Q(\data_out1[-1111111109]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111108]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10227] ),
-        .Q(\data_out0[-1111111108]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111108]__1_n_0 ),
-        .Q(\data_out0[-1111111108]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[3]),
-        .Q(\data_out0[-1111111108]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111108]__3_n_0 ),
-        .Q(\data_out0[-1111111108]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20459] ),
-        .Q(\data_out0[-1111111108]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111108]__5_n_0 ),
-        .Q(\data_out0[-1111111108]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20451] ),
-        .Q(\data_out0[-1111111108]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111108]__7_n_0 ),
-        .Q(\data_out0[-1111111108]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111108]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30691] ),
-        .Q(\data_out0[-1111111108]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111108]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111108]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30691] ),
-        .Q(\data_out0[-1111111108]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111109]__0 
+    \data_out1[-1111111109]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111109]_srl2_n_0 ),
-        .Q(\data_out0[-1111111109]__0_n_0 ),
+        .D(\data_pipelined_reg[30706]_srl2_n_0 ),
+        .Q(\data_out1[-1111111109]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111109]__1 
+  FDRE \data_out1[-1111111110] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[2]),
-        .Q(\data_out0[-1111111109]__1_n_0 ),
+        .D(p_0_in[10225]),
+        .Q(\data_out1[-_n_0_1111111110] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111109]__10 
+  FDRE \data_out1[-1111111110]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111109]__9_n_0 ),
-        .Q(\data_out0[-1111111109]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111110] ),
+        .Q(\data_out1[-1111111110]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111109]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10226] ),
-        .Q(\data_out0[-1111111109]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111109]__1_n_0 ),
-        .Q(\data_out0[-1111111109]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[2]),
-        .Q(\data_out0[-1111111109]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111109]__3_n_0 ),
-        .Q(\data_out0[-1111111109]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20458] ),
-        .Q(\data_out0[-1111111109]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111109]__5_n_0 ),
-        .Q(\data_out0[-1111111109]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20450] ),
-        .Q(\data_out0[-1111111109]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111109]__7_n_0 ),
-        .Q(\data_out0[-1111111109]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111109]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30690] ),
-        .Q(\data_out0[-1111111109]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111109]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111109]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30690] ),
-        .Q(\data_out0[-1111111109]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111110]__0 
+    \data_out1[-1111111110]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111110]_srl2_n_0 ),
-        .Q(\data_out0[-1111111110]__0_n_0 ),
+        .D(\data_pipelined_reg[30705]_srl2_n_0 ),
+        .Q(\data_out1[-1111111110]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111110]__1 
+  FDRE \data_out1[-1111111111] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[1]),
-        .Q(\data_out0[-1111111110]__1_n_0 ),
+        .D(p_0_in[10224]),
+        .Q(\data_out1[-_n_0_1111111111] ),
         .R(1'b0));
-  FDRE \data_out0[-1111111110]__10 
+  FDRE \data_out1[-1111111111]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111110]__9_n_0 ),
-        .Q(\data_out0[-1111111110]__10_n_0 ),
+        .D(\data_out1[-_n_0_1111111111] ),
+        .Q(\data_out1[-1111111111]__0_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111110]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10225] ),
-        .Q(\data_out0[-1111111110]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111110]__1_n_0 ),
-        .Q(\data_out0[-1111111110]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[1]),
-        .Q(\data_out0[-1111111110]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111110]__3_n_0 ),
-        .Q(\data_out0[-1111111110]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20457] ),
-        .Q(\data_out0[-1111111110]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111110]__5_n_0 ),
-        .Q(\data_out0[-1111111110]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20449] ),
-        .Q(\data_out0[-1111111110]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111110]__7_n_0 ),
-        .Q(\data_out0[-1111111110]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111110]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30689] ),
-        .Q(\data_out0[-1111111110]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111110]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111110]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30689] ),
-        .Q(\data_out0[-1111111110]_srl2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
-    \data_out0[-1111111111]__0 
+    \data_out1[-1111111111]__1 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(\data_out0[-1111111111]_srl2_n_0 ),
-        .Q(\data_out0[-1111111111]__0_n_0 ),
+        .D(\data_pipelined_reg[30704]_srl2_n_0 ),
+        .Q(\data_out1[-1111111111]__1_n_0 ),
         .R(1'b0));
-  FDRE \data_out0[-1111111111]__1 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(B[0]),
-        .Q(\data_out0[-1111111111]__1_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__10 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111111]__9_n_0 ),
-        .Q(\data_out0[-1111111111]__10_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__11 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10224] ),
-        .Q(\data_out0[-1111111111]__11_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__2 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111111]__1_n_0 ),
-        .Q(\data_out0[-1111111111]__2_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__3 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(C[0]),
-        .Q(\data_out0[-1111111111]__3_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__4 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111111]__3_n_0 ),
-        .Q(\data_out0[-1111111111]__4_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__5 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20456] ),
-        .Q(\data_out0[-1111111111]__5_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__6 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111111]__5_n_0 ),
-        .Q(\data_out0[-1111111111]__6_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__7 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20448] ),
-        .Q(\data_out0[-1111111111]__7_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__8 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_out0[-1111111111]__7_n_0 ),
-        .Q(\data_out0[-1111111111]__8_n_0 ),
-        .R(1'b0));
-  FDRE \data_out0[-1111111111]__9 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[30688] ),
-        .Q(\data_out0[-1111111111]__9_n_0 ),
-        .R(1'b0));
-  (* srl_bus_name = "\U0/data_out0 " *) 
-  (* srl_name = "\U0/data_out0[-1111111111]_srl2 " *) 
-  SRL16E #(
-    .INIT(16'h0000)) 
-    \data_out0[-1111111111]_srl2 
-       (.A0(1'b1),
-        .A1(1'b0),
-        .A2(1'b0),
-        .A3(1'b0),
-        .CE(vid_active_video),
-        .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[30688] ),
-        .Q(\data_out0[-1111111111]_srl2_n_0 ));
-  CARRY4 data_out0__0_carry
+  CARRY4 data_out1__1_carry
        (.CI(1'b0),
-        .CO({data_out0__0_carry_n_0,data_out0__0_carry_n_1,data_out0__0_carry_n_2,data_out0__0_carry_n_3}),
+        .CO({data_out1__1_carry_n_0,data_out1__1_carry_n_1,data_out1__1_carry_n_2,data_out1__1_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({data_out0__0_carry_i_1_n_0,data_out0__0_carry_i_2_n_0,data_out0__0_carry_i_3_n_0,1'b0}),
-        .O(p_0_in[3:0]),
-        .S({data_out0__0_carry_i_4_n_0,data_out0__0_carry_i_5_n_0,data_out0__0_carry_i_6_n_0,data_out0__0_carry_i_7_n_0}));
-  CARRY4 data_out0__0_carry__0
-       (.CI(data_out0__0_carry_n_0),
-        .CO({data_out0__0_carry__0_n_0,data_out0__0_carry__0_n_1,data_out0__0_carry__0_n_2,data_out0__0_carry__0_n_3}),
+        .DI({data_out1__1_carry_i_1_n_0,data_out1__1_carry_i_2_n_0,\data_out4[-1111111110]__1_n_0 ,\data_out4[-1111111111]__1_n_0 }),
+        .O({data_out1__1_carry_n_4,data_out1__1_carry_n_5,data_out1__1_carry_n_6,data_out1__1_carry_n_7}),
+        .S({data_out1__1_carry_i_3_n_0,data_out1__1_carry_i_4_n_0,data_out1__1_carry_i_5_n_0,data_out1__1_carry_i_6_n_0}));
+  CARRY4 data_out1__1_carry__0
+       (.CI(data_out1__1_carry_n_0),
+        .CO({data_out1__1_carry__0_n_0,data_out1__1_carry__0_n_1,data_out1__1_carry__0_n_2,data_out1__1_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({data_out0__0_carry__0_i_1_n_0,data_out0__0_carry__0_i_2_n_0,data_out0__0_carry__0_i_3_n_0,data_out0__0_carry__0_i_4_n_0}),
-        .O(p_0_in[7:4]),
-        .S({data_out0__0_carry__0_i_5_n_0,data_out0__0_carry__0_i_6_n_0,data_out0__0_carry__0_i_7_n_0,data_out0__0_carry__0_i_8_n_0}));
-  (* HLUTNM = "lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__0_carry__0_i_1
-       (.I0(\data_out0[-1111111105]__2_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_5),
-        .I2(\data_out0[-1111111105]__3_n_0 ),
-        .O(data_out0__0_carry__0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__0_i_10
-       (.I0(\data_out0[-1111111105]__10_n_0 ),
-        .I1(C__0[7]),
-        .O(data_out0__0_carry__0_i_10_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__0_i_11
-       (.I0(\data_out0[-1111111106]__10_n_0 ),
-        .I1(C__0[6]),
-        .O(data_out0__0_carry__0_i_11_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__0_i_12
-       (.I0(\data_out0[-1111111107]__10_n_0 ),
-        .I1(C__0[5]),
-        .O(data_out0__0_carry__0_i_12_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__0_i_13
-       (.I0(\data_out0[-1111111108]__10_n_0 ),
-        .I1(C__0[4]),
-        .O(data_out0__0_carry__0_i_13_n_0));
-  (* HLUTNM = "lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__0_carry__0_i_2
-       (.I0(\data_out0[-1111111106]__2_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_6),
-        .I2(\data_out0[-1111111106]__3_n_0 ),
-        .O(data_out0__0_carry__0_i_2_n_0));
+        .DI({data_out1__1_carry__0_i_1_n_0,data_out1__1_carry__0_i_2_n_0,data_out1__1_carry__0_i_3_n_0,data_out1__1_carry__0_i_4_n_0}),
+        .O({data_out1__1_carry__0_n_4,data_out1__1_carry__0_n_5,data_out1__1_carry__0_n_6,data_out1__1_carry__0_n_7}),
+        .S({data_out1__1_carry__0_i_5_n_0,data_out1__1_carry__0_i_6_n_0,data_out1__1_carry__0_i_7_n_0,data_out1__1_carry__0_i_8_n_0}));
   (* HLUTNM = "lutpair4" *) 
   LUT3 #(
     .INIT(8'hE8)) 
-    data_out0__0_carry__0_i_3
-       (.I0(\data_out0[-1111111107]__2_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_7),
-        .I2(\data_out0[-1111111107]__3_n_0 ),
-        .O(data_out0__0_carry__0_i_3_n_0));
+    data_out1__1_carry__0_i_1
+       (.I0(data_out4_n_99),
+        .I1(\data_out4[-1111111105]__1_n_0 ),
+        .I2(data_out4__1[5]),
+        .O(data_out1__1_carry__0_i_1_n_0));
   (* HLUTNM = "lutpair3" *) 
   LUT3 #(
     .INIT(8'hE8)) 
-    data_out0__0_carry__0_i_4
-       (.I0(\data_out0[-1111111108]__2_n_0 ),
-        .I1(data_out0__0_carry_i_8_n_4),
-        .I2(\data_out0[-1111111108]__3_n_0 ),
-        .O(data_out0__0_carry__0_i_4_n_0));
+    data_out1__1_carry__0_i_2
+       (.I0(data_out4_n_100),
+        .I1(\data_out4[-1111111106]__1_n_0 ),
+        .I2(data_out4__1[4]),
+        .O(data_out1__1_carry__0_i_2_n_0));
+  (* HLUTNM = "lutpair2" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    data_out1__1_carry__0_i_3
+       (.I0(data_out4_n_101),
+        .I1(\data_out4[-1111111107]__1_n_0 ),
+        .I2(data_out4__1[3]),
+        .O(data_out1__1_carry__0_i_3_n_0));
+  (* HLUTNM = "lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hE8)) 
+    data_out1__1_carry__0_i_4
+       (.I0(data_out4_n_102),
+        .I1(\data_out4[-1111111108]__1_n_0 ),
+        .I2(data_out4__1[2]),
+        .O(data_out1__1_carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'h6996)) 
-    data_out0__0_carry__0_i_5
-       (.I0(data_out0__0_carry__0_i_1_n_0),
-        .I1(data_out0__0_carry__0_i_9_n_4),
-        .I2(\data_out0[-1111111104]__2_n_0 ),
-        .I3(\data_out0[-1111111104]__3_n_0 ),
-        .O(data_out0__0_carry__0_i_5_n_0));
-  (* HLUTNM = "lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__0_carry__0_i_6
-       (.I0(\data_out0[-1111111105]__2_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_5),
-        .I2(\data_out0[-1111111105]__3_n_0 ),
-        .I3(data_out0__0_carry__0_i_2_n_0),
-        .O(data_out0__0_carry__0_i_6_n_0));
-  (* HLUTNM = "lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__0_carry__0_i_7
-       (.I0(\data_out0[-1111111106]__2_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_6),
-        .I2(\data_out0[-1111111106]__3_n_0 ),
-        .I3(data_out0__0_carry__0_i_3_n_0),
-        .O(data_out0__0_carry__0_i_7_n_0));
+    data_out1__1_carry__0_i_5
+       (.I0(data_out1__1_carry__0_i_1_n_0),
+        .I1(data_out4_n_98),
+        .I2(\data_out4[-1111111104]__1_n_0 ),
+        .I3(data_out4__1[6]),
+        .O(data_out1__1_carry__0_i_5_n_0));
   (* HLUTNM = "lutpair4" *) 
   LUT4 #(
     .INIT(16'h6996)) 
-    data_out0__0_carry__0_i_8
-       (.I0(\data_out0[-1111111107]__2_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_7),
-        .I2(\data_out0[-1111111107]__3_n_0 ),
-        .I3(data_out0__0_carry__0_i_4_n_0),
-        .O(data_out0__0_carry__0_i_8_n_0));
-  CARRY4 data_out0__0_carry__0_i_9
-       (.CI(data_out0__0_carry_i_8_n_0),
-        .CO({data_out0__0_carry__0_i_9_n_0,data_out0__0_carry__0_i_9_n_1,data_out0__0_carry__0_i_9_n_2,data_out0__0_carry__0_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111105]__10_n_0 ,\data_out0[-1111111106]__10_n_0 ,\data_out0[-1111111107]__10_n_0 ,\data_out0[-1111111108]__10_n_0 }),
-        .O({data_out0__0_carry__0_i_9_n_4,data_out0__0_carry__0_i_9_n_5,data_out0__0_carry__0_i_9_n_6,data_out0__0_carry__0_i_9_n_7}),
-        .S({data_out0__0_carry__0_i_10_n_0,data_out0__0_carry__0_i_11_n_0,data_out0__0_carry__0_i_12_n_0,data_out0__0_carry__0_i_13_n_0}));
-  CARRY4 data_out0__0_carry__1
-       (.CI(data_out0__0_carry__0_n_0),
-        .CO({NLW_data_out0__0_carry__1_CO_UNCONNECTED[3],data_out0__0_carry__1_n_1,data_out0__0_carry__1_n_2,data_out0__0_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,data_out0__0_carry__1_i_1_n_7}),
-        .O(p_0_in[11:8]),
-        .S({data_out0__0_carry__1_i_1_n_4,data_out0__0_carry__1_i_1_n_5,data_out0__0_carry__1_i_1_n_6,data_out0__0_carry__1_i_2_n_0}));
-  CARRY4 data_out0__0_carry__1_i_1
-       (.CI(data_out0__0_carry__0_i_9_n_0),
-        .CO({NLW_data_out0__0_carry__1_i_1_CO_UNCONNECTED[3],data_out0__0_carry__1_i_1_n_1,data_out0__0_carry__1_i_1_n_2,data_out0__0_carry__1_i_1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,\data_out0[-1111111104]__10_n_0 }),
-        .O({data_out0__0_carry__1_i_1_n_4,data_out0__0_carry__1_i_1_n_5,data_out0__0_carry__1_i_1_n_6,data_out0__0_carry__1_i_1_n_7}),
-        .S({data_out0__0_carry__1_i_3_n_1,C__0[10:9],data_out0__0_carry__1_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_10
-       (.I0(\data_out0[-1111111107]__8_n_0 ),
-        .I1(data_out0__0_carry__1_i_12_n_5),
-        .O(data_out0__0_carry__1_i_10_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_11
-       (.I0(\data_out0[-1111111108]__8_n_0 ),
-        .I1(data_out0__0_carry__1_i_12_n_6),
-        .O(data_out0__0_carry__1_i_11_n_0));
-  CARRY4 data_out0__0_carry__1_i_12
-       (.CI(data_out0__0_carry_i_16_n_0),
-        .CO({data_out0__0_carry__1_i_12_n_0,data_out0__0_carry__1_i_12_n_1,data_out0__0_carry__1_i_12_n_2,data_out0__0_carry__1_i_12_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111105]__6_n_0 ,\data_out0[-1111111106]__6_n_0 ,\data_out0[-1111111107]__6_n_0 ,\data_out0[-1111111108]__6_n_0 }),
-        .O({data_out0__0_carry__1_i_12_n_4,data_out0__0_carry__1_i_12_n_5,data_out0__0_carry__1_i_12_n_6,data_out0__0_carry__1_i_12_n_7}),
-        .S({data_out0__0_carry__1_i_15_n_0,data_out0__0_carry__1_i_16_n_0,data_out0__0_carry__1_i_17_n_0,data_out0__0_carry__1_i_18_n_0}));
-  CARRY4 data_out0__0_carry__1_i_13
-       (.CI(data_out0__0_carry__1_i_19_n_0),
-        .CO({NLW_data_out0__0_carry__1_i_13_CO_UNCONNECTED[3:2],data_out0__0_carry__1_i_13_n_2,NLW_data_out0__0_carry__1_i_13_CO_UNCONNECTED[0]}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,\data_out0[-1111111104]__4_n_0 }),
-        .O({NLW_data_out0__0_carry__1_i_13_O_UNCONNECTED[3:1],data_out0__0_carry__1_i_13_n_7}),
-        .S({1'b0,1'b0,1'b1,data_out0__0_carry__1_i_20_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_14
-       (.I0(\data_out0[-1111111104]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_13_n_7),
-        .O(data_out0__0_carry__1_i_14_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_15
-       (.I0(\data_out0[-1111111105]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_19_n_4),
-        .O(data_out0__0_carry__1_i_15_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_16
-       (.I0(\data_out0[-1111111106]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_19_n_5),
-        .O(data_out0__0_carry__1_i_16_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_17
-       (.I0(\data_out0[-1111111107]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_19_n_6),
-        .O(data_out0__0_carry__1_i_17_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_18
-       (.I0(\data_out0[-1111111108]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_19_n_7),
-        .O(data_out0__0_carry__1_i_18_n_0));
-  CARRY4 data_out0__0_carry__1_i_19
-       (.CI(data_out0__0_carry__1_i_21_n_0),
-        .CO({data_out0__0_carry__1_i_19_n_0,data_out0__0_carry__1_i_19_n_1,data_out0__0_carry__1_i_19_n_2,data_out0__0_carry__1_i_19_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111105]__4_n_0 ,\data_out0[-1111111106]__4_n_0 ,\data_out0[-1111111107]__4_n_0 ,\data_out0[-1111111108]__4_n_0 }),
-        .O({data_out0__0_carry__1_i_19_n_4,data_out0__0_carry__1_i_19_n_5,data_out0__0_carry__1_i_19_n_6,data_out0__0_carry__1_i_19_n_7}),
-        .S({data_out0__0_carry__1_i_22_n_0,data_out0__0_carry__1_i_23_n_0,data_out0__0_carry__1_i_24_n_0,data_out0__0_carry__1_i_25_n_0}));
-  LUT4 #(
-    .INIT(16'h17E8)) 
-    data_out0__0_carry__1_i_2
-       (.I0(\data_out0[-1111111104]__3_n_0 ),
-        .I1(data_out0__0_carry__0_i_9_n_4),
-        .I2(\data_out0[-1111111104]__2_n_0 ),
-        .I3(data_out0__0_carry__1_i_1_n_7),
-        .O(data_out0__0_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_20
-       (.I0(\data_out0[-1111111104]__4_n_0 ),
-        .I1(data_out4[7]),
-        .O(data_out0__0_carry__1_i_20_n_0));
-  CARRY4 data_out0__0_carry__1_i_21
-       (.CI(1'b0),
-        .CO({data_out0__0_carry__1_i_21_n_0,data_out0__0_carry__1_i_21_n_1,data_out0__0_carry__1_i_21_n_2,data_out0__0_carry__1_i_21_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111109]__4_n_0 ,\data_out0[-1111111110]__4_n_0 ,\data_out0[-1111111111]__4_n_0 ,1'b0}),
-        .O({data_out0__0_carry__1_i_21_n_4,data_out0__0_carry__1_i_21_n_5,data_out0__0_carry__1_i_21_n_6,NLW_data_out0__0_carry__1_i_21_O_UNCONNECTED[0]}),
-        .S({data_out0__0_carry__1_i_26_n_0,data_out0__0_carry__1_i_27_n_0,data_out0__0_carry__1_i_28_n_0,1'b0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_22
-       (.I0(\data_out0[-1111111105]__4_n_0 ),
-        .I1(data_out4[6]),
-        .O(data_out0__0_carry__1_i_22_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_23
-       (.I0(\data_out0[-1111111106]__4_n_0 ),
-        .I1(data_out4[5]),
-        .O(data_out0__0_carry__1_i_23_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_24
-       (.I0(\data_out0[-1111111107]__4_n_0 ),
-        .I1(data_out4[4]),
-        .O(data_out0__0_carry__1_i_24_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_25
-       (.I0(\data_out0[-1111111108]__4_n_0 ),
-        .I1(data_out4[3]),
-        .O(data_out0__0_carry__1_i_25_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_26
-       (.I0(\data_out0[-1111111109]__4_n_0 ),
-        .I1(data_out4[2]),
-        .O(data_out0__0_carry__1_i_26_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_27
-       (.I0(\data_out0[-1111111110]__4_n_0 ),
-        .I1(data_out4[1]),
-        .O(data_out0__0_carry__1_i_27_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_28
-       (.I0(\data_out0[-1111111111]__4_n_0 ),
-        .I1(data_out4[0]),
-        .O(data_out0__0_carry__1_i_28_n_0));
-  CARRY4 data_out0__0_carry__1_i_3
-       (.CI(data_out0__0_carry__1_i_5_n_0),
-        .CO({NLW_data_out0__0_carry__1_i_3_CO_UNCONNECTED[3],data_out0__0_carry__1_i_3_n_1,NLW_data_out0__0_carry__1_i_3_CO_UNCONNECTED[1],data_out0__0_carry__1_i_3_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,\data_out0[-1111111104]__8_n_0 }),
-        .O({NLW_data_out0__0_carry__1_i_3_O_UNCONNECTED[3:2],C__0[10:9]}),
-        .S({1'b0,1'b1,data_out0__0_carry__1_i_6_n_1,data_out0__0_carry__1_i_7_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_4
-       (.I0(\data_out0[-1111111104]__10_n_0 ),
-        .I1(C__0[8]),
-        .O(data_out0__0_carry__1_i_4_n_0));
-  CARRY4 data_out0__0_carry__1_i_5
-       (.CI(data_out0__0_carry_i_12_n_0),
-        .CO({data_out0__0_carry__1_i_5_n_0,data_out0__0_carry__1_i_5_n_1,data_out0__0_carry__1_i_5_n_2,data_out0__0_carry__1_i_5_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111105]__8_n_0 ,\data_out0[-1111111106]__8_n_0 ,\data_out0[-1111111107]__8_n_0 ,\data_out0[-1111111108]__8_n_0 }),
-        .O(C__0[8:5]),
-        .S({data_out0__0_carry__1_i_8_n_0,data_out0__0_carry__1_i_9_n_0,data_out0__0_carry__1_i_10_n_0,data_out0__0_carry__1_i_11_n_0}));
-  CARRY4 data_out0__0_carry__1_i_6
-       (.CI(data_out0__0_carry__1_i_12_n_0),
-        .CO({NLW_data_out0__0_carry__1_i_6_CO_UNCONNECTED[3],data_out0__0_carry__1_i_6_n_1,NLW_data_out0__0_carry__1_i_6_CO_UNCONNECTED[1],data_out0__0_carry__1_i_6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,\data_out0[-1111111104]__6_n_0 }),
-        .O({NLW_data_out0__0_carry__1_i_6_O_UNCONNECTED[3:2],data_out0__0_carry__1_i_6_n_6,data_out0__0_carry__1_i_6_n_7}),
-        .S({1'b0,1'b1,data_out0__0_carry__1_i_13_n_2,data_out0__0_carry__1_i_14_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_7
-       (.I0(\data_out0[-1111111104]__8_n_0 ),
-        .I1(data_out0__0_carry__1_i_6_n_6),
-        .O(data_out0__0_carry__1_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_8
-       (.I0(\data_out0[-1111111105]__8_n_0 ),
-        .I1(data_out0__0_carry__1_i_6_n_7),
-        .O(data_out0__0_carry__1_i_8_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry__1_i_9
-       (.I0(\data_out0[-1111111106]__8_n_0 ),
-        .I1(data_out0__0_carry__1_i_12_n_4),
-        .O(data_out0__0_carry__1_i_9_n_0));
-  (* HLUTNM = "lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__0_carry_i_1
-       (.I0(\data_out0[-1111111109]__2_n_0 ),
-        .I1(data_out0__0_carry_i_8_n_5),
-        .I2(\data_out0[-1111111109]__3_n_0 ),
-        .O(data_out0__0_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_10
-       (.I0(\data_out0[-1111111110]__10_n_0 ),
-        .I1(C__0[2]),
-        .O(data_out0__0_carry_i_10_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_11
-       (.I0(\data_out0[-1111111111]__10_n_0 ),
-        .I1(C__0[1]),
-        .O(data_out0__0_carry_i_11_n_0));
-  CARRY4 data_out0__0_carry_i_12
-       (.CI(1'b0),
-        .CO({data_out0__0_carry_i_12_n_0,data_out0__0_carry_i_12_n_1,data_out0__0_carry_i_12_n_2,data_out0__0_carry_i_12_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111109]__8_n_0 ,\data_out0[-1111111110]__8_n_0 ,\data_out0[-1111111111]__8_n_0 ,1'b0}),
-        .O(C__0[4:1]),
-        .S({data_out0__0_carry_i_13_n_0,data_out0__0_carry_i_14_n_0,data_out0__0_carry_i_15_n_0,data_out0__0_carry_i_16_n_6}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_13
-       (.I0(\data_out0[-1111111109]__8_n_0 ),
-        .I1(data_out0__0_carry__1_i_12_n_7),
-        .O(data_out0__0_carry_i_13_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_14
-       (.I0(\data_out0[-1111111110]__8_n_0 ),
-        .I1(data_out0__0_carry_i_16_n_4),
-        .O(data_out0__0_carry_i_14_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_15
-       (.I0(\data_out0[-1111111111]__8_n_0 ),
-        .I1(data_out0__0_carry_i_16_n_5),
-        .O(data_out0__0_carry_i_15_n_0));
-  CARRY4 data_out0__0_carry_i_16
-       (.CI(1'b0),
-        .CO({data_out0__0_carry_i_16_n_0,data_out0__0_carry_i_16_n_1,data_out0__0_carry_i_16_n_2,data_out0__0_carry_i_16_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111109]__6_n_0 ,\data_out0[-1111111110]__6_n_0 ,\data_out0[-1111111111]__6_n_0 ,1'b0}),
-        .O({data_out0__0_carry_i_16_n_4,data_out0__0_carry_i_16_n_5,data_out0__0_carry_i_16_n_6,NLW_data_out0__0_carry_i_16_O_UNCONNECTED[0]}),
-        .S({data_out0__0_carry_i_17_n_0,data_out0__0_carry_i_18_n_0,data_out0__0_carry_i_19_n_0,1'b0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_17
-       (.I0(\data_out0[-1111111109]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_21_n_4),
-        .O(data_out0__0_carry_i_17_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_18
-       (.I0(\data_out0[-1111111110]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_21_n_5),
-        .O(data_out0__0_carry_i_18_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_19
-       (.I0(\data_out0[-1111111111]__6_n_0 ),
-        .I1(data_out0__0_carry__1_i_21_n_6),
-        .O(data_out0__0_carry_i_19_n_0));
-  (* HLUTNM = "lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__0_carry_i_2
-       (.I0(\data_out0[-1111111110]__2_n_0 ),
-        .I1(data_out0__0_carry_i_8_n_6),
-        .I2(\data_out0[-1111111110]__3_n_0 ),
-        .O(data_out0__0_carry_i_2_n_0));
-  (* HLUTNM = "lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    data_out0__0_carry_i_3
-       (.I0(\data_out0[-1111111111]__2_n_0 ),
-        .I1(\data_out0[-1111111111]__3_n_0 ),
-        .O(data_out0__0_carry_i_3_n_0));
+    data_out1__1_carry__0_i_6
+       (.I0(data_out4_n_99),
+        .I1(\data_out4[-1111111105]__1_n_0 ),
+        .I2(data_out4__1[5]),
+        .I3(data_out1__1_carry__0_i_2_n_0),
+        .O(data_out1__1_carry__0_i_6_n_0));
   (* HLUTNM = "lutpair3" *) 
   LUT4 #(
     .INIT(16'h6996)) 
-    data_out0__0_carry_i_4
-       (.I0(\data_out0[-1111111108]__2_n_0 ),
-        .I1(data_out0__0_carry_i_8_n_4),
-        .I2(\data_out0[-1111111108]__3_n_0 ),
-        .I3(data_out0__0_carry_i_1_n_0),
-        .O(data_out0__0_carry_i_4_n_0));
+    data_out1__1_carry__0_i_7
+       (.I0(data_out4_n_100),
+        .I1(\data_out4[-1111111106]__1_n_0 ),
+        .I2(data_out4__1[4]),
+        .I3(data_out1__1_carry__0_i_3_n_0),
+        .O(data_out1__1_carry__0_i_7_n_0));
   (* HLUTNM = "lutpair2" *) 
   LUT4 #(
     .INIT(16'h6996)) 
-    data_out0__0_carry_i_5
-       (.I0(\data_out0[-1111111109]__2_n_0 ),
-        .I1(data_out0__0_carry_i_8_n_5),
-        .I2(\data_out0[-1111111109]__3_n_0 ),
-        .I3(data_out0__0_carry_i_2_n_0),
-        .O(data_out0__0_carry_i_5_n_0));
-  (* HLUTNM = "lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__0_carry_i_6
-       (.I0(\data_out0[-1111111110]__2_n_0 ),
-        .I1(data_out0__0_carry_i_8_n_6),
-        .I2(\data_out0[-1111111110]__3_n_0 ),
-        .I3(data_out0__0_carry_i_3_n_0),
-        .O(data_out0__0_carry_i_6_n_0));
+    data_out1__1_carry__0_i_8
+       (.I0(data_out4_n_101),
+        .I1(\data_out4[-1111111107]__1_n_0 ),
+        .I2(data_out4__1[3]),
+        .I3(data_out1__1_carry__0_i_4_n_0),
+        .O(data_out1__1_carry__0_i_8_n_0));
+  CARRY4 data_out1__1_carry__1
+       (.CI(data_out1__1_carry__0_n_0),
+        .CO({NLW_data_out1__1_carry__1_CO_UNCONNECTED[3:2],data_out1__1_carry__1_n_2,data_out1__1_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,data_out4_n_96,data_out1__1_carry__1_i_1_n_0}),
+        .O({NLW_data_out1__1_carry__1_O_UNCONNECTED[3],data_out1__1_carry__1_n_5,data_out1__1_carry__1_n_6,data_out1__1_carry__1_n_7}),
+        .S({1'b0,data_out4_n_95,data_out1__1_carry__1_i_2_n_0,data_out1__1_carry__1_i_3_n_0}));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    data_out1__1_carry__1_i_1
+       (.I0(data_out4_n_98),
+        .I1(\data_out4[-1111111104]__1_n_0 ),
+        .I2(data_out4__1[6]),
+        .O(data_out1__1_carry__1_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h78)) 
+    data_out1__1_carry__1_i_2
+       (.I0(data_out4__1[7]),
+        .I1(data_out4_n_97),
+        .I2(data_out4_n_96),
+        .O(data_out1__1_carry__1_i_2_n_0));
+  LUT5 #(
+    .INIT(32'hE81717E8)) 
+    data_out1__1_carry__1_i_3
+       (.I0(data_out4__1[6]),
+        .I1(\data_out4[-1111111104]__1_n_0 ),
+        .I2(data_out4_n_98),
+        .I3(data_out4__1[7]),
+        .I4(data_out4_n_97),
+        .O(data_out1__1_carry__1_i_3_n_0));
   (* HLUTNM = "lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_7
-       (.I0(\data_out0[-1111111111]__2_n_0 ),
-        .I1(\data_out0[-1111111111]__3_n_0 ),
-        .O(data_out0__0_carry_i_7_n_0));
-  CARRY4 data_out0__0_carry_i_8
-       (.CI(1'b0),
-        .CO({data_out0__0_carry_i_8_n_0,data_out0__0_carry_i_8_n_1,data_out0__0_carry_i_8_n_2,data_out0__0_carry_i_8_n_3}),
-        .CYINIT(1'b0),
-        .DI({\data_out0[-1111111109]__10_n_0 ,\data_out0[-1111111110]__10_n_0 ,\data_out0[-1111111111]__10_n_0 ,1'b0}),
-        .O({data_out0__0_carry_i_8_n_4,data_out0__0_carry_i_8_n_5,data_out0__0_carry_i_8_n_6,NLW_data_out0__0_carry_i_8_O_UNCONNECTED[0]}),
-        .S({data_out0__0_carry_i_9_n_0,data_out0__0_carry_i_10_n_0,data_out0__0_carry_i_11_n_0,1'b0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    data_out0__0_carry_i_9
-       (.I0(\data_out0[-1111111109]__10_n_0 ),
-        .I1(C__0[3]),
-        .O(data_out0__0_carry_i_9_n_0));
-  CARRY4 data_out0__32_carry
-       (.CI(1'b0),
-        .CO({data_out0__32_carry_n_0,data_out0__32_carry_n_1,data_out0__32_carry_n_2,data_out0__32_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({data_out0__32_carry_i_1_n_0,data_out0__32_carry_i_2_n_0,data_out0__32_carry_i_3_n_0,1'b0}),
-        .O(NLW_data_out0__32_carry_O_UNCONNECTED[3:0]),
-        .S({data_out0__32_carry_i_4_n_0,data_out0__32_carry_i_5_n_0,data_out0__32_carry_i_6_n_0,data_out0__32_carry_i_7_n_0}));
-  CARRY4 data_out0__32_carry__0
-       (.CI(data_out0__32_carry_n_0),
-        .CO({data_out0__32_carry__0_n_0,data_out0__32_carry__0_n_1,data_out0__32_carry__0_n_2,data_out0__32_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({data_out0__32_carry__0_i_1_n_0,data_out0__32_carry__0_i_2_n_0,data_out0__32_carry__0_i_3_n_0,data_out0__32_carry__0_i_4_n_0}),
-        .O(data_out[3:0]),
-        .S({data_out0__32_carry__0_i_5_n_0,data_out0__32_carry__0_i_6_n_0,data_out0__32_carry__0_i_7_n_0,data_out0__32_carry__0_i_8_n_0}));
-  (* HLUTNM = "lutpair13" *) 
   LUT3 #(
     .INIT(8'hE8)) 
-    data_out0__32_carry__0_i_1
-       (.I0(\data_out0[-1111111105]__0_n_0 ),
-        .I1(p_0_in[6]),
-        .I2(\data_out0[-1111111105]__11_n_0 ),
-        .O(data_out0__32_carry__0_i_1_n_0));
-  (* HLUTNM = "lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__32_carry__0_i_2
-       (.I0(\data_out0[-1111111106]__0_n_0 ),
-        .I1(p_0_in[5]),
-        .I2(\data_out0[-1111111106]__11_n_0 ),
-        .O(data_out0__32_carry__0_i_2_n_0));
-  (* HLUTNM = "lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__32_carry__0_i_3
-       (.I0(\data_out0[-1111111107]__0_n_0 ),
-        .I1(p_0_in[4]),
-        .I2(\data_out0[-1111111107]__11_n_0 ),
-        .O(data_out0__32_carry__0_i_3_n_0));
-  (* HLUTNM = "lutpair10" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__32_carry__0_i_4
-       (.I0(\data_out0[-1111111108]__0_n_0 ),
-        .I1(p_0_in[3]),
-        .I2(\data_out0[-1111111108]__11_n_0 ),
-        .O(data_out0__32_carry__0_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry__0_i_5
-       (.I0(data_out0__32_carry__0_i_1_n_0),
-        .I1(p_0_in[7]),
-        .I2(\data_out0[-1111111104]__0_n_0 ),
-        .I3(\data_out0[-1111111104]__11_n_0 ),
-        .O(data_out0__32_carry__0_i_5_n_0));
-  (* HLUTNM = "lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry__0_i_6
-       (.I0(\data_out0[-1111111105]__0_n_0 ),
-        .I1(p_0_in[6]),
-        .I2(\data_out0[-1111111105]__11_n_0 ),
-        .I3(data_out0__32_carry__0_i_2_n_0),
-        .O(data_out0__32_carry__0_i_6_n_0));
-  (* HLUTNM = "lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry__0_i_7
-       (.I0(\data_out0[-1111111106]__0_n_0 ),
-        .I1(p_0_in[5]),
-        .I2(\data_out0[-1111111106]__11_n_0 ),
-        .I3(data_out0__32_carry__0_i_3_n_0),
-        .O(data_out0__32_carry__0_i_7_n_0));
-  (* HLUTNM = "lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry__0_i_8
-       (.I0(\data_out0[-1111111107]__0_n_0 ),
-        .I1(p_0_in[4]),
-        .I2(\data_out0[-1111111107]__11_n_0 ),
-        .I3(data_out0__32_carry__0_i_4_n_0),
-        .O(data_out0__32_carry__0_i_8_n_0));
-  CARRY4 data_out0__32_carry__1
-       (.CI(data_out0__32_carry__0_n_0),
-        .CO({NLW_data_out0__32_carry__1_CO_UNCONNECTED[3],data_out0__32_carry__1_n_1,data_out0__32_carry__1_n_2,data_out0__32_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,p_0_in[8]}),
-        .O(data_out[7:4]),
-        .S({p_0_in[11:9],data_out0__32_carry__1_i_1_n_0}));
-  LUT4 #(
-    .INIT(16'h17E8)) 
-    data_out0__32_carry__1_i_1
-       (.I0(\data_out0[-1111111104]__11_n_0 ),
-        .I1(p_0_in[7]),
-        .I2(\data_out0[-1111111104]__0_n_0 ),
-        .I3(p_0_in[8]),
-        .O(data_out0__32_carry__1_i_1_n_0));
-  (* HLUTNM = "lutpair9" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__32_carry_i_1
-       (.I0(\data_out0[-1111111109]__0_n_0 ),
-        .I1(p_0_in[2]),
-        .I2(\data_out0[-1111111109]__11_n_0 ),
-        .O(data_out0__32_carry_i_1_n_0));
-  (* HLUTNM = "lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__32_carry_i_2
-       (.I0(\data_out0[-1111111110]__0_n_0 ),
-        .I1(p_0_in[1]),
-        .I2(\data_out0[-1111111110]__11_n_0 ),
-        .O(data_out0__32_carry_i_2_n_0));
-  (* HLUTNM = "lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    data_out0__32_carry_i_3
-       (.I0(\data_out0[-1111111111]__0_n_0 ),
-        .I1(p_0_in[0]),
-        .I2(\data_out0[-1111111111]__11_n_0 ),
-        .O(data_out0__32_carry_i_3_n_0));
-  (* HLUTNM = "lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry_i_4
-       (.I0(\data_out0[-1111111108]__0_n_0 ),
-        .I1(p_0_in[3]),
-        .I2(\data_out0[-1111111108]__11_n_0 ),
-        .I3(data_out0__32_carry_i_1_n_0),
-        .O(data_out0__32_carry_i_4_n_0));
-  (* HLUTNM = "lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry_i_5
-       (.I0(\data_out0[-1111111109]__0_n_0 ),
-        .I1(p_0_in[2]),
-        .I2(\data_out0[-1111111109]__11_n_0 ),
-        .I3(data_out0__32_carry_i_2_n_0),
-        .O(data_out0__32_carry_i_5_n_0));
-  (* HLUTNM = "lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    data_out0__32_carry_i_6
-       (.I0(\data_out0[-1111111110]__0_n_0 ),
-        .I1(p_0_in[1]),
-        .I2(\data_out0[-1111111110]__11_n_0 ),
-        .I3(data_out0__32_carry_i_3_n_0),
-        .O(data_out0__32_carry_i_6_n_0));
-  (* HLUTNM = "lutpair7" *) 
+    data_out1__1_carry_i_1
+       (.I0(\data_out4[-1111111109]__1_n_0 ),
+        .I1(data_out4_n_103),
+        .I2(data_out4__1[1]),
+        .O(data_out1__1_carry_i_1_n_0));
   LUT3 #(
     .INIT(8'h96)) 
-    data_out0__32_carry_i_7
-       (.I0(\data_out0[-1111111111]__0_n_0 ),
-        .I1(p_0_in[0]),
-        .I2(\data_out0[-1111111111]__11_n_0 ),
-        .O(data_out0__32_carry_i_7_n_0));
+    data_out1__1_carry_i_2
+       (.I0(\data_out4[-1111111109]__1_n_0 ),
+        .I1(data_out4__1[1]),
+        .I2(data_out4_n_103),
+        .O(data_out1__1_carry_i_2_n_0));
+  (* HLUTNM = "lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h6996)) 
+    data_out1__1_carry_i_3
+       (.I0(data_out4_n_102),
+        .I1(\data_out4[-1111111108]__1_n_0 ),
+        .I2(data_out4__1[2]),
+        .I3(data_out1__1_carry_i_1_n_0),
+        .O(data_out1__1_carry_i_3_n_0));
+  (* HLUTNM = "lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h69969696)) 
+    data_out1__1_carry_i_4
+       (.I0(\data_out4[-1111111109]__1_n_0 ),
+        .I1(data_out4_n_103),
+        .I2(data_out4__1[1]),
+        .I3(data_out4_n_104),
+        .I4(data_out4__1[0]),
+        .O(data_out1__1_carry_i_4_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    data_out1__1_carry_i_5
+       (.I0(data_out4_n_104),
+        .I1(data_out4__1[0]),
+        .I2(\data_out4[-1111111110]__1_n_0 ),
+        .O(data_out1__1_carry_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    data_out1__1_carry_i_6
+       (.I0(\data_out4[-1111111111]__1_n_0 ),
+        .I1(data_out4_n_105),
+        .O(data_out1__1_carry_i_6_n_0));
+  CARRY4 \data_out1_inferred__1/i___1_carry 
+       (.CI(1'b0),
+        .CO({\data_out1_inferred__1/i___1_carry_n_0 ,\data_out1_inferred__1/i___1_carry_n_1 ,\data_out1_inferred__1/i___1_carry_n_2 ,\data_out1_inferred__1/i___1_carry_n_3 }),
+        .CYINIT(1'b0),
+        .DI({i___1_carry_i_1_n_0,i___1_carry_i_2_n_0,i___1_carry_i_3_n_0,\data_out1[-1111111111]__1_n_0 }),
+        .O({data_out[0],\NLW_data_out1_inferred__1/i___1_carry_O_UNCONNECTED [2:0]}),
+        .S({i___1_carry_i_4_n_0,i___1_carry_i_5_n_0,i___1_carry_i_6_n_0,i___1_carry_i_7_n_0}));
+  CARRY4 \data_out1_inferred__1/i___1_carry__0 
+       (.CI(\data_out1_inferred__1/i___1_carry_n_0 ),
+        .CO({\data_out1_inferred__1/i___1_carry__0_n_0 ,\data_out1_inferred__1/i___1_carry__0_n_1 ,\data_out1_inferred__1/i___1_carry__0_n_2 ,\data_out1_inferred__1/i___1_carry__0_n_3 }),
+        .CYINIT(1'b0),
+        .DI({i___1_carry__0_i_1_n_0,i___1_carry__0_i_2_n_0,i___1_carry__0_i_3_n_0,i___1_carry__0_i_4_n_0}),
+        .O(data_out[4:1]),
+        .S({i___1_carry__0_i_5_n_0,i___1_carry__0_i_6_n_0,i___1_carry__0_i_7_n_0,i___1_carry__0_i_8_n_0}));
+  CARRY4 \data_out1_inferred__1/i___1_carry__1 
+       (.CI(\data_out1_inferred__1/i___1_carry__0_n_0 ),
+        .CO({\NLW_data_out1_inferred__1/i___1_carry__1_CO_UNCONNECTED [3:2],\data_out1_inferred__1/i___1_carry__1_n_2 ,\data_out1_inferred__1/i___1_carry__1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,i___1_carry__1_i_1_n_0,i___1_carry__1_i_2_n_0}),
+        .O({\NLW_data_out1_inferred__1/i___1_carry__1_O_UNCONNECTED [3],data_out0,data_out[6:5]}),
+        .S({1'b0,i___1_carry__1_i_3_n_0,i___1_carry__1_i_4_n_0,i___1_carry__1_i_5_n_0}));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-11 {cell *THIS*}}" *) 
+  DSP48E1 #(
+    .ACASCREG(0),
+    .ADREG(1),
+    .ALUMODEREG(0),
+    .AREG(0),
+    .AUTORESET_PATDET("NO_RESET"),
+    .A_INPUT("DIRECT"),
+    .BCASCREG(2),
+    .BREG(2),
+    .B_INPUT("DIRECT"),
+    .CARRYINREG(0),
+    .CARRYINSELREG(0),
+    .CREG(1),
+    .DREG(1),
+    .INMODEREG(0),
+    .MASK(48'h3FFFFFFFFFFF),
+    .MREG(0),
+    .OPMODEREG(0),
+    .PATTERN(48'h000000000000),
+    .PREG(0),
+    .SEL_MASK("MASK"),
+    .SEL_PATTERN("PATTERN"),
+    .USE_DPORT("FALSE"),
+    .USE_MULT("MULTIPLY"),
+    .USE_PATTERN_DETECT("NO_PATDET"),
+    .USE_SIMD("ONE48")) 
+    data_out4
+       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .ACOUT(NLW_data_out4_ACOUT_UNCONNECTED[29:0]),
+        .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
+        .B({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,p_0_in[30695:30688]}),
+        .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .BCOUT(NLW_data_out4_BCOUT_UNCONNECTED[17:0]),
+        .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .CARRYCASCIN(1'b0),
+        .CARRYCASCOUT(NLW_data_out4_CARRYCASCOUT_UNCONNECTED),
+        .CARRYIN(1'b0),
+        .CARRYINSEL({1'b0,1'b0,1'b0}),
+        .CARRYOUT(NLW_data_out4_CARRYOUT_UNCONNECTED[3:0]),
+        .CEA1(1'b0),
+        .CEA2(1'b0),
+        .CEAD(1'b0),
+        .CEALUMODE(1'b0),
+        .CEB1(vid_active_video),
+        .CEB2(vid_active_video),
+        .CEC(1'b0),
+        .CECARRYIN(1'b0),
+        .CECTRL(1'b0),
+        .CED(1'b0),
+        .CEINMODE(1'b0),
+        .CEM(1'b0),
+        .CEP(1'b0),
+        .CLK(clk_pixel),
+        .D({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .MULTSIGNIN(1'b0),
+        .MULTSIGNOUT(NLW_data_out4_MULTSIGNOUT_UNCONNECTED),
+        .OPMODE({1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b1}),
+        .OVERFLOW(NLW_data_out4_OVERFLOW_UNCONNECTED),
+        .P({data_out4_n_58,data_out4_n_59,data_out4_n_60,data_out4_n_61,data_out4_n_62,data_out4_n_63,data_out4_n_64,data_out4_n_65,data_out4_n_66,data_out4_n_67,data_out4_n_68,data_out4_n_69,data_out4_n_70,data_out4_n_71,data_out4_n_72,data_out4_n_73,data_out4_n_74,data_out4_n_75,data_out4_n_76,data_out4_n_77,data_out4_n_78,data_out4_n_79,data_out4_n_80,data_out4_n_81,data_out4_n_82,data_out4_n_83,data_out4_n_84,data_out4_n_85,data_out4_n_86,data_out4_n_87,data_out4_n_88,data_out4_n_89,data_out4_n_90,data_out4_n_91,data_out4_n_92,data_out4_n_93,data_out4_n_94,data_out4_n_95,data_out4_n_96,data_out4_n_97,data_out4_n_98,data_out4_n_99,data_out4_n_100,data_out4_n_101,data_out4_n_102,data_out4_n_103,data_out4_n_104,data_out4_n_105}),
+        .PATTERNBDETECT(NLW_data_out4_PATTERNBDETECT_UNCONNECTED),
+        .PATTERNDETECT(NLW_data_out4_PATTERNDETECT_UNCONNECTED),
+        .PCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .PCOUT({data_out4_n_106,data_out4_n_107,data_out4_n_108,data_out4_n_109,data_out4_n_110,data_out4_n_111,data_out4_n_112,data_out4_n_113,data_out4_n_114,data_out4_n_115,data_out4_n_116,data_out4_n_117,data_out4_n_118,data_out4_n_119,data_out4_n_120,data_out4_n_121,data_out4_n_122,data_out4_n_123,data_out4_n_124,data_out4_n_125,data_out4_n_126,data_out4_n_127,data_out4_n_128,data_out4_n_129,data_out4_n_130,data_out4_n_131,data_out4_n_132,data_out4_n_133,data_out4_n_134,data_out4_n_135,data_out4_n_136,data_out4_n_137,data_out4_n_138,data_out4_n_139,data_out4_n_140,data_out4_n_141,data_out4_n_142,data_out4_n_143,data_out4_n_144,data_out4_n_145,data_out4_n_146,data_out4_n_147,data_out4_n_148,data_out4_n_149,data_out4_n_150,data_out4_n_151,data_out4_n_152,data_out4_n_153}),
+        .RSTA(1'b0),
+        .RSTALLCARRYIN(1'b0),
+        .RSTALUMODE(1'b0),
+        .RSTB(1'b0),
+        .RSTC(1'b0),
+        .RSTCTRL(1'b0),
+        .RSTD(1'b0),
+        .RSTINMODE(1'b0),
+        .RSTM(1'b0),
+        .RSTP(1'b0),
+        .UNDERFLOW(NLW_data_out4_UNDERFLOW_UNCONNECTED));
   FDRE \data_out4[-1111111104] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[7]),
+        .D(p_0_in[30703]),
         .Q(\data_out4[-_n_0_1111111104] ),
         .R(1'b0));
   FDRE \data_out4[-1111111104]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111104] ),
-        .Q(data_out4[7]),
+        .Q(\data_out4[-1111111104]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111104]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10223]),
+        .Q(\data_out4[-1111111104]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111104]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111104]__1_n_0 ),
+        .Q(data_out4__1[7]),
         .R(1'b0));
   FDRE \data_out4[-1111111105] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[6]),
+        .D(p_0_in[30702]),
         .Q(\data_out4[-_n_0_1111111105] ),
         .R(1'b0));
   FDRE \data_out4[-1111111105]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111105] ),
-        .Q(data_out4[6]),
+        .Q(\data_out4[-1111111105]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111105]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10222]),
+        .Q(\data_out4[-1111111105]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111105]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111105]__1_n_0 ),
+        .Q(data_out4__1[6]),
         .R(1'b0));
   FDRE \data_out4[-1111111106] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[5]),
+        .D(p_0_in[30701]),
         .Q(\data_out4[-_n_0_1111111106] ),
         .R(1'b0));
   FDRE \data_out4[-1111111106]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111106] ),
-        .Q(data_out4[5]),
+        .Q(\data_out4[-1111111106]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111106]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10221]),
+        .Q(\data_out4[-1111111106]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111106]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111106]__1_n_0 ),
+        .Q(data_out4__1[5]),
         .R(1'b0));
   FDRE \data_out4[-1111111107] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[4]),
+        .D(p_0_in[30700]),
         .Q(\data_out4[-_n_0_1111111107] ),
         .R(1'b0));
   FDRE \data_out4[-1111111107]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111107] ),
-        .Q(data_out4[4]),
+        .Q(\data_out4[-1111111107]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111107]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10220]),
+        .Q(\data_out4[-1111111107]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111107]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111107]__1_n_0 ),
+        .Q(data_out4__1[4]),
         .R(1'b0));
   FDRE \data_out4[-1111111108] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[3]),
+        .D(p_0_in[30699]),
         .Q(\data_out4[-_n_0_1111111108] ),
         .R(1'b0));
   FDRE \data_out4[-1111111108]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111108] ),
-        .Q(data_out4[3]),
+        .Q(\data_out4[-1111111108]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111108]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10219]),
+        .Q(\data_out4[-1111111108]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111108]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111108]__1_n_0 ),
+        .Q(data_out4__1[3]),
         .R(1'b0));
   FDRE \data_out4[-1111111109] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[2]),
+        .D(p_0_in[30698]),
         .Q(\data_out4[-_n_0_1111111109] ),
         .R(1'b0));
   FDRE \data_out4[-1111111109]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111109] ),
-        .Q(data_out4[2]),
+        .Q(\data_out4[-1111111109]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111109]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10218]),
+        .Q(\data_out4[-1111111109]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111109]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111109]__1_n_0 ),
+        .Q(data_out4__1[2]),
         .R(1'b0));
   FDRE \data_out4[-1111111110] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[1]),
+        .D(p_0_in[30697]),
         .Q(\data_out4[-_n_0_1111111110] ),
         .R(1'b0));
   FDRE \data_out4[-1111111110]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111110] ),
-        .Q(data_out4[1]),
+        .Q(\data_out4[-1111111110]__0_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111110]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10217]),
+        .Q(\data_out4[-1111111110]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111110]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111110]__1_n_0 ),
+        .Q(data_out4__1[1]),
         .R(1'b0));
   FDRE \data_out4[-1111111111] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(A[0]),
+        .D(p_0_in[30696]),
         .Q(\data_out4[-_n_0_1111111111] ),
         .R(1'b0));
   FDRE \data_out4[-1111111111]__0 
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_out4[-_n_0_1111111111] ),
-        .Q(data_out4[0]),
+        .Q(\data_out4[-1111111111]__0_n_0 ),
         .R(1'b0));
+  FDRE \data_out4[-1111111111]__1 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(p_0_in[10216]),
+        .Q(\data_out4[-1111111111]__1_n_0 ),
+        .R(1'b0));
+  FDRE \data_out4[-1111111111]__2 
+       (.C(clk_pixel),
+        .CE(vid_active_video),
+        .D(\data_out4[-1111111111]__1_n_0 ),
+        .Q(data_out4__1[0]),
+        .R(1'b0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \data_out[7]_INST_0 
+       (.I0(data_out0),
+        .O(data_out[7]));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[0] 
@@ -5887,7 +5069,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10200]_srl27_n_0 ),
-        .Q(C[0]),
+        .Q(p_0_in[10216]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5895,7 +5077,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10201]_srl27_n_0 ),
-        .Q(C[1]),
+        .Q(p_0_in[10217]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5903,7 +5085,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10202]_srl27_n_0 ),
-        .Q(C[2]),
+        .Q(p_0_in[10218]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5911,7 +5093,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10203]_srl27_n_0 ),
-        .Q(C[3]),
+        .Q(p_0_in[10219]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5919,7 +5101,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10204]_srl27_n_0 ),
-        .Q(C[4]),
+        .Q(p_0_in[10220]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5927,7 +5109,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10205]_srl27_n_0 ),
-        .Q(C[5]),
+        .Q(p_0_in[10221]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5935,7 +5117,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10206]_srl27_n_0 ),
-        .Q(C[6]),
+        .Q(p_0_in[10222]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5943,135 +5125,71 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[10207]_srl27_n_0 ),
-        .Q(C[7]),
+        .Q(p_0_in[10223]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10216] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[0]),
-        .Q(\data_pipelined_reg_n_0_[10216] ),
+        .D(p_0_in[10216]),
+        .Q(p_0_in[10224]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10217] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[1]),
-        .Q(\data_pipelined_reg_n_0_[10217] ),
+        .D(p_0_in[10217]),
+        .Q(p_0_in[10225]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10218] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[2]),
-        .Q(\data_pipelined_reg_n_0_[10218] ),
+        .D(p_0_in[10218]),
+        .Q(p_0_in[10226]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10219] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[3]),
-        .Q(\data_pipelined_reg_n_0_[10219] ),
+        .D(p_0_in[10219]),
+        .Q(p_0_in[10227]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10220] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[4]),
-        .Q(\data_pipelined_reg_n_0_[10220] ),
+        .D(p_0_in[10220]),
+        .Q(p_0_in[10228]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10221] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[5]),
-        .Q(\data_pipelined_reg_n_0_[10221] ),
+        .D(p_0_in[10221]),
+        .Q(p_0_in[10229]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10222] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[6]),
-        .Q(\data_pipelined_reg_n_0_[10222] ),
+        .D(p_0_in[10222]),
+        .Q(p_0_in[10230]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[10223] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(C[7]),
-        .Q(\data_pipelined_reg_n_0_[10223] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10224] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10216] ),
-        .Q(\data_pipelined_reg_n_0_[10224] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10225] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10217] ),
-        .Q(\data_pipelined_reg_n_0_[10225] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10226] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10218] ),
-        .Q(\data_pipelined_reg_n_0_[10226] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10227] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10219] ),
-        .Q(\data_pipelined_reg_n_0_[10227] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10228] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10220] ),
-        .Q(\data_pipelined_reg_n_0_[10228] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10229] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10221] ),
-        .Q(\data_pipelined_reg_n_0_[10229] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10230] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10222] ),
-        .Q(\data_pipelined_reg_n_0_[10230] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[10231] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[10223] ),
-        .Q(\data_pipelined_reg_n_0_[10231] ),
+        .D(p_0_in[10223]),
+        .Q(p_0_in[10231]),
         .R(1'b0));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
   (* srl_name = "\U0/data_pipelined_reg[1024]_srl32 " *) 
@@ -6162,885 +5280,885 @@ module system_gauss_0_0_gauss
         .Q(\data_pipelined_reg[1031]_srl32_n_0 ),
         .Q31(\NLW_data_pipelined_reg[1031]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10480]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10472]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10480]_srl32 
+    \data_pipelined_reg[10472]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10224] ),
-        .Q(\NLW_data_pipelined_reg[10480]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10480]_srl32_n_1 ));
+        .D(p_0_in[10224]),
+        .Q(\NLW_data_pipelined_reg[10472]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10472]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10481]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10473]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10481]_srl32 
+    \data_pipelined_reg[10473]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10225] ),
-        .Q(\NLW_data_pipelined_reg[10481]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10481]_srl32_n_1 ));
+        .D(p_0_in[10225]),
+        .Q(\NLW_data_pipelined_reg[10473]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10473]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10482]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10474]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10482]_srl32 
+    \data_pipelined_reg[10474]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10226] ),
-        .Q(\NLW_data_pipelined_reg[10482]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10482]_srl32_n_1 ));
+        .D(p_0_in[10226]),
+        .Q(\NLW_data_pipelined_reg[10474]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10474]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10483]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10475]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10483]_srl32 
+    \data_pipelined_reg[10475]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10227] ),
-        .Q(\NLW_data_pipelined_reg[10483]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10483]_srl32_n_1 ));
+        .D(p_0_in[10227]),
+        .Q(\NLW_data_pipelined_reg[10475]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10475]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10484]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10476]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10484]_srl32 
+    \data_pipelined_reg[10476]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10228] ),
-        .Q(\NLW_data_pipelined_reg[10484]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10484]_srl32_n_1 ));
+        .D(p_0_in[10228]),
+        .Q(\NLW_data_pipelined_reg[10476]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10476]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10485]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10477]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10485]_srl32 
+    \data_pipelined_reg[10477]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10229] ),
-        .Q(\NLW_data_pipelined_reg[10485]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10485]_srl32_n_1 ));
+        .D(p_0_in[10229]),
+        .Q(\NLW_data_pipelined_reg[10477]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10477]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10486]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10478]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10486]_srl32 
+    \data_pipelined_reg[10478]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10230] ),
-        .Q(\NLW_data_pipelined_reg[10486]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10486]_srl32_n_1 ));
+        .D(p_0_in[10230]),
+        .Q(\NLW_data_pipelined_reg[10478]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10478]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10487]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10479]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10487]_srl32 
+    \data_pipelined_reg[10479]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[10231] ),
-        .Q(\NLW_data_pipelined_reg[10487]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10487]_srl32_n_1 ));
+        .D(p_0_in[10231]),
+        .Q(\NLW_data_pipelined_reg[10479]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10479]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10736]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10728]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10736]_srl32 
+    \data_pipelined_reg[10728]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10480]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10736]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10736]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10472]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10728]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10728]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10737]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10729]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10737]_srl32 
+    \data_pipelined_reg[10729]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10481]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10737]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10737]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10473]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10729]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10729]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10738]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10730]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10738]_srl32 
+    \data_pipelined_reg[10730]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10482]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10738]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10738]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10474]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10730]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10730]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10739]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10731]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10739]_srl32 
+    \data_pipelined_reg[10731]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10483]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10739]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10739]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10475]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10731]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10731]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10740]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10732]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10740]_srl32 
+    \data_pipelined_reg[10732]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10484]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10740]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10740]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10476]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10732]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10732]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10741]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10733]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10741]_srl32 
+    \data_pipelined_reg[10733]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10485]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10741]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10741]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10477]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10733]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10733]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10742]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10734]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10742]_srl32 
+    \data_pipelined_reg[10734]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10486]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10742]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10742]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10478]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10734]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10734]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10743]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10735]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10743]_srl32 
+    \data_pipelined_reg[10735]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10487]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10743]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10743]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10479]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10735]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10735]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10992]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10984]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10992]_srl32 
+    \data_pipelined_reg[10984]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10736]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10992]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10992]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10728]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10984]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10984]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10993]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10985]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10993]_srl32 
+    \data_pipelined_reg[10985]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10737]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10993]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10993]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10729]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10985]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10985]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10994]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10986]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10994]_srl32 
+    \data_pipelined_reg[10986]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10738]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10994]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10994]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10730]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10986]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10986]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10995]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10987]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10995]_srl32 
+    \data_pipelined_reg[10987]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10739]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10995]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10995]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10731]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10987]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10987]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10996]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10988]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10996]_srl32 
+    \data_pipelined_reg[10988]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10740]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10996]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10996]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10732]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10988]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10988]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10997]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10989]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10997]_srl32 
+    \data_pipelined_reg[10989]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10741]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10997]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10997]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10733]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10989]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10989]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10998]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10990]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10998]_srl32 
+    \data_pipelined_reg[10990]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10742]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10998]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10998]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10734]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10990]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10990]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[10999]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[10991]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[10999]_srl32 
+    \data_pipelined_reg[10991]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10743]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[10999]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[10999]_srl32_n_1 ));
+        .D(\data_pipelined_reg[10735]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[10991]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[10991]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11248]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11240]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11248]_srl32 
+    \data_pipelined_reg[11240]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10992]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11248]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11248]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10984]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11240]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11240]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11249]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11241]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11249]_srl32 
+    \data_pipelined_reg[11241]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10993]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11249]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11249]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10985]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11241]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11241]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11250]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11242]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11250]_srl32 
+    \data_pipelined_reg[11242]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10994]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11250]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11250]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10986]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11242]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11242]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11251]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11243]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11251]_srl32 
+    \data_pipelined_reg[11243]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10995]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11251]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11251]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10987]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11243]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11243]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11252]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11244]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11252]_srl32 
+    \data_pipelined_reg[11244]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10996]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11252]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11252]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10988]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11244]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11244]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11253]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11245]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11253]_srl32 
+    \data_pipelined_reg[11245]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10997]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11253]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11253]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10989]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11245]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11245]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11254]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11246]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11254]_srl32 
+    \data_pipelined_reg[11246]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10998]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11254]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11254]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10990]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11246]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11246]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11255]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11247]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11255]_srl32 
+    \data_pipelined_reg[11247]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[10999]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[11255]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[11255]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[10991]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[11247]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[11247]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11504]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11496]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11504]_srl32 
+    \data_pipelined_reg[11496]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11248]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11504]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11504]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11240]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11496]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11496]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11505]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11497]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11505]_srl32 
+    \data_pipelined_reg[11497]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11249]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11505]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11505]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11241]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11497]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11497]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11506]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11498]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11506]_srl32 
+    \data_pipelined_reg[11498]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11250]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11506]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11506]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11242]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11498]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11498]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11507]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11499]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11507]_srl32 
+    \data_pipelined_reg[11499]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11251]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11507]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11507]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11243]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11499]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11499]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11508]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11500]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11508]_srl32 
+    \data_pipelined_reg[11500]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11252]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11508]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11508]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11244]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11500]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11500]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11509]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11501]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11509]_srl32 
+    \data_pipelined_reg[11501]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11253]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11509]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11509]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11245]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11501]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11501]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11510]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11502]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11510]_srl32 
+    \data_pipelined_reg[11502]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11254]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11510]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11510]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11246]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11502]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11502]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11511]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11503]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11511]_srl32 
+    \data_pipelined_reg[11503]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11255]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[11511]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11511]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11247]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[11503]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11503]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11760]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11752]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11760]_srl32 
+    \data_pipelined_reg[11752]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11504]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11760]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11760]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11496]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11752]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11752]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11761]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11753]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11761]_srl32 
+    \data_pipelined_reg[11753]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11505]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11761]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11761]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11497]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11753]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11753]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11762]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11754]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11762]_srl32 
+    \data_pipelined_reg[11754]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11506]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11762]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11762]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11498]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11754]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11754]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11763]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11755]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11763]_srl32 
+    \data_pipelined_reg[11755]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11507]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11763]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11763]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11499]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11755]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11755]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11764]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11756]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11764]_srl32 
+    \data_pipelined_reg[11756]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11508]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11764]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11764]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11500]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11756]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11756]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11765]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11757]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11765]_srl32 
+    \data_pipelined_reg[11757]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11509]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11765]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11765]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11501]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11757]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11757]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11766]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11758]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11766]_srl32 
+    \data_pipelined_reg[11758]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11510]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11766]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11766]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11502]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11758]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11758]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[11767]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[11759]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[11767]_srl32 
+    \data_pipelined_reg[11759]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11511]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[11767]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[11767]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11503]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[11759]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[11759]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12016]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12008]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12016]_srl32 
+    \data_pipelined_reg[12008]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11760]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12016]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12016]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11752]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12008]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12008]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12017]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12009]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12017]_srl32 
+    \data_pipelined_reg[12009]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11761]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12017]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12017]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11753]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12009]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12009]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12018]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12010]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12018]_srl32 
+    \data_pipelined_reg[12010]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11762]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12018]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12018]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11754]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12010]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12010]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12019]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12011]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12019]_srl32 
+    \data_pipelined_reg[12011]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11763]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12019]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12019]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11755]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12011]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12011]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12020]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12012]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12020]_srl32 
+    \data_pipelined_reg[12012]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11764]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12020]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12020]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11756]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12012]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12012]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12021]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12013]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12021]_srl32 
+    \data_pipelined_reg[12013]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11765]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12021]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12021]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11757]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12013]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12013]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12022]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12014]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12022]_srl32 
+    \data_pipelined_reg[12014]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11766]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12022]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12022]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11758]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12014]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12014]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12023]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12015]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12023]_srl32 
+    \data_pipelined_reg[12015]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[11767]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12023]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12023]_srl32_n_1 ));
+        .D(\data_pipelined_reg[11759]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12015]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12015]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12272]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12264]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12272]_srl32 
+    \data_pipelined_reg[12264]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12016]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12272]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12272]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12008]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12264]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12264]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12273]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12265]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12273]_srl32 
+    \data_pipelined_reg[12265]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12017]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12273]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12273]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12009]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12265]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12265]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12274]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12266]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12274]_srl32 
+    \data_pipelined_reg[12266]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12018]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12274]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12274]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12010]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12266]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12266]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12275]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12267]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12275]_srl32 
+    \data_pipelined_reg[12267]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12019]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12275]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12275]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12011]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12267]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12267]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12276]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12268]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12276]_srl32 
+    \data_pipelined_reg[12268]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12020]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12276]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12276]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12012]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12268]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12268]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12277]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12269]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12277]_srl32 
+    \data_pipelined_reg[12269]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12021]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12277]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12277]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12013]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12269]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12269]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12278]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12270]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12278]_srl32 
+    \data_pipelined_reg[12270]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12022]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12278]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12278]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12014]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12270]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12270]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12279]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12271]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12279]_srl32 
+    \data_pipelined_reg[12271]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12023]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[12279]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[12279]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[12015]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[12271]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[12271]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12528]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12520]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12528]_srl32 
+    \data_pipelined_reg[12520]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12272]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12528]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12528]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12264]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12520]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12520]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12529]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12521]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12529]_srl32 
+    \data_pipelined_reg[12521]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12273]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12529]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12529]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12265]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12521]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12521]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12530]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12522]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12530]_srl32 
+    \data_pipelined_reg[12522]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12274]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12530]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12530]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12266]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12522]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12522]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12531]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12523]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12531]_srl32 
+    \data_pipelined_reg[12523]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12275]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12531]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12531]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12267]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12523]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12523]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12532]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12524]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12532]_srl32 
+    \data_pipelined_reg[12524]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12276]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12532]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12532]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12268]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12524]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12524]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12533]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12525]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12533]_srl32 
+    \data_pipelined_reg[12525]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12277]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12533]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12533]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12269]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12525]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12525]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12534]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12526]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12534]_srl32 
+    \data_pipelined_reg[12526]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12278]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12534]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12534]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12270]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12526]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12526]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12535]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12527]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12535]_srl32 
+    \data_pipelined_reg[12527]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12279]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[12535]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12535]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12271]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[12527]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12527]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12784]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12776]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12784]_srl32 
+    \data_pipelined_reg[12776]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12528]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12784]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12784]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12520]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12776]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12776]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12785]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12777]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12785]_srl32 
+    \data_pipelined_reg[12777]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12529]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12785]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12785]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12521]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12777]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12777]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12786]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12778]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12786]_srl32 
+    \data_pipelined_reg[12778]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12530]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12786]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12786]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12522]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12778]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12778]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12787]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12779]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12787]_srl32 
+    \data_pipelined_reg[12779]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12531]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12787]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12787]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12523]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12779]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12779]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12788]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12780]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12788]_srl32 
+    \data_pipelined_reg[12780]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12532]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12788]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12788]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12524]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12780]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12780]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12789]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12781]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12789]_srl32 
+    \data_pipelined_reg[12781]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12533]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12789]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12789]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12525]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12781]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12781]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12790]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12782]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12790]_srl32 
+    \data_pipelined_reg[12782]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12534]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12790]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12790]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12526]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12782]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12782]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[12791]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[12783]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[12791]_srl32 
+    \data_pipelined_reg[12783]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12535]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[12791]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[12791]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12527]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[12783]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[12783]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
   (* srl_name = "\U0/data_pipelined_reg[1280]_srl32 " *) 
   SRLC32E #(
@@ -7130,885 +6248,885 @@ module system_gauss_0_0_gauss
         .Q(\NLW_data_pipelined_reg[1287]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[1287]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13040]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13032]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13040]_srl32 
+    \data_pipelined_reg[13032]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12784]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13040]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13040]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12776]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13032]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13032]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13041]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13033]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13041]_srl32 
+    \data_pipelined_reg[13033]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12785]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13041]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13041]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12777]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13033]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13033]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13042]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13034]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13042]_srl32 
+    \data_pipelined_reg[13034]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12786]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13042]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13042]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12778]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13034]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13034]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13043]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13035]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13043]_srl32 
+    \data_pipelined_reg[13035]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12787]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13043]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13043]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12779]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13035]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13035]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13044]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13036]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13044]_srl32 
+    \data_pipelined_reg[13036]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12788]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13044]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13044]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12780]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13036]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13036]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13045]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13037]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13045]_srl32 
+    \data_pipelined_reg[13037]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12789]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13045]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13045]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12781]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13037]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13037]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13046]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13038]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13046]_srl32 
+    \data_pipelined_reg[13038]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12790]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13046]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13046]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12782]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13038]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13038]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13047]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13039]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13047]_srl32 
+    \data_pipelined_reg[13039]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[12791]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13047]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13047]_srl32_n_1 ));
+        .D(\data_pipelined_reg[12783]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13039]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13039]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13296]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13288]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13296]_srl32 
+    \data_pipelined_reg[13288]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13040]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13296]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13296]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13032]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13288]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13288]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13297]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13289]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13297]_srl32 
+    \data_pipelined_reg[13289]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13041]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13297]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13297]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13033]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13289]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13289]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13298]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13290]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13298]_srl32 
+    \data_pipelined_reg[13290]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13042]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13298]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13298]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13034]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13290]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13290]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13299]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13291]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13299]_srl32 
+    \data_pipelined_reg[13291]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13043]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13299]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13299]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13035]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13291]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13291]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13300]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13292]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13300]_srl32 
+    \data_pipelined_reg[13292]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13044]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13300]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13300]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13036]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13292]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13292]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13301]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13293]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13301]_srl32 
+    \data_pipelined_reg[13293]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13045]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13301]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13301]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13037]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13293]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13293]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13302]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13294]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13302]_srl32 
+    \data_pipelined_reg[13294]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13046]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13302]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13302]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13038]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13294]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13294]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13303]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13295]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13303]_srl32 
+    \data_pipelined_reg[13295]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13047]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[13303]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[13303]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[13039]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[13295]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[13295]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13552]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13544]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13552]_srl32 
+    \data_pipelined_reg[13544]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13296]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13552]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13552]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13288]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13544]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13544]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13553]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13545]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13553]_srl32 
+    \data_pipelined_reg[13545]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13297]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13553]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13553]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13289]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13545]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13545]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13554]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13546]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13554]_srl32 
+    \data_pipelined_reg[13546]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13298]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13554]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13554]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13290]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13546]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13546]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13555]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13547]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13555]_srl32 
+    \data_pipelined_reg[13547]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13299]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13555]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13555]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13291]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13547]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13547]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13556]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13548]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13556]_srl32 
+    \data_pipelined_reg[13548]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13300]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13556]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13556]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13292]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13548]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13548]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13557]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13549]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13557]_srl32 
+    \data_pipelined_reg[13549]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13301]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13557]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13557]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13293]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13549]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13549]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13558]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13550]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13558]_srl32 
+    \data_pipelined_reg[13550]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13302]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13558]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13558]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13294]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13550]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13550]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13559]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13551]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13559]_srl32 
+    \data_pipelined_reg[13551]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13303]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[13559]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13559]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13295]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[13551]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13551]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13808]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13800]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13808]_srl32 
+    \data_pipelined_reg[13800]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13552]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13808]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13808]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13544]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13800]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13800]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13809]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13801]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13809]_srl32 
+    \data_pipelined_reg[13801]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13553]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13809]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13809]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13545]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13801]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13801]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13810]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13802]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13810]_srl32 
+    \data_pipelined_reg[13802]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13554]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13810]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13810]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13546]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13802]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13802]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13811]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13803]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13811]_srl32 
+    \data_pipelined_reg[13803]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13555]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13811]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13811]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13547]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13803]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13803]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13812]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13804]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13812]_srl32 
+    \data_pipelined_reg[13804]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13556]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13812]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13812]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13548]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13804]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13804]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13813]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13805]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13813]_srl32 
+    \data_pipelined_reg[13805]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13557]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13813]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13813]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13549]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13805]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13805]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13814]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13806]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13814]_srl32 
+    \data_pipelined_reg[13806]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13558]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13814]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13814]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13550]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13806]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13806]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[13815]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[13807]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[13815]_srl32 
+    \data_pipelined_reg[13807]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13559]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[13815]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[13815]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13551]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[13807]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[13807]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14064]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14056]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14064]_srl32 
+    \data_pipelined_reg[14056]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13808]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14064]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14064]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13800]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14056]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14056]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14065]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14057]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14065]_srl32 
+    \data_pipelined_reg[14057]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13809]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14065]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14065]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13801]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14057]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14057]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14066]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14058]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14066]_srl32 
+    \data_pipelined_reg[14058]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13810]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14066]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14066]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13802]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14058]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14058]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14067]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14059]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14067]_srl32 
+    \data_pipelined_reg[14059]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13811]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14067]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14067]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13803]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14059]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14059]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14068]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14060]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14068]_srl32 
+    \data_pipelined_reg[14060]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13812]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14068]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14068]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13804]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14060]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14060]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14069]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14061]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14069]_srl32 
+    \data_pipelined_reg[14061]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13813]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14069]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14069]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13805]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14061]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14061]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14070]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14062]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14070]_srl32 
+    \data_pipelined_reg[14062]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13814]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14070]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14070]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13806]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14062]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14062]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14071]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14063]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14071]_srl32 
+    \data_pipelined_reg[14063]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[13815]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14071]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14071]_srl32_n_1 ));
+        .D(\data_pipelined_reg[13807]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14063]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14063]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14320]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14312]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14320]_srl32 
+    \data_pipelined_reg[14312]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14064]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14320]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14320]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14056]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14312]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14312]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14321]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14313]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14321]_srl32 
+    \data_pipelined_reg[14313]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14065]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14321]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14321]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14057]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14313]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14313]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14322]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14314]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14322]_srl32 
+    \data_pipelined_reg[14314]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14066]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14322]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14322]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14058]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14314]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14314]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14323]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14315]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14323]_srl32 
+    \data_pipelined_reg[14315]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14067]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14323]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14323]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14059]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14315]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14315]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14324]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14316]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14324]_srl32 
+    \data_pipelined_reg[14316]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14068]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14324]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14324]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14060]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14316]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14316]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14325]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14317]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14325]_srl32 
+    \data_pipelined_reg[14317]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14069]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14325]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14325]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14061]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14317]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14317]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14326]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14318]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14326]_srl32 
+    \data_pipelined_reg[14318]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14070]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14326]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14326]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14062]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14318]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14318]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14327]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14319]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14327]_srl32 
+    \data_pipelined_reg[14319]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14071]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[14327]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[14327]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[14063]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[14319]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[14319]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14576]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14568]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14576]_srl32 
+    \data_pipelined_reg[14568]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14320]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14576]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14576]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14312]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14568]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14568]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14577]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14569]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14577]_srl32 
+    \data_pipelined_reg[14569]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14321]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14577]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14577]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14313]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14569]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14569]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14578]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14570]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14578]_srl32 
+    \data_pipelined_reg[14570]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14322]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14578]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14578]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14314]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14570]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14570]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14579]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14571]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14579]_srl32 
+    \data_pipelined_reg[14571]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14323]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14579]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14579]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14315]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14571]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14571]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14580]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14572]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14580]_srl32 
+    \data_pipelined_reg[14572]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14324]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14580]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14580]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14316]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14572]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14572]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14581]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14573]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14581]_srl32 
+    \data_pipelined_reg[14573]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14325]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14581]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14581]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14317]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14573]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14573]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14582]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14574]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14582]_srl32 
+    \data_pipelined_reg[14574]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14326]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14582]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14582]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14318]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14574]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14574]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14583]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14575]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14583]_srl32 
+    \data_pipelined_reg[14575]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14327]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[14583]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14583]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14319]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[14575]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14575]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14832]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14824]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14832]_srl32 
+    \data_pipelined_reg[14824]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14576]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14832]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14832]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14568]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14824]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14824]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14833]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14825]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14833]_srl32 
+    \data_pipelined_reg[14825]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14577]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14833]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14833]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14569]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14825]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14825]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14834]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14826]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14834]_srl32 
+    \data_pipelined_reg[14826]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14578]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14834]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14834]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14570]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14826]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14826]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14835]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14827]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14835]_srl32 
+    \data_pipelined_reg[14827]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14579]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14835]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14835]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14571]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14827]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14827]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14836]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14828]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14836]_srl32 
+    \data_pipelined_reg[14828]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14580]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14836]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14836]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14572]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14828]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14828]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14837]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14829]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14837]_srl32 
+    \data_pipelined_reg[14829]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14581]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14837]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14837]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14573]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14829]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14829]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14838]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14830]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14838]_srl32 
+    \data_pipelined_reg[14830]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14582]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14838]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14838]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14574]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14830]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14830]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[14839]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[14831]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[14839]_srl32 
+    \data_pipelined_reg[14831]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14583]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[14839]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[14839]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14575]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[14831]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[14831]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15088]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15080]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15088]_srl32 
+    \data_pipelined_reg[15080]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14832]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15088]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15088]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14824]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15080]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15080]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15089]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15081]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15089]_srl32 
+    \data_pipelined_reg[15081]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14833]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15089]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15089]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14825]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15081]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15081]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15090]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15082]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15090]_srl32 
+    \data_pipelined_reg[15082]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14834]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15090]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15090]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14826]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15082]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15082]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15091]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15083]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15091]_srl32 
+    \data_pipelined_reg[15083]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14835]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15091]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15091]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14827]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15083]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15083]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15092]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15084]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15092]_srl32 
+    \data_pipelined_reg[15084]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14836]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15092]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15092]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14828]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15084]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15084]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15093]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15085]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15093]_srl32 
+    \data_pipelined_reg[15085]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14837]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15093]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15093]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14829]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15085]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15085]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15094]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15086]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15094]_srl32 
+    \data_pipelined_reg[15086]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14838]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15094]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15094]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14830]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15086]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15086]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15095]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15087]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15095]_srl32 
+    \data_pipelined_reg[15087]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[14839]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15095]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15095]_srl32_n_1 ));
+        .D(\data_pipelined_reg[14831]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15087]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15087]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15344]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15336]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15344]_srl32 
+    \data_pipelined_reg[15336]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15088]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15344]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15344]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15080]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15336]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15336]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15345]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15337]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15345]_srl32 
+    \data_pipelined_reg[15337]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15089]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15345]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15345]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15081]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15337]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15337]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15346]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15338]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15346]_srl32 
+    \data_pipelined_reg[15338]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15090]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15346]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15346]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15082]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15338]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15338]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15347]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15339]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15347]_srl32 
+    \data_pipelined_reg[15339]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15091]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15347]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15347]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15083]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15339]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15339]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15348]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15340]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15348]_srl32 
+    \data_pipelined_reg[15340]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15092]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15348]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15348]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15084]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15340]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15340]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15349]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15341]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15349]_srl32 
+    \data_pipelined_reg[15341]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15093]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15349]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15349]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15085]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15341]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15341]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15350]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15342]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15350]_srl32 
+    \data_pipelined_reg[15342]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15094]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15350]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15350]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15086]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15342]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15342]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15351]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15343]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15351]_srl32 
+    \data_pipelined_reg[15343]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15095]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[15351]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[15351]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[15087]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[15343]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[15343]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
   (* srl_name = "\U0/data_pipelined_reg[1536]_srl32 " *) 
   SRLC32E #(
@@ -8098,885 +7216,885 @@ module system_gauss_0_0_gauss
         .Q(\NLW_data_pipelined_reg[1543]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[1543]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15600]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15592]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15600]_srl32 
+    \data_pipelined_reg[15592]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15344]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15600]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15600]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15336]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15592]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15592]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15601]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15593]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15601]_srl32 
+    \data_pipelined_reg[15593]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15345]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15601]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15601]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15337]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15593]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15593]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15602]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15594]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15602]_srl32 
+    \data_pipelined_reg[15594]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15346]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15602]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15602]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15338]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15594]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15594]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15603]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15595]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15603]_srl32 
+    \data_pipelined_reg[15595]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15347]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15603]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15603]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15339]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15595]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15595]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15604]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15596]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15604]_srl32 
+    \data_pipelined_reg[15596]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15348]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15604]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15604]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15340]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15596]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15596]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15605]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15597]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15605]_srl32 
+    \data_pipelined_reg[15597]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15349]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15605]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15605]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15341]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15597]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15597]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15606]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15598]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15606]_srl32 
+    \data_pipelined_reg[15598]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15350]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15606]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15606]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15342]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15598]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15598]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15607]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15599]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15607]_srl32 
+    \data_pipelined_reg[15599]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15351]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[15607]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15607]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15343]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[15599]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15599]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15856]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15848]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15856]_srl32 
+    \data_pipelined_reg[15848]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15600]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15856]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15856]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15592]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15848]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15848]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15857]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15849]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15857]_srl32 
+    \data_pipelined_reg[15849]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15601]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15857]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15857]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15593]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15849]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15849]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15858]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15850]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15858]_srl32 
+    \data_pipelined_reg[15850]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15602]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15858]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15858]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15594]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15850]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15850]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15859]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15851]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15859]_srl32 
+    \data_pipelined_reg[15851]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15603]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15859]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15859]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15595]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15851]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15851]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15860]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15852]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15860]_srl32 
+    \data_pipelined_reg[15852]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15604]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15860]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15860]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15596]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15852]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15852]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15861]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15853]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15861]_srl32 
+    \data_pipelined_reg[15853]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15605]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15861]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15861]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15597]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15853]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15853]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15862]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15854]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15862]_srl32 
+    \data_pipelined_reg[15854]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15606]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15862]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15862]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15598]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15854]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15854]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[15863]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[15855]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[15863]_srl32 
+    \data_pipelined_reg[15855]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15607]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[15863]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[15863]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15599]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[15855]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[15855]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16112]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16104]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16112]_srl32 
+    \data_pipelined_reg[16104]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15856]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16112]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16112]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15848]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16104]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16104]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16113]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16105]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16113]_srl32 
+    \data_pipelined_reg[16105]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15857]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16113]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16113]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15849]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16105]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16105]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16114]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16106]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16114]_srl32 
+    \data_pipelined_reg[16106]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15858]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16114]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16114]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15850]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16106]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16106]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16115]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16107]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16115]_srl32 
+    \data_pipelined_reg[16107]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15859]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16115]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16115]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15851]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16107]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16107]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16116]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16108]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16116]_srl32 
+    \data_pipelined_reg[16108]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15860]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16116]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16116]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15852]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16108]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16108]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16117]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16109]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16117]_srl32 
+    \data_pipelined_reg[16109]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15861]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16117]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16117]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15853]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16109]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16109]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16118]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16110]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16118]_srl32 
+    \data_pipelined_reg[16110]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15862]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16118]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16118]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15854]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16110]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16110]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16119]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16111]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16119]_srl32 
+    \data_pipelined_reg[16111]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[15863]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16119]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16119]_srl32_n_1 ));
+        .D(\data_pipelined_reg[15855]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16111]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16111]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16368]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16360]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16368]_srl32 
+    \data_pipelined_reg[16360]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16112]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16368]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16368]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16104]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16360]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16360]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16369]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16361]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16369]_srl32 
+    \data_pipelined_reg[16361]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16113]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16369]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16369]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16105]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16361]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16361]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16370]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16362]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16370]_srl32 
+    \data_pipelined_reg[16362]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16114]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16370]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16370]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16106]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16362]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16362]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16371]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16363]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16371]_srl32 
+    \data_pipelined_reg[16363]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16115]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16371]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16371]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16107]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16363]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16363]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16372]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16364]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16372]_srl32 
+    \data_pipelined_reg[16364]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16116]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16372]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16372]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16108]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16364]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16364]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16373]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16365]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16373]_srl32 
+    \data_pipelined_reg[16365]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16117]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16373]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16373]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16109]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16365]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16365]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16374]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16366]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16374]_srl32 
+    \data_pipelined_reg[16366]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16118]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16374]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16374]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16110]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16366]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16366]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16375]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16367]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16375]_srl32 
+    \data_pipelined_reg[16367]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16119]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[16375]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[16375]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[16111]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[16367]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[16367]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16624]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16616]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16624]_srl32 
+    \data_pipelined_reg[16616]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16368]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16624]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16624]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16360]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16616]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16616]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16625]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16617]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16625]_srl32 
+    \data_pipelined_reg[16617]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16369]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16625]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16625]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16361]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16617]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16617]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16626]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16618]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16626]_srl32 
+    \data_pipelined_reg[16618]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16370]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16626]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16626]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16362]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16618]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16618]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16627]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16619]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16627]_srl32 
+    \data_pipelined_reg[16619]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16371]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16627]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16627]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16363]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16619]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16619]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16628]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16620]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16628]_srl32 
+    \data_pipelined_reg[16620]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16372]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16628]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16628]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16364]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16620]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16620]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16629]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16621]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16629]_srl32 
+    \data_pipelined_reg[16621]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16373]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16629]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16629]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16365]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16621]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16621]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16630]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16622]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16630]_srl32 
+    \data_pipelined_reg[16622]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16374]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16630]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16630]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16366]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16622]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16622]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16631]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16623]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16631]_srl32 
+    \data_pipelined_reg[16623]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16375]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[16631]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16631]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16367]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[16623]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16623]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16880]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16872]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16880]_srl32 
+    \data_pipelined_reg[16872]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16624]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16880]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16880]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16616]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16872]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16872]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16881]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16873]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16881]_srl32 
+    \data_pipelined_reg[16873]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16625]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16881]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16881]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16617]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16873]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16873]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16882]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16874]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16882]_srl32 
+    \data_pipelined_reg[16874]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16626]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16882]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16882]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16618]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16874]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16874]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16883]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16875]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16883]_srl32 
+    \data_pipelined_reg[16875]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16627]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16883]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16883]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16619]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16875]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16875]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16884]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16876]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16884]_srl32 
+    \data_pipelined_reg[16876]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16628]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16884]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16884]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16620]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16876]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16876]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16885]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16877]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16885]_srl32 
+    \data_pipelined_reg[16877]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16629]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16885]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16885]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16621]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16877]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16877]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16886]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16878]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16886]_srl32 
+    \data_pipelined_reg[16878]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16630]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16886]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16886]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16622]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16878]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16878]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[16887]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[16879]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[16887]_srl32 
+    \data_pipelined_reg[16879]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16631]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[16887]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[16887]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16623]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[16879]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[16879]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17136]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17128]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17136]_srl32 
+    \data_pipelined_reg[17128]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16880]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17136]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17136]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16872]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17128]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17128]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17137]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17129]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17137]_srl32 
+    \data_pipelined_reg[17129]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16881]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17137]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17137]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16873]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17129]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17129]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17138]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17130]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17138]_srl32 
+    \data_pipelined_reg[17130]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16882]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17138]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17138]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16874]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17130]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17130]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17139]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17131]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17139]_srl32 
+    \data_pipelined_reg[17131]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16883]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17139]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17139]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16875]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17131]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17131]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17140]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17132]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17140]_srl32 
+    \data_pipelined_reg[17132]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16884]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17140]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17140]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16876]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17132]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17132]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17141]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17133]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17141]_srl32 
+    \data_pipelined_reg[17133]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16885]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17141]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17141]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16877]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17133]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17133]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17142]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17134]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17142]_srl32 
+    \data_pipelined_reg[17134]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16886]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17142]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17142]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16878]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17134]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17134]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17143]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17135]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17143]_srl32 
+    \data_pipelined_reg[17135]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[16887]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17143]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17143]_srl32_n_1 ));
+        .D(\data_pipelined_reg[16879]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17135]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17135]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17392]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17384]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17392]_srl32 
+    \data_pipelined_reg[17384]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17136]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17392]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17392]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17128]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17384]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17384]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17393]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17385]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17393]_srl32 
+    \data_pipelined_reg[17385]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17137]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17393]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17393]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17129]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17385]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17385]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17394]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17386]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17394]_srl32 
+    \data_pipelined_reg[17386]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17138]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17394]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17394]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17130]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17386]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17386]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17395]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17387]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17395]_srl32 
+    \data_pipelined_reg[17387]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17139]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17395]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17395]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17131]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17387]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17387]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17396]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17388]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17396]_srl32 
+    \data_pipelined_reg[17388]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17140]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17396]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17396]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17132]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17388]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17388]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17397]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17389]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17397]_srl32 
+    \data_pipelined_reg[17389]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17141]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17397]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17397]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17133]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17389]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17389]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17398]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17390]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17398]_srl32 
+    \data_pipelined_reg[17390]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17142]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17398]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17398]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17134]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17390]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17390]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17399]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17391]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17399]_srl32 
+    \data_pipelined_reg[17391]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17143]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[17399]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[17399]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[17135]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[17391]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[17391]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17648]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17640]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17648]_srl32 
+    \data_pipelined_reg[17640]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17392]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17648]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17648]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17384]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17640]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17640]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17649]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17641]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17649]_srl32 
+    \data_pipelined_reg[17641]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17393]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17649]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17649]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17385]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17641]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17641]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17650]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17642]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17650]_srl32 
+    \data_pipelined_reg[17642]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17394]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17650]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17650]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17386]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17642]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17642]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17651]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17643]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17651]_srl32 
+    \data_pipelined_reg[17643]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17395]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17651]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17651]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17387]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17643]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17643]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17652]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17644]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17652]_srl32 
+    \data_pipelined_reg[17644]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17396]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17652]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17652]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17388]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17644]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17644]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17653]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17645]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17653]_srl32 
+    \data_pipelined_reg[17645]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17397]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17653]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17653]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17389]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17645]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17645]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17654]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17646]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17654]_srl32 
+    \data_pipelined_reg[17646]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17398]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17654]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17654]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17390]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17646]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17646]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17655]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17647]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17655]_srl32 
+    \data_pipelined_reg[17647]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17399]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[17655]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17655]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17391]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[17647]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17647]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17904]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17896]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17904]_srl32 
+    \data_pipelined_reg[17896]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17648]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17904]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17904]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17640]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17896]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17896]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17905]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17897]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17905]_srl32 
+    \data_pipelined_reg[17897]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17649]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17905]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17905]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17641]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17897]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17897]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17906]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17898]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17906]_srl32 
+    \data_pipelined_reg[17898]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17650]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17906]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17906]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17642]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17898]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17898]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17907]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17899]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17907]_srl32 
+    \data_pipelined_reg[17899]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17651]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17907]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17907]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17643]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17899]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17899]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17908]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17900]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17908]_srl32 
+    \data_pipelined_reg[17900]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17652]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17908]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17908]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17644]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17900]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17900]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17909]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17901]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17909]_srl32 
+    \data_pipelined_reg[17901]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17653]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17909]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17909]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17645]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17901]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17901]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17910]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17902]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17910]_srl32 
+    \data_pipelined_reg[17902]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17654]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17910]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17910]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17646]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17902]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17902]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[17911]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[17903]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[17911]_srl32 
+    \data_pipelined_reg[17903]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17655]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[17911]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[17911]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17647]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[17903]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[17903]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
   (* srl_name = "\U0/data_pipelined_reg[1792]_srl32 " *) 
   SRLC32E #(
@@ -9066,709 +8184,709 @@ module system_gauss_0_0_gauss
         .Q(\NLW_data_pipelined_reg[1799]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[1799]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18160]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18152]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18160]_srl32 
+    \data_pipelined_reg[18152]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17904]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18160]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18160]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17896]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18152]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18152]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18161]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18153]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18161]_srl32 
+    \data_pipelined_reg[18153]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17905]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18161]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18161]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17897]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18153]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18153]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18162]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18154]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18162]_srl32 
+    \data_pipelined_reg[18154]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17906]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18162]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18162]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17898]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18154]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18154]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18163]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18155]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18163]_srl32 
+    \data_pipelined_reg[18155]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17907]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18163]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18163]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17899]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18155]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18155]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18164]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18156]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18164]_srl32 
+    \data_pipelined_reg[18156]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17908]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18164]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18164]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17900]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18156]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18156]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18165]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18157]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18165]_srl32 
+    \data_pipelined_reg[18157]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17909]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18165]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18165]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17901]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18157]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18157]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18166]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18158]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18166]_srl32 
+    \data_pipelined_reg[18158]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17910]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18166]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18166]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17902]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18158]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18158]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18167]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18159]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18167]_srl32 
+    \data_pipelined_reg[18159]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[17911]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18167]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18167]_srl32_n_1 ));
+        .D(\data_pipelined_reg[17903]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18159]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18159]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18416]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18408]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18416]_srl32 
+    \data_pipelined_reg[18408]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18160]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18416]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18416]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18152]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18408]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18408]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18417]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18409]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18417]_srl32 
+    \data_pipelined_reg[18409]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18161]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18417]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18417]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18153]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18409]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18409]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18418]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18410]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18418]_srl32 
+    \data_pipelined_reg[18410]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18162]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18418]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18418]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18154]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18410]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18410]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18419]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18411]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18419]_srl32 
+    \data_pipelined_reg[18411]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18163]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18419]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18419]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18155]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18411]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18411]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18420]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18412]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18420]_srl32 
+    \data_pipelined_reg[18412]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18164]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18420]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18420]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18156]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18412]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18412]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18421]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18413]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18421]_srl32 
+    \data_pipelined_reg[18413]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18165]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18421]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18421]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18157]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18413]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18413]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18422]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18414]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18422]_srl32 
+    \data_pipelined_reg[18414]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18166]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18422]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18422]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18158]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18414]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18414]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18423]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18415]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18423]_srl32 
+    \data_pipelined_reg[18415]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18167]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[18423]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[18423]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[18159]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[18415]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[18415]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18672]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18664]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18672]_srl32 
+    \data_pipelined_reg[18664]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18416]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18672]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18672]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18408]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18664]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18664]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18673]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18665]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18673]_srl32 
+    \data_pipelined_reg[18665]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18417]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18673]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18673]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18409]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18665]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18665]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18674]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18666]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18674]_srl32 
+    \data_pipelined_reg[18666]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18418]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18674]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18674]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18410]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18666]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18666]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18675]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18667]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18675]_srl32 
+    \data_pipelined_reg[18667]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18419]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18675]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18675]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18411]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18667]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18667]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18676]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18668]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18676]_srl32 
+    \data_pipelined_reg[18668]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18420]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18676]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18676]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18412]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18668]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18668]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18677]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18669]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18677]_srl32 
+    \data_pipelined_reg[18669]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18421]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18677]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18677]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18413]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18669]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18669]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18678]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18670]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18678]_srl32 
+    \data_pipelined_reg[18670]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18422]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18678]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18678]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18414]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18670]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18670]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18679]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18671]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18679]_srl32 
+    \data_pipelined_reg[18671]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18423]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[18679]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18679]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18415]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[18671]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18671]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18928]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18920]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18928]_srl32 
+    \data_pipelined_reg[18920]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18672]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18928]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18928]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18664]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18920]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18920]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18929]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18921]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18929]_srl32 
+    \data_pipelined_reg[18921]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18673]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18929]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18929]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18665]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18921]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18921]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18930]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18922]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18930]_srl32 
+    \data_pipelined_reg[18922]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18674]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18930]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18930]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18666]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18922]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18922]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18931]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18923]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18931]_srl32 
+    \data_pipelined_reg[18923]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18675]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18931]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18931]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18667]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18923]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18923]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18932]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18924]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18932]_srl32 
+    \data_pipelined_reg[18924]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18676]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18932]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18932]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18668]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18924]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18924]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18933]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18925]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18933]_srl32 
+    \data_pipelined_reg[18925]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18677]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18933]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18933]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18669]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18925]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18925]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18934]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18926]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18934]_srl32 
+    \data_pipelined_reg[18926]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18678]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18934]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18934]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18670]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18926]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18926]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[18935]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[18927]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[18935]_srl32 
+    \data_pipelined_reg[18927]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18679]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[18935]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[18935]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18671]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[18927]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[18927]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19184]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19176]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19184]_srl32 
+    \data_pipelined_reg[19176]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18928]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19184]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19184]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18920]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19176]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19176]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19185]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19177]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19185]_srl32 
+    \data_pipelined_reg[19177]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18929]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19185]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19185]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18921]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19177]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19177]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19186]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19178]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19186]_srl32 
+    \data_pipelined_reg[19178]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18930]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19186]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19186]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18922]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19178]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19178]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19187]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19179]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19187]_srl32 
+    \data_pipelined_reg[19179]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18931]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19187]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19187]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18923]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19179]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19179]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19188]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19180]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19188]_srl32 
+    \data_pipelined_reg[19180]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18932]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19188]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19188]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18924]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19180]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19180]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19189]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19181]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19189]_srl32 
+    \data_pipelined_reg[19181]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18933]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19189]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19189]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18925]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19181]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19181]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19190]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19182]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19190]_srl32 
+    \data_pipelined_reg[19182]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18934]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19190]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19190]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18926]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19182]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19182]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19191]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19183]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19191]_srl32 
+    \data_pipelined_reg[19183]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[18935]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19191]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19191]_srl32_n_1 ));
+        .D(\data_pipelined_reg[18927]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19183]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19183]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19440]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19432]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19440]_srl32 
+    \data_pipelined_reg[19432]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19184]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19440]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19440]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19176]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19432]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19432]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19441]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19433]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19441]_srl32 
+    \data_pipelined_reg[19433]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19185]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19441]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19441]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19177]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19433]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19433]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19442]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19434]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19442]_srl32 
+    \data_pipelined_reg[19434]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19186]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19442]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19442]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19178]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19434]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19434]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19443]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19435]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19443]_srl32 
+    \data_pipelined_reg[19435]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19187]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19443]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19443]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19179]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19435]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19435]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19444]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19436]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19444]_srl32 
+    \data_pipelined_reg[19436]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19188]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19444]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19444]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19180]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19436]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19436]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19445]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19437]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19445]_srl32 
+    \data_pipelined_reg[19437]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19189]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19445]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19445]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19181]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19437]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19437]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19446]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19438]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19446]_srl32 
+    \data_pipelined_reg[19438]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19190]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19446]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19446]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19182]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19438]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19438]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19447]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19439]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19447]_srl32 
+    \data_pipelined_reg[19439]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19191]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[19447]_srl32_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[19447]_srl32_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[19183]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[19439]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[19439]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19696]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19688]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19696]_srl32 
+    \data_pipelined_reg[19688]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19440]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19696]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19696]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19432]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19688]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19688]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19697]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19689]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19697]_srl32 
+    \data_pipelined_reg[19689]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19441]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19697]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19697]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19433]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19689]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19689]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19698]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19690]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19698]_srl32 
+    \data_pipelined_reg[19690]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19442]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19698]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19698]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19434]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19690]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19690]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19699]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19691]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19699]_srl32 
+    \data_pipelined_reg[19691]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19443]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19699]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19699]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19435]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19691]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19691]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19700]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19692]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19700]_srl32 
+    \data_pipelined_reg[19692]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19444]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19700]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19700]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19436]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19692]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19692]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19701]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19693]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19701]_srl32 
+    \data_pipelined_reg[19693]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19445]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19701]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19701]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19437]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19693]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19693]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19702]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19694]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19702]_srl32 
+    \data_pipelined_reg[19694]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19446]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19702]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19702]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19438]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19694]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19694]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19703]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19695]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19703]_srl32 
+    \data_pipelined_reg[19695]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19447]_srl32_n_0 ),
-        .Q(\NLW_data_pipelined_reg[19703]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19703]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19439]_srl32_n_0 ),
+        .Q(\NLW_data_pipelined_reg[19695]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19695]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19952]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19944]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19952]_srl32 
+    \data_pipelined_reg[19944]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19696]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19952]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19952]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19688]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19944]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19944]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19953]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19945]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19953]_srl32 
+    \data_pipelined_reg[19945]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19697]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19953]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19953]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19689]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19945]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19945]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19954]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19946]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19954]_srl32 
+    \data_pipelined_reg[19946]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19698]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19954]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19954]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19690]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19946]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19946]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19955]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19947]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19955]_srl32 
+    \data_pipelined_reg[19947]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19699]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19955]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19955]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19691]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19947]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19947]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19956]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19948]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19956]_srl32 
+    \data_pipelined_reg[19948]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19700]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19956]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19956]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19692]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19948]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19948]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19957]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19949]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19957]_srl32 
+    \data_pipelined_reg[19949]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19701]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19957]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19957]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19693]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19949]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19949]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19958]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19950]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19958]_srl32 
+    \data_pipelined_reg[19950]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19702]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19958]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19958]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19694]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19950]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19950]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[19959]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[19951]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[19959]_srl32 
+    \data_pipelined_reg[19951]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19703]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[19959]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[19959]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19695]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[19951]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[19951]_srl32_n_1 ));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[1] 
@@ -9778,373 +8896,181 @@ module system_gauss_0_0_gauss
         .Q(\data_pipelined_reg_n_0_[1] ),
         .R(1'b0));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20208]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20200]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20208]_srl32 
+    \data_pipelined_reg[20200]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19952]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20208]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20208]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19944]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20200]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20200]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20209]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20201]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20209]_srl32 
+    \data_pipelined_reg[20201]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19953]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20209]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20209]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19945]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20201]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20201]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20210]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20202]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20210]_srl32 
+    \data_pipelined_reg[20202]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19954]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20210]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20210]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19946]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20202]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20202]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20211]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20203]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20211]_srl32 
+    \data_pipelined_reg[20203]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19955]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20211]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20211]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19947]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20203]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20203]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20212]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20204]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20212]_srl32 
+    \data_pipelined_reg[20204]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19956]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20212]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20212]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19948]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20204]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20204]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20213]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20205]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20213]_srl32 
+    \data_pipelined_reg[20205]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19957]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20213]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20213]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19949]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20205]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20205]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20214]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20206]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20214]_srl32 
+    \data_pipelined_reg[20206]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19958]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20214]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20214]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19950]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20206]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20206]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20215]_srl32 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20207]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20215]_srl32 
+    \data_pipelined_reg[20207]_srl32 
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[19959]_srl32_n_1 ),
-        .Q(\NLW_data_pipelined_reg[20215]_srl32_Q_UNCONNECTED ),
-        .Q31(\data_pipelined_reg[20215]_srl32_n_1 ));
+        .D(\data_pipelined_reg[19951]_srl32_n_1 ),
+        .Q(\NLW_data_pipelined_reg[20207]_srl32_Q_UNCONNECTED ),
+        .Q31(\data_pipelined_reg[20207]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20432]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20456]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20432]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20456]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20208]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20432]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20432]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20200]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20456]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20456]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20433]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20457]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20433]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20457]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20209]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20433]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20433]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20201]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20457]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20457]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20434]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20458]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20434]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20458]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20210]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20434]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20434]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20202]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20458]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20458]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20435]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20459]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20435]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20459]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20211]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20435]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20435]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20203]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20459]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20459]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20436]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20460]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20436]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20460]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20212]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20436]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20436]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20204]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20460]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20460]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20437]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20461]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20437]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20461]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20213]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20437]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20437]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20205]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20461]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20461]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20438]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20462]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20438]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20462]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20214]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20438]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20438]_srl28_Q31_UNCONNECTED ));
+        .D(\data_pipelined_reg[20206]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20462]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20462]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
-  (* srl_name = "\U0/data_pipelined_reg[20439]_srl28 " *) 
+  (* srl_name = "\U0/data_pipelined_reg[20463]_srl32 " *) 
   SRLC32E #(
     .INIT(32'h00000000)) 
-    \data_pipelined_reg[20439]_srl28 
-       (.A({1'b1,1'b1,1'b0,1'b1,1'b1}),
+    \data_pipelined_reg[20463]_srl32 
+       (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg[20215]_srl32_n_1 ),
-        .Q(\data_pipelined_reg[20439]_srl28_n_0 ),
-        .Q31(\NLW_data_pipelined_reg[20439]_srl28_Q31_UNCONNECTED ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20440] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20432]_srl28_n_0 ),
-        .Q(A[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20441] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20433]_srl28_n_0 ),
-        .Q(A[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20442] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20434]_srl28_n_0 ),
-        .Q(A[2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20443] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20435]_srl28_n_0 ),
-        .Q(A[3]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20444] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20436]_srl28_n_0 ),
-        .Q(A[4]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20445] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20437]_srl28_n_0 ),
-        .Q(A[5]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20446] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20438]_srl28_n_0 ),
-        .Q(A[6]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20447] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg[20439]_srl28_n_0 ),
-        .Q(A[7]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20448] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[0]),
-        .Q(\data_pipelined_reg_n_0_[20448] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20449] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[1]),
-        .Q(\data_pipelined_reg_n_0_[20449] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20450] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[2]),
-        .Q(\data_pipelined_reg_n_0_[20450] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20451] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[3]),
-        .Q(\data_pipelined_reg_n_0_[20451] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20452] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[4]),
-        .Q(\data_pipelined_reg_n_0_[20452] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20453] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[5]),
-        .Q(\data_pipelined_reg_n_0_[20453] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20454] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[6]),
-        .Q(\data_pipelined_reg_n_0_[20454] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20455] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(A[7]),
-        .Q(\data_pipelined_reg_n_0_[20455] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20456] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20448] ),
-        .Q(\data_pipelined_reg_n_0_[20456] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20457] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20449] ),
-        .Q(\data_pipelined_reg_n_0_[20457] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20458] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20450] ),
-        .Q(\data_pipelined_reg_n_0_[20458] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20459] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20451] ),
-        .Q(\data_pipelined_reg_n_0_[20459] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20460] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20452] ),
-        .Q(\data_pipelined_reg_n_0_[20460] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20461] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20453] ),
-        .Q(\data_pipelined_reg_n_0_[20461] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20462] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20454] ),
-        .Q(\data_pipelined_reg_n_0_[20462] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \data_pipelined_reg[20463] 
-       (.C(clk_pixel),
-        .CE(vid_active_video),
-        .D(\data_pipelined_reg_n_0_[20455] ),
-        .Q(\data_pipelined_reg_n_0_[20463] ),
-        .R(1'b0));
+        .D(\data_pipelined_reg[20207]_srl32_n_1 ),
+        .Q(\data_pipelined_reg[20463]_srl32_n_0 ),
+        .Q31(\NLW_data_pipelined_reg[20463]_srl32_Q31_UNCONNECTED ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
   (* srl_name = "\U0/data_pipelined_reg[2048]_srl32 " *) 
   SRLC32E #(
@@ -10241,7 +9167,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20456] ),
+        .D(\data_pipelined_reg[20456]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20712]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20712]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10252,7 +9178,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20457] ),
+        .D(\data_pipelined_reg[20457]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20713]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20713]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10263,7 +9189,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20458] ),
+        .D(\data_pipelined_reg[20458]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20714]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20714]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10274,7 +9200,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20459] ),
+        .D(\data_pipelined_reg[20459]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20715]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20715]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10285,7 +9211,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20460] ),
+        .D(\data_pipelined_reg[20460]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20716]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20716]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10296,7 +9222,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20461] ),
+        .D(\data_pipelined_reg[20461]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20717]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20717]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10307,7 +9233,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20462] ),
+        .D(\data_pipelined_reg[20462]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20718]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20718]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -10318,7 +9244,7 @@ module system_gauss_0_0_gauss
        (.A({1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CE(vid_active_video),
         .CLK(clk_pixel),
-        .D(\data_pipelined_reg_n_0_[20463] ),
+        .D(\data_pipelined_reg[20463]_srl32_n_0 ),
         .Q(\NLW_data_pipelined_reg[20719]_srl32_Q_UNCONNECTED ),
         .Q31(\data_pipelined_reg[20719]_srl32_n_1 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
@@ -14119,7 +13045,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30672]_srl29_n_0 ),
-        .Q(B[0]),
+        .Q(p_0_in[30688]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14127,7 +13053,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30673]_srl29_n_0 ),
-        .Q(B[1]),
+        .Q(p_0_in[30689]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14135,7 +13061,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30674]_srl29_n_0 ),
-        .Q(B[2]),
+        .Q(p_0_in[30690]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14143,7 +13069,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30675]_srl29_n_0 ),
-        .Q(B[3]),
+        .Q(p_0_in[30691]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14151,7 +13077,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30676]_srl29_n_0 ),
-        .Q(B[4]),
+        .Q(p_0_in[30692]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14159,7 +13085,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30677]_srl29_n_0 ),
-        .Q(B[5]),
+        .Q(p_0_in[30693]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14167,7 +13093,7 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30678]_srl29_n_0 ),
-        .Q(B[6]),
+        .Q(p_0_in[30694]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -14175,72 +13101,176 @@ module system_gauss_0_0_gauss
        (.C(clk_pixel),
         .CE(vid_active_video),
         .D(\data_pipelined_reg[30679]_srl29_n_0 ),
-        .Q(B[7]),
+        .Q(p_0_in[30695]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30688] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[0]),
-        .Q(\data_pipelined_reg_n_0_[30688] ),
+        .D(p_0_in[30688]),
+        .Q(p_0_in[30696]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30689] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[1]),
-        .Q(\data_pipelined_reg_n_0_[30689] ),
+        .D(p_0_in[30689]),
+        .Q(p_0_in[30697]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30690] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[2]),
-        .Q(\data_pipelined_reg_n_0_[30690] ),
+        .D(p_0_in[30690]),
+        .Q(p_0_in[30698]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30691] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[3]),
-        .Q(\data_pipelined_reg_n_0_[30691] ),
+        .D(p_0_in[30691]),
+        .Q(p_0_in[30699]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30692] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[4]),
-        .Q(\data_pipelined_reg_n_0_[30692] ),
+        .D(p_0_in[30692]),
+        .Q(p_0_in[30700]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30693] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[5]),
-        .Q(\data_pipelined_reg_n_0_[30693] ),
+        .D(p_0_in[30693]),
+        .Q(p_0_in[30701]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30694] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[6]),
-        .Q(\data_pipelined_reg_n_0_[30694] ),
+        .D(p_0_in[30694]),
+        .Q(p_0_in[30702]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \data_pipelined_reg[30695] 
        (.C(clk_pixel),
         .CE(vid_active_video),
-        .D(B[7]),
-        .Q(\data_pipelined_reg_n_0_[30695] ),
+        .D(p_0_in[30695]),
+        .Q(p_0_in[30703]),
         .R(1'b0));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30704]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30704]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30696]),
+        .Q(\data_pipelined_reg[30704]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30705]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30705]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30697]),
+        .Q(\data_pipelined_reg[30705]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30706]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30706]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30698]),
+        .Q(\data_pipelined_reg[30706]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30707]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30707]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30699]),
+        .Q(\data_pipelined_reg[30707]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30708]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30708]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30700]),
+        .Q(\data_pipelined_reg[30708]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30709]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30709]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30701]),
+        .Q(\data_pipelined_reg[30709]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30710]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30710]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30702]),
+        .Q(\data_pipelined_reg[30710]_srl2_n_0 ));
+  (* srl_bus_name = "\U0/data_pipelined_reg " *) 
+  (* srl_name = "\U0/data_pipelined_reg[30711]_srl2 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \data_pipelined_reg[30711]_srl2 
+       (.A0(1'b1),
+        .A1(1'b0),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(vid_active_video),
+        .CLK(clk_pixel),
+        .D(p_0_in[30703]),
+        .Q(\data_pipelined_reg[30711]_srl2_n_0 ));
   (* srl_bus_name = "\U0/data_pipelined_reg " *) 
   (* srl_name = "\U0/data_pipelined_reg[3072]_srl32 " *) 
   SRLC32E #(
@@ -18257,11 +17287,367 @@ module system_gauss_0_0_gauss
         .D(\hsync_pipelined_reg[960]_srl32_n_1 ),
         .Q(\NLW_hsync_pipelined_reg[992]_srl32_Q_UNCONNECTED ),
         .Q31(\hsync_pipelined_reg[992]_srl32_n_1 ));
+  (* HLUTNM = "lutpair5" *) 
+  LUT4 #(
+    .INIT(16'hF660)) 
+    i___1_carry__0_i_1
+       (.I0(\data_out1[-1111111105]__1_n_0 ),
+        .I1(i___1_carry__1_i_9_n_0),
+        .I2(p_0_in__0[6]),
+        .I3(i___1_carry__0_i_9_n_0),
+        .O(i___1_carry__0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000001)) 
+    i___1_carry__0_i_10
+       (.I0(\data_out1[-1111111107]__1_n_0 ),
+        .I1(\data_out1[-1111111109]__1_n_0 ),
+        .I2(\data_out1[-1111111110]__1_n_0 ),
+        .I3(\data_out1[-1111111111]__1_n_0 ),
+        .I4(\data_out1[-1111111108]__1_n_0 ),
+        .I5(\data_out1[-1111111106]__1_n_0 ),
+        .O(i___1_carry__0_i_10_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h55555556)) 
+    i___1_carry__0_i_11
+       (.I0(\data_out4[-1111111107]__0_n_0 ),
+        .I1(\data_out4[-1111111109]__0_n_0 ),
+        .I2(\data_out4[-1111111110]__0_n_0 ),
+        .I3(\data_out4[-1111111111]__0_n_0 ),
+        .I4(\data_out4[-1111111108]__0_n_0 ),
+        .O(i___1_carry__0_i_11_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h55555556)) 
+    i___1_carry__0_i_12
+       (.I0(\data_out1[-1111111107]__1_n_0 ),
+        .I1(\data_out1[-1111111109]__1_n_0 ),
+        .I2(\data_out1[-1111111110]__1_n_0 ),
+        .I3(\data_out1[-1111111111]__1_n_0 ),
+        .I4(\data_out1[-1111111108]__1_n_0 ),
+        .O(i___1_carry__0_i_12_n_0));
+  CARRY4 i___1_carry__0_i_13
+       (.CI(1'b0),
+        .CO({i___1_carry__0_i_13_n_0,i___1_carry__0_i_13_n_1,i___1_carry__0_i_13_n_2,i___1_carry__0_i_13_n_3}),
+        .CYINIT(1'b0),
+        .DI({\data_out1[-1111111108]__0_n_0 ,\data_out1[-1111111109]__0_n_0 ,\data_out1[-1111111110]__0_n_0 ,\data_out1[-1111111111]__0_n_0 }),
+        .O(p_0_in__0[3:0]),
+        .S({i___1_carry__0_i_17_n_0,i___1_carry__0_i_18_n_0,i___1_carry__0_i_19_n_0,i___1_carry__0_i_20_n_0}));
+  LUT3 #(
+    .INIT(8'h56)) 
+    i___1_carry__0_i_14
+       (.I0(\data_out4[-1111111109]__0_n_0 ),
+        .I1(\data_out4[-1111111110]__0_n_0 ),
+        .I2(\data_out4[-1111111111]__0_n_0 ),
+        .O(i___1_carry__0_i_14_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__0_i_15
+       (.I0(\data_out4[-1111111105]__0_n_0 ),
+        .I1(i___1_carry__1_i_6_n_0),
+        .O(i___1_carry__0_i_15_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h5556)) 
+    i___1_carry__0_i_16
+       (.I0(\data_out4[-1111111108]__0_n_0 ),
+        .I1(\data_out4[-1111111111]__0_n_0 ),
+        .I2(\data_out4[-1111111110]__0_n_0 ),
+        .I3(\data_out4[-1111111109]__0_n_0 ),
+        .O(i___1_carry__0_i_16_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__0_i_17
+       (.I0(\data_out1[-1111111108]__0_n_0 ),
+        .I1(data_out1__1_carry_n_4),
+        .O(i___1_carry__0_i_17_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__0_i_18
+       (.I0(\data_out1[-1111111109]__0_n_0 ),
+        .I1(data_out1__1_carry_n_5),
+        .O(i___1_carry__0_i_18_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__0_i_19
+       (.I0(\data_out1[-1111111110]__0_n_0 ),
+        .I1(data_out1__1_carry_n_6),
+        .O(i___1_carry__0_i_19_n_0));
+  LUT3 #(
+    .INIT(8'hD4)) 
+    i___1_carry__0_i_2
+       (.I0(i___1_carry__0_i_10_n_0),
+        .I1(p_0_in__0[5]),
+        .I2(i___1_carry__0_i_11_n_0),
+        .O(i___1_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__0_i_20
+       (.I0(\data_out1[-1111111111]__0_n_0 ),
+        .I1(data_out1__1_carry_n_7),
+        .O(i___1_carry__0_i_20_n_0));
+  LUT6 #(
+    .INIT(64'hAAABFFFE0002AAA8)) 
+    i___1_carry__0_i_3
+       (.I0(p_0_in__0[4]),
+        .I1(\data_out4[-1111111109]__0_n_0 ),
+        .I2(\data_out4[-1111111110]__0_n_0 ),
+        .I3(\data_out4[-1111111111]__0_n_0 ),
+        .I4(\data_out4[-1111111108]__0_n_0 ),
+        .I5(i___1_carry__0_i_12_n_0),
+        .O(i___1_carry__0_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h8E8E8E8E8E8E8EE8)) 
+    i___1_carry__0_i_4
+       (.I0(p_0_in__0[3]),
+        .I1(i___1_carry__0_i_14_n_0),
+        .I2(\data_out1[-1111111108]__1_n_0 ),
+        .I3(\data_out1[-1111111111]__1_n_0 ),
+        .I4(\data_out1[-1111111110]__1_n_0 ),
+        .I5(\data_out1[-1111111109]__1_n_0 ),
+        .O(i___1_carry__0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h9996666966699996)) 
+    i___1_carry__0_i_5
+       (.I0(i___1_carry__0_i_1_n_0),
+        .I1(\data_out1[-1111111104]__1_n_0 ),
+        .I2(i___1_carry__1_i_9_n_0),
+        .I3(\data_out1[-1111111105]__1_n_0 ),
+        .I4(i___1_carry__0_i_15_n_0),
+        .I5(p_0_in__0[7]),
+        .O(i___1_carry__0_i_5_n_0));
+  (* HLUTNM = "lutpair5" *) 
+  LUT5 #(
+    .INIT(32'h96696996)) 
+    i___1_carry__0_i_6
+       (.I0(\data_out1[-1111111105]__1_n_0 ),
+        .I1(i___1_carry__1_i_9_n_0),
+        .I2(p_0_in__0[6]),
+        .I3(i___1_carry__0_i_9_n_0),
+        .I4(i___1_carry__0_i_2_n_0),
+        .O(i___1_carry__0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hE81717E817E8E817)) 
+    i___1_carry__0_i_7
+       (.I0(i___1_carry__0_i_12_n_0),
+        .I1(i___1_carry__0_i_16_n_0),
+        .I2(p_0_in__0[4]),
+        .I3(i___1_carry__0_i_10_n_0),
+        .I4(i___1_carry__0_i_11_n_0),
+        .I5(p_0_in__0[5]),
+        .O(i___1_carry__0_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    i___1_carry__0_i_8
+       (.I0(i___1_carry__0_i_4_n_0),
+        .I1(i___1_carry__0_i_12_n_0),
+        .I2(p_0_in__0[4]),
+        .I3(i___1_carry__0_i_16_n_0),
+        .O(i___1_carry__0_i_8_n_0));
+  LUT6 #(
+    .INIT(64'h5555555555555556)) 
+    i___1_carry__0_i_9
+       (.I0(\data_out4[-1111111106]__0_n_0 ),
+        .I1(\data_out4[-1111111108]__0_n_0 ),
+        .I2(\data_out4[-1111111111]__0_n_0 ),
+        .I3(\data_out4[-1111111110]__0_n_0 ),
+        .I4(\data_out4[-1111111109]__0_n_0 ),
+        .I5(\data_out4[-1111111107]__0_n_0 ),
+        .O(i___1_carry__0_i_9_n_0));
+  LUT5 #(
+    .INIT(32'hFF565600)) 
+    i___1_carry__1_i_1
+       (.I0(\data_out4[-1111111104]__0_n_0 ),
+        .I1(i___1_carry__1_i_6_n_0),
+        .I2(\data_out4[-1111111105]__0_n_0 ),
+        .I3(p_0_in__0[8]),
+        .I4(i___1_carry__1_i_8_n_0),
+        .O(i___1_carry__1_i_1_n_0));
+  CARRY4 i___1_carry__1_i_10
+       (.CI(i___1_carry__0_i_13_n_0),
+        .CO({i___1_carry__1_i_10_n_0,i___1_carry__1_i_10_n_1,i___1_carry__1_i_10_n_2,i___1_carry__1_i_10_n_3}),
+        .CYINIT(1'b0),
+        .DI({\data_out1[-1111111104]__0_n_0 ,\data_out1[-1111111105]__0_n_0 ,\data_out1[-1111111106]__0_n_0 ,\data_out1[-1111111107]__0_n_0 }),
+        .O(p_0_in__0[7:4]),
+        .S({i___1_carry__1_i_11_n_0,i___1_carry__1_i_12_n_0,i___1_carry__1_i_13_n_0,i___1_carry__1_i_14_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__1_i_11
+       (.I0(\data_out1[-1111111104]__0_n_0 ),
+        .I1(data_out1__1_carry__0_n_4),
+        .O(i___1_carry__1_i_11_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__1_i_12
+       (.I0(\data_out1[-1111111105]__0_n_0 ),
+        .I1(data_out1__1_carry__0_n_5),
+        .O(i___1_carry__1_i_12_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__1_i_13
+       (.I0(\data_out1[-1111111106]__0_n_0 ),
+        .I1(data_out1__1_carry__0_n_6),
+        .O(i___1_carry__1_i_13_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry__1_i_14
+       (.I0(\data_out1[-1111111107]__0_n_0 ),
+        .I1(data_out1__1_carry__0_n_7),
+        .O(i___1_carry__1_i_14_n_0));
+  LUT6 #(
+    .INIT(64'h5600FF56FF565600)) 
+    i___1_carry__1_i_2
+       (.I0(\data_out1[-1111111104]__1_n_0 ),
+        .I1(i___1_carry__1_i_9_n_0),
+        .I2(\data_out1[-1111111105]__1_n_0 ),
+        .I3(p_0_in__0[7]),
+        .I4(i___1_carry__1_i_6_n_0),
+        .I5(\data_out4[-1111111105]__0_n_0 ),
+        .O(i___1_carry__1_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h555555599999999A)) 
+    i___1_carry__1_i_3
+       (.I0(p_0_in__0[10]),
+        .I1(p_0_in__0[9]),
+        .I2(\data_out4[-1111111104]__0_n_0 ),
+        .I3(i___1_carry__1_i_6_n_0),
+        .I4(\data_out4[-1111111105]__0_n_0 ),
+        .I5(i___1_carry__1_i_8_n_0),
+        .O(i___1_carry__1_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h5402ABFD02ABFD54)) 
+    i___1_carry__1_i_4
+       (.I0(p_0_in__0[8]),
+        .I1(\data_out4[-1111111105]__0_n_0 ),
+        .I2(i___1_carry__1_i_6_n_0),
+        .I3(\data_out4[-1111111104]__0_n_0 ),
+        .I4(p_0_in__0[9]),
+        .I5(i___1_carry__1_i_8_n_0),
+        .O(i___1_carry__1_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hA95656A956A9A956)) 
+    i___1_carry__1_i_5
+       (.I0(\data_out4[-1111111104]__0_n_0 ),
+        .I1(i___1_carry__1_i_6_n_0),
+        .I2(\data_out4[-1111111105]__0_n_0 ),
+        .I3(i___1_carry__1_i_2_n_0),
+        .I4(p_0_in__0[8]),
+        .I5(i___1_carry__1_i_8_n_0),
+        .O(i___1_carry__1_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    i___1_carry__1_i_6
+       (.I0(\data_out4[-1111111106]__0_n_0 ),
+        .I1(\data_out4[-1111111108]__0_n_0 ),
+        .I2(\data_out4[-1111111111]__0_n_0 ),
+        .I3(\data_out4[-1111111110]__0_n_0 ),
+        .I4(\data_out4[-1111111109]__0_n_0 ),
+        .I5(\data_out4[-1111111107]__0_n_0 ),
+        .O(i___1_carry__1_i_6_n_0));
+  CARRY4 i___1_carry__1_i_7
+       (.CI(i___1_carry__1_i_10_n_0),
+        .CO({NLW_i___1_carry__1_i_7_CO_UNCONNECTED[3:2],i___1_carry__1_i_7_n_2,i___1_carry__1_i_7_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_i___1_carry__1_i_7_O_UNCONNECTED[3],p_0_in__0[10:8]}),
+        .S({1'b0,data_out1__1_carry__1_n_5,data_out1__1_carry__1_n_6,data_out1__1_carry__1_n_7}));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    i___1_carry__1_i_8
+       (.I0(\data_out1[-1111111104]__1_n_0 ),
+        .I1(i___1_carry__1_i_9_n_0),
+        .I2(\data_out1[-1111111105]__1_n_0 ),
+        .O(i___1_carry__1_i_8_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    i___1_carry__1_i_9
+       (.I0(\data_out1[-1111111106]__1_n_0 ),
+        .I1(\data_out1[-1111111108]__1_n_0 ),
+        .I2(\data_out1[-1111111111]__1_n_0 ),
+        .I3(\data_out1[-1111111110]__1_n_0 ),
+        .I4(\data_out1[-1111111109]__1_n_0 ),
+        .I5(\data_out1[-1111111107]__1_n_0 ),
+        .O(i___1_carry__1_i_9_n_0));
+  LUT6 #(
+    .INIT(64'h5600FF56FF565600)) 
+    i___1_carry_i_1
+       (.I0(\data_out1[-1111111109]__1_n_0 ),
+        .I1(\data_out1[-1111111110]__1_n_0 ),
+        .I2(\data_out1[-1111111111]__1_n_0 ),
+        .I3(p_0_in__0[2]),
+        .I4(\data_out4[-1111111110]__0_n_0 ),
+        .I5(\data_out4[-1111111111]__0_n_0 ),
+        .O(i___1_carry_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hE11E1EE11EE1E11E)) 
+    i___1_carry_i_2
+       (.I0(\data_out1[-1111111111]__1_n_0 ),
+        .I1(\data_out1[-1111111110]__1_n_0 ),
+        .I2(\data_out1[-1111111109]__1_n_0 ),
+        .I3(\data_out4[-1111111111]__0_n_0 ),
+        .I4(\data_out4[-1111111110]__0_n_0 ),
+        .I5(p_0_in__0[2]),
+        .O(i___1_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry_i_3
+       (.I0(p_0_in__0[1]),
+        .I1(\data_out4[-1111111111]__0_n_0 ),
+        .O(i___1_carry_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h9996666966699996)) 
+    i___1_carry_i_4
+       (.I0(i___1_carry_i_1_n_0),
+        .I1(p_0_in__0[3]),
+        .I2(\data_out4[-1111111111]__0_n_0 ),
+        .I3(\data_out4[-1111111110]__0_n_0 ),
+        .I4(\data_out4[-1111111109]__0_n_0 ),
+        .I5(i___1_carry_i_8_n_0),
+        .O(i___1_carry_i_4_n_0));
+  LUT5 #(
+    .INIT(32'h96966996)) 
+    i___1_carry_i_5
+       (.I0(p_0_in__0[2]),
+        .I1(\data_out4[-1111111110]__0_n_0 ),
+        .I2(i___1_carry_i_9_n_0),
+        .I3(\data_out4[-1111111111]__0_n_0 ),
+        .I4(p_0_in__0[1]),
+        .O(i___1_carry_i_5_n_0));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    i___1_carry_i_6
+       (.I0(\data_out4[-1111111111]__0_n_0 ),
+        .I1(p_0_in__0[1]),
+        .I2(\data_out1[-1111111110]__1_n_0 ),
+        .I3(\data_out1[-1111111111]__1_n_0 ),
+        .O(i___1_carry_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i___1_carry_i_7
+       (.I0(\data_out1[-1111111111]__1_n_0 ),
+        .I1(p_0_in__0[0]),
+        .O(i___1_carry_i_7_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h5556)) 
+    i___1_carry_i_8
+       (.I0(\data_out1[-1111111108]__1_n_0 ),
+        .I1(\data_out1[-1111111111]__1_n_0 ),
+        .I2(\data_out1[-1111111110]__1_n_0 ),
+        .I3(\data_out1[-1111111109]__1_n_0 ),
+        .O(i___1_carry_i_8_n_0));
+  LUT3 #(
+    .INIT(8'h56)) 
+    i___1_carry_i_9
+       (.I0(\data_out1[-1111111109]__1_n_0 ),
+        .I1(\data_out1[-1111111110]__1_n_0 ),
+        .I2(\data_out1[-1111111111]__1_n_0 ),
+        .O(i___1_carry_i_9_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     vid_av_INST_0
-       (.I0(p_0_in_0),
+       (.I0(av_pipelined),
         .I1(vid_active_video),
         .O(vid_av));
   FDRE #(

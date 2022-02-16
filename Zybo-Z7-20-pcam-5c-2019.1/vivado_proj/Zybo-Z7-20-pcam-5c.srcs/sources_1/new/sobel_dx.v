@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module gauss
+module sobel_dx
 
 #( 
     parameter ROW_WIDTH = 1280,
@@ -89,6 +89,6 @@ localparam row2_max_index = (16*ROW_WIDTH-1);
  
 localparam row3_max_index = (24*ROW_WIDTH-1);
  
-assign data_out = ((data_pipelined[row1_max_index-16:row1_max_index-23] + 2 * data_pipelined[row1_max_index-8:row1_max_index-15] + data_pipelined[row1_max_index:row1_max_index-7]) + (2 * data_pipelined[row2_max_index-16:row2_max_index-23] + 4 * data_pipelined[row2_max_index-8:row2_max_index-15] + 2 * data_pipelined[row2_max_index:row2_max_index-7]) + (data_pipelined[row3_max_index-16:row3_max_index-23] + 2 * data_pipelined[row3_max_index-8:row3_max_index-15] + data_pipelined[row3_max_index:row3_max_index-7])) >> 4;
+assign data_out = (((data_pipelined[row1_max_index-16:row1_max_index-23] + 2 * data_pipelined[row1_max_index-8:row1_max_index-15] + data_pipelined[row1_max_index:row1_max_index-7])  + (-1 * data_pipelined[row3_max_index-16:row3_max_index-23] - 2 * data_pipelined[row3_max_index-8:row3_max_index-15] - data_pipelined[row3_max_index:row3_max_index-7])) >> 3) + 128;
 
 endmodule

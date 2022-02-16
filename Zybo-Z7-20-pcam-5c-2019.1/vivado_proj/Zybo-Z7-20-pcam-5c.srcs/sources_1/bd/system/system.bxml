@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1644931634"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1644931634"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1644931634"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1644931634"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1645004446"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1645004446"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1645004446"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1645004446"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0.xci" Type="IP">
         <Instance HierarchyPath="AXI_BayerToRGB_1"/>
@@ -177,6 +177,14 @@
       </File>
       <File Name="ip/system_gauss_0_0/system_gauss_0_0.xci" Type="IP">
         <Instance HierarchyPath="gauss_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/system_sobel_dx_0_0/system_sobel_dx_0_0.xci" Type="IP">
+        <Instance HierarchyPath="sobel_dx_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
