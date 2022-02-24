@@ -14,7 +14,7 @@ The following filters were implemented:
 (5. Ideas for nonMaxSuppression are present, but currently we do not have access to the board anymore)
 
 An example image (showing the absolute value of the Sobel gradient) can be found here:
-![](img/IMG_5932.png)
+<img src="img/IMG_5932.png" alt="drawing" style="width:400px;"/>
 
 First and foremost
 ------------------
