@@ -1,16 +1,20 @@
-Zybo Z7 -20 Pcam 5C Demo
+Zybo Z7-20 Canny Edge Detector
 ====================
 
 Description
 -----------
-This Zybo Z7 Pcam 5C project is built upon the camera demo found *here*\link. It uses Pcam 5C as a video source and forwards the streamed image data through the FPGA to the HDMI TX port. An UART interface is available to configure the image sensor and additional post processing IP Cores. 
-We tried to add a Canny-Edgedetector by converting the pixeldata in the pipeline before sending them out on the hdmi tx port.
-1. Graypicture
-2. Gauss 3x3
-3.1 Sobelx
-3.2 Sobely
-4. Sobelabs
+This Zybo Z7 Pcam 5C project is built upon the initial Pcam 5C demo provided by Digilent. You can find the original project [*here*](https://github.com/Digilent/Zybo-Z7-20-pcam-5c). This demo uses the Pcam 5C as a video source and forwards the streamed image data through the FPGA to the HDMI TX port. An UART interface is available to configure the image sensor and additional post processing IP Cores. 
+We added a Canny-Edge-Detector by converting the pixeldata in the pipeline before sending them out on the hdmi tx port.
+The following filters were implemented:
+1. Convert RGB to Grayscale
+2. Gauss (3x3 kernel)
+3.1 SobelX (3x3 kernel)
+3.2 SobelY (3x3 kernel)
+4. Gradient calculation of both Sobel results
 (5. Ideas for nonMaxSuppression are present, but currently we do not have access to the board anymore)
+
+An example image (showing the absolute value of the Sobel gradient) can be found here:
+![](img/IMG_5932.png)
 
 First and foremost
 ------------------
@@ -22,14 +26,14 @@ Requirements
 * **Zybo Z7 -20**
 * **Pcam 5C**
 * **Monitor with HDMI/DVI input**
-* **Vivado 2018.2 Installation with Xilinx SDK**: To set up Vivado, see the [Installing Vivado and Digilent Board Files Tutorial](https://reference.digilentinc.com/vivado/installing-vivado/start).
+* **Vivado 2019.1 Installation with Xilinx SDK**: To set up Vivado, see the [Installing Vivado and Digilent Board Files Tutorial](https://reference.digilentinc.com/vivado/installing-vivado/start).
 
 Demo Setup
 ----------
 
-1. Download the most recent release ZIP archive ("Zybo-Z7-20-Pcam-5C-2018.2-*.zip") from the repo's [releases page](https://github.com/Digilent/Zybo-Z7-20-pcam-5c/releases).
+1. Download the most recent release ZIP archive ("Zybo-Z7-20-Pcam-5C-2019.1-*.zip") from the main repo's [releases page](https://github.com/Digilent/Zybo-Z7-20-pcam-5c/releases).
 2. Extract the downloaded ZIP.
-3. Open the XPR project file, found at \<archive extracted location\>/vivado_proj/Zybo-Z7-20-pcam-5c.xpr, included in the extracted release archive in Vivado 2018.2.
+3. Open the XPR project file, found at \<archive extracted location\>/vivado_proj/Zybo-Z7-20-pcam-5c.xpr, included in the extracted release archive in Vivado 2019.1.
 4. In the toolbar at the top of the Vivado window, select **File -> Export -> Export Hardware**. Select **\<Local to Project\>** as the Exported Location and make sure that the **Include bitstream** box is checked, then click **OK**.
 5. In the toolbar at the top of the Vivado window, select **File -> Launch SDK**. Select **\<Local to Project\>** as both the workspace location and exported location, then click **OK**.
 6. With Vivado SDK opened, wait for the hardware platform exported by Vivado to be imported.
