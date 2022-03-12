@@ -1,4 +1,4 @@
-Colin Mikolajczak
-Finn Hahn
-Daniel Soukup
-Bastian Kersting
+Colin Mikolajczak,
+Finn Hahn,
+Daniel Soukup,
+Bastian Kersting,
