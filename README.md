@@ -1,6 +1,9 @@
 Zybo Z7-20 Canny Edge Detector
 ====================
 
+This project was created during the course "Hardware Development for Software Developers" at the University for Applied Science Munich.
+It implements a Canny-Edge Detector on a Zybo-Z7 FPGA.
+
 Description
 -----------
 This Zybo Z7 Pcam 5C project is built upon the initial Pcam 5C demo provided by Digilent. You can find the original project [*here*](https://github.com/Digilent/Zybo-Z7-20-pcam-5c). This demo uses the Pcam 5C as a video source and forwards the streamed image data through the FPGA to the HDMI TX port. An UART interface is available to configure the image sensor and additional post processing IP Cores. 
